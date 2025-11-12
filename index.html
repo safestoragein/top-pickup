@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangalore Pickup Data Analysis</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .stat-card.total .icon { color: #3498db; }
+        .stat-card.areas .icon { color: #e74c3c; }
+        .stat-card.coverage .icon { color: #27ae60; }
+        .stat-card.top .icon { color: #f39c12; }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .stat-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .controls {
+            padding: 30px;
+            background: white;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: #3498db;
+        }
+
+        .search-box .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .export-btn {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .table-container {
+            padding: 0 30px 30px;
+            overflow-x: auto;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-table thead {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+        }
+
+        .data-table th {
+            padding: 20px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .data-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+
+        .data-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .rank-cell {
+            text-align: center;
+            font-weight: 700;
+            color: #3498db;
+            font-size: 1.2rem;
+        }
+
+        .area-name {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .bookings {
+            font-weight: 600;
+            color: #27ae60;
+        }
+
+        .percentage {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .sub-areas {
+            font-style: italic;
+            color: #7f8c8d;
+            line-height: 1.4;
+        }
+
+        .apartments {
+            line-height: 1.6;
+        }
+
+        .apartment-item {
+            background: #ecf0f1;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            margin: 2px;
+            display: inline-block;
+        }
+
+        .apartment-count {
+            background: #3498db;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            margin-left: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box {
+                min-width: unset;
+            }
+
+            .table-container {
+                padding: 0 15px 20px;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 10px 8px;
+                font-size: 0.9rem;
+            }
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 50px;
+            color: #999;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-map-marker-alt"></i> Bangalore Pickup Data Analysis</h1>
+            <p>Comprehensive analysis of 1-year pickup data across top 15 areas</p>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card total">
+                <div class="icon"><i class="fas fa-chart-bar"></i></div>
+                <h3 id="totalPickups">3,207</h3>
+                <p>Total Pickup Records</p>
+            </div>
+            <div class="stat-card areas">
+                <div class="icon"><i class="fas fa-map"></i></div>
+                <h3>15</h3>
+                <p>Top Performing Areas</p>
+            </div>
+            <div class="stat-card coverage">
+                <div class="icon"><i class="fas fa-percentage"></i></div>
+                <h3 id="coverage">48.2%</h3>
+                <p>Coverage by Top 15</p>
+            </div>
+            <div class="stat-card top">
+                <div class="icon"><i class="fas fa-trophy"></i></div>
+                <h3>Whitefield</h3>
+                <p>Leading Area (259 bookings)</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search areas, apartments, or sub-areas...">
+            </div>
+            <button class="export-btn" onclick="exportToExcel()">
+                <i class="fas fa-download"></i>
+                Export to Excel
+            </button>
+        </div>
+
+        <div class="table-container">
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading data...
+            </div>
+            <div class="no-results" id="noResults">
+                <i class="fas fa-search"></i> No results found for your search.
+            </div>
+            <table class="data-table" id="dataTable">
+                <thead>
+                    <tr>
+                        <th width="8%">Rank</th>
+                        <th width="15%">Area Name</th>
+                        <th width="12%">Bookings</th>
+                        <th width="25%">Top Sub-Areas</th>
+                        <th width="40%">Top Apartments (Booking Count)</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Bangalore pickup data
+        const pickupData = [
+            {
+                rank: 1,
+                area: "Whitefield",
+                bookings: 259,
+                percentage: 8.1,
+                subAreas: ["ECC Road", "Whitefield Main Road", "Dodsworth Layout"],
+                apartments: [
+                    {name: "ECC Road", count: 32},
+                    {name: "Nallurhalli", count: 5},
+                    {name: "Immadihalli", count: 5},
+                    {name: "Prestige Lakeside Habitat", count: 4},
+                    {name: "Prestige Shantiniketan Apartment", count: 4},
+                    {name: "Sumadhura Shikharam", count: 3},
+                    {name: "3rd Cross Vinayaka Nagar Road", count: 2}
+                ]
+            },
+            {
+                rank: 2,
+                area: "Marathahalli",
+                bookings: 142,
+                percentage: 4.4,
+                subAreas: ["AECS Layout", "Sarjapur-Marathahalli Road", "Chandra Layout"],
+                apartments: [
+                    {name: "AECS Layout", count: 6},
+                    {name: "Purva Fountain Square", count: 3},
+                    {name: "PR Layout", count: 3},
+                    {name: "CKB Layout", count: 2},
+                    {name: "Salarpuria Sanctity", count: 2},
+                    {name: "2nd Cross Road", count: 2},
+                    {name: "Mantri Flora", count: 2}
+                ]
+            },
+            {
+                rank: 3,
+                area: "HSR Layout",
+                bookings: 135,
+                percentage: 4.2,
+                subAreas: ["HSR Layout", "Sector 2", "1st Sector"],
+                apartments: [
+                    {name: "HSR Layout", count: 11},
+                    {name: "Sector 1", count: 8},
+                    {name: "Sector 2", count: 6},
+                    {name: "Sector 3", count: 4},
+                    {name: "4th Cross Road", count: 4},
+                    {name: "2nd Sector", count: 3},
+                    {name: "Sector 7", count: 3}
+                ]
+            },
+            {
+                rank: 4,
+                area: "Electronic City",
+                bookings: 111,
+                percentage: 3.5,
+                subAreas: ["Phase 1", "Electronics City Phase 1", "Electronic City Phase I"],
+                apartments: [
+                    {name: "Phase 1", count: 13},
+                    {name: "Neeladri Road", count: 4},
+                    {name: "Electronics City Phase 1", count: 3},
+                    {name: "Celebrity Paradise Layout", count: 3},
+                    {name: "Hosa Road", count: 2},
+                    {name: "Neeladri Nagar", count: 2},
+                    {name: "S A Residency", count: 2}
+                ]
+            },
+            {
+                rank: 5,
+                area: "Bellandur",
+                bookings: 89,
+                percentage: 2.8,
+                subAreas: ["Green Glen Layout", "Outer Ring Road", "Bellandur Main Road"],
+                apartments: [
+                    {name: "Adarsh Palm Retreat", count: 4},
+                    {name: "Assetz East Point", count: 3},
+                    {name: "RMV Arcades", count: 2},
+                    {name: "Raju Colony", count: 2},
+                    {name: "Meda Heights", count: 2},
+                    {name: "Green Glen Layout", count: 2},
+                    {name: "Sobha Carnation", count: 2}
+                ]
+            },
+            {
+                rank: 6,
+                area: "BTM Layout",
+                bookings: 69,
+                percentage: 2.2,
+                subAreas: ["BTM Layout", "Abbaappa Layout", "VP Road"],
+                apartments: [
+                    {name: "BTM 2nd Stage", count: 14},
+                    {name: "Madiwala", count: 3},
+                    {name: "BTM Layout", count: 2},
+                    {name: "Galaxy Homes", count: 2},
+                    {name: "Umar Residency", count: 2},
+                    {name: "BTM Layout 2nd Stage", count: 2},
+                    {name: "BTM 1st Stage", count: 2}
+                ]
+            },
+            {
+                rank: 7,
+                area: "Koramangala",
+                bookings: 69,
+                percentage: 2.2,
+                subAreas: ["HSR Layout 5th Sector", "7th Cross Road", "8th Cross Road"],
+                apartments: [
+                    {name: "Koramangala 1st Block", count: 3},
+                    {name: "Embassy Meadows", count: 3},
+                    {name: "4th Block", count: 2},
+                    {name: "Raheja Residency", count: 2},
+                    {name: "Nextdoor Bumble Co-Living PG", count: 1},
+                    {name: "2nd Block", count: 1},
+                    {name: "Dreamhigh Communication", count: 1}
+                ]
+            },
+            {
+                rank: 8,
+                area: "Varthur",
+                bookings: 66,
+                percentage: 2.1,
+                subAreas: ["Balagere Road", "Varthur Road", "Eidgah Road"],
+                apartments: [
+                    {name: "Sobha Dream Acres", count: 9},
+                    {name: "Brigade Cornerstone Utopia", count: 7},
+                    {name: "DS max Sterling", count: 2},
+                    {name: "Varthur Lake", count: 2},
+                    {name: "Myhna Maple street", count: 2},
+                    {name: "Prestige Lakeside Habitat", count: 2},
+                    {name: "ATZ Estrella", count: 1}
+                ]
+            },
+            {
+                rank: 9,
+                area: "Sarjapur",
+                bookings: 55,
+                percentage: 1.7,
+                subAreas: ["Sarjapur Road", "Sarjapur Main Road", "Ambalipura-Sarjapur Road"],
+                apartments: [
+                    {name: "Sarjapur Road", count: 7},
+                    {name: "Suncity Gloria Apartments", count: 2},
+                    {name: "Gold's Gym Sarjapur Road", count: 2},
+                    {name: "DoubleTree Suites by Hilton Bengaluru", count: 1},
+                    {name: "Ambalipura - Sarjapur Road", count: 1},
+                    {name: "Prestige Silver Dale", count: 1},
+                    {name: "DSR PARKWAY", count: 1}
+                ]
+            },
+            {
+                rank: 10,
+                area: "Brookefield",
+                bookings: 51,
+                percentage: 1.6,
+                subAreas: ["BEML Layout", "ITPL Main Road", "AECS Layout"],
+                apartments: [
+                    {name: "BEML Layout", count: 6},
+                    {name: "Kundalahalli", count: 2},
+                    {name: "Gopalan Habitat Splendour Apartments", count: 2},
+                    {name: "Phase 2", count: 2},
+                    {name: "Sterling Shalom", count: 1},
+                    {name: "MILLENNIUM HABITAT", count: 1},
+                    {name: "Keerthi Flora Apartments", count: 1}
+                ]
+            },
+            {
+                rank: 11,
+                area: "Indiranagar",
+                bookings: 50,
+                percentage: 1.6,
+                subAreas: ["Eshwara Layout", "1st Cross Rd", "1st Cross Road"],
+                apartments: [
+                    {name: "KP Towers", count: 2},
+                    {name: "Defence Colony", count: 2},
+                    {name: "1st Cross Rd", count: 2},
+                    {name: "4053", count: 1},
+                    {name: "6th Cross Rd", count: 1},
+                    {name: "INDUS SIGNATURE APARTMENT", count: 1},
+                    {name: "Citrus Court", count: 1}
+                ]
+            },
+            {
+                rank: 12,
+                area: "Kadugodi",
+                bookings: 48,
+                percentage: 1.5,
+                subAreas: ["Maithri Layout", "3G Homes Crimson Layout", "AB Vajapayee Road"],
+                apartments: [
+                    {name: "Hope farm Circle", count: 2},
+                    {name: "Channasandra Main Road", count: 1},
+                    {name: "Siddhartha Layout", count: 1},
+                    {name: "ARK SERENE COUNTY", count: 1},
+                    {name: "V S Reddy Colony", count: 1},
+                    {name: "AB Vajapayee Road", count: 1},
+                    {name: "VSR layout", count: 1}
+                ]
+            },
+            {
+                rank: 13,
+                area: "Kadubeesanahalli",
+                bookings: 38,
+                percentage: 1.2,
+                subAreas: ["Kaverappa Layout", "New Kaverappa Layout", "Bhoganahalli Road"],
+                apartments: [
+                    {name: "Varthur Road", count: 2},
+                    {name: "Bhuvi By Amsha", count: 2},
+                    {name: "Sree Casa Grande", count: 2},
+                    {name: "VILLA-15", count: 1},
+                    {name: "Sri Balaji Residency", count: 1},
+                    {name: "Mars Avenue", count: 1},
+                    {name: "2nd cross Munireddy Layout", count: 1}
+                ]
+            },
+            {
+                rank: 14,
+                area: "JP Nagar",
+                bookings: 34,
+                percentage: 1.1,
+                subAreas: ["JP Nagar 7th Phase", "JP Nagar Phase 6", "Annaiah Reddy Layout"],
+                apartments: [
+                    {name: "JP Nagar 7th Phase", count: 4},
+                    {name: "JP Nagar 8th Phase", count: 4},
+                    {name: "JP Nagar 6th Phase", count: 2},
+                    {name: "Annaiah Reddy Layout", count: 2},
+                    {name: "Shriram Southern Crest", count: 2},
+                    {name: "28th Main Road", count: 1},
+                    {name: "JP Nagar 9th Phase", count: 1}
+                ]
+            },
+            {
+                rank: 15,
+                area: "Gunjur",
+                bookings: 32,
+                percentage: 1.0,
+                subAreas: ["Gunjur Village", "State Highway 35", "Main Road"],
+                apartments: [
+                    {name: "Gunjur Village", count: 5},
+                    {name: "State Highway 35", count: 3},
+                    {name: "Main Road", count: 2},
+                    {name: "Various individual buildings", count: 1}
+                ]
+            }
+        ];
+
+        // Populate table
+        function populateTable(data = pickupData) {
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                
+                // Format apartments
+                const apartmentsHtml = item.apartments.map(apt => 
+                    `<span class="apartment-item">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
+                ).join(' ');
+
+                row.innerHTML = `
+                    <td class="rank-cell">${item.rank}</td>
+                    <td class="area-name">${item.area}</td>
+                    <td class="bookings">${item.bookings} <span class="percentage">(${item.percentage}%)</span></td>
+                    <td class="sub-areas">${item.subAreas.join(', ')}</td>
+                    <td class="apartments">${apartmentsHtml}</td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+
+            // Show/hide no results message
+            document.getElementById('noResults').style.display = data.length === 0 ? 'block' : 'none';
+            document.getElementById('dataTable').style.display = data.length === 0 ? 'none' : 'table';
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            if (searchTerm === '') {
+                populateTable();
+                return;
+            }
+
+            const filteredData = pickupData.filter(item => {
+                return item.area.toLowerCase().includes(searchTerm) ||
+                       item.subAreas.some(sub => sub.toLowerCase().includes(searchTerm)) ||
+                       item.apartments.some(apt => apt.name.toLowerCase().includes(searchTerm));
+            });
+
+            populateTable(filteredData);
+        });
+
+        // Export to Excel function
+        function exportToExcel() {
+            const ws_data = [
+                ['Rank', 'Area Name', 'Total Bookings', 'Percentage', 'Top Sub-Areas', 'Top Apartments with Counts']
+            ];
+
+            pickupData.forEach(item => {
+                const apartmentsList = item.apartments.map(apt => `${apt.name} (${apt.count})`).join(', ');
+                ws_data.push([
+                    item.rank,
+                    item.area,
+                    item.bookings,
+                    `${item.percentage}%`,
+                    item.subAreas.join(', '),
+                    apartmentsList
+                ]);
+            });
+
+            // Create workbook and worksheet
+            const wb = XLSX.utils.book_new();
+            const ws = XLSX.utils.aoa_to_sheet(ws_data);
+
+            // Set column widths
+            ws['!cols'] = [
+                { wch: 8 },   // Rank
+                { wch: 20 },  // Area Name
+                { wch: 15 },  // Bookings
+                { wch: 12 },  // Percentage
+                { wch: 40 },  // Sub-Areas
+                { wch: 60 }   // Apartments
+            ];
+
+            // Add worksheet to workbook
+            XLSX.utils.book_append_sheet(wb, ws, "Bangalore Pickup Analysis");
+
+            // Generate filename with current date
+            const now = new Date();
+            const filename = `Bangalore_Pickup_Analysis_${now.getFullYear()}-${(now.getMonth()+1).toString().padStart(2,'0')}-${now.getDate().toString().padStart(2,'0')}.xlsx`;
+
+            // Save file
+            XLSX.writeFile(wb, filename);
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            populateTable();
+            
+            // Add some loading animation
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('dataTable').style.display = 'none';
+            
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('dataTable').style.display = 'table';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
