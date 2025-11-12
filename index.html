@@ -342,11 +342,12 @@
             <table class="data-table" id="dataTable">
                 <thead>
                     <tr>
-                        <th width="8%">Rank</th>
-                        <th width="15%">Area Name</th>
-                        <th width="12%">Bookings</th>
-                        <th width="25%">Top Sub-Areas</th>
-                        <th width="40%">Top Apartments (Booking Count)</th>
+                        <th width="6%">Rank</th>
+                        <th width="12%">Area Name</th>
+                        <th width="10%">Bookings</th>
+                        <th width="22%">Top Sub-Areas</th>
+                        <th width="25%">🏢 Apartments (Count)</th>
+                        <th width="25%">📍 Locations/Roads (Count)</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
@@ -357,29 +358,8 @@
     </div>
 
     <script>
-        // Bangalore pickup data with comprehensive apartment listings (2+ bookings)
+        // Bangalore pickup data with categorized apartments and locations
         const pickupData = [
-            {
-                rank: 1,
-                area: "Unknown",
-                bookings: 1923,
-                percentage: 60.0,
-                subAreas: ["Silver Springs Layout", "1st Main Road", "AECS Layout"],
-                apartments: [
-                    {name: "Munnekollal", count: 16},
-                    {name: "Mahadevapura", count: 12},
-                    {name: "Ground Floor", count: 11},
-                    {name: "WeWork", count: 10},
-                    {name: "Bengaluru", count: 9},
-                    {name: "Ramamurthy Nagar", count: 8},
-                    {name: "4th Cross Road", count: 7},
-                    {name: "Kaggadasapura", count: 7},
-                    {name: "Bangalore", count: 7},
-                    {name: "Provident Park Square", count: 6},
-                    {name: "Doddanekundi", count: 6},
-                    {name: "Banaswadi", count: 6}
-                ]
-            },
             {
                 rank: 2,
                 area: "Whitefield",
@@ -387,31 +367,25 @@
                 percentage: 8.1,
                 subAreas: ["ECC Road", "Whitefield Main Road", "Dodsworth Layout"],
                 apartments: [
+                    {name: "Prestige Lakeside Habitat", count: 4},
+                    {name: "Prestige Shantiniketan Apartment Complex", count: 4},
+                    {name: "White Rose Layout", count: 2},
+                    {name: "Prestige Park View", count: 2},
+                    {name: "Prestige Waterford", count: 2},
+                    {name: "Brigade Lakefront", count: 2},
+                    {name: "22024 Prestige Shantiniketan Apartment Complex", count: 2},
+                    {name: "Lahari Apartments", count: 2}
+                ],
+                locations: [
                     {name: "ECC Road", count: 32},
                     {name: "Nallurhalli", count: 5},
                     {name: "Immadihalli", count: 5},
-                    {name: "Prestige Lakeside Habitat", count: 4},
-                    {name: "Prestige Shantiniketan Apartment Complex", count: 4},
-                    {name: "Sumadhura Shikharam", count: 3},
                     {name: "3rd Cross Vinayaka Nagar Road", count: 2},
-                    {name: "White Rose Layout", count: 2},
-                    {name: "Spectra Raaya", count: 2},
                     {name: "Outer Circle", count: 2},
-                    {name: "Prestige Park View", count: 2},
-                    {name: "Meenakshi Layout Road", count: 2},
-                    {name: "Mahaveer Tranquil", count: 2},
-                    {name: "Windmills", count: 2},
                     {name: "Siddapura", count: 2},
-                    {name: "Pattandur Agrahara", count: 2},
-                    {name: "Vaswani Brentwood", count: 2},
                     {name: "Thubarahalli", count: 2},
-                    {name: "Casa Gopalan", count: 2},
-                    {name: "DivyaSree Republic of Whitefield", count: 2},
-                    {name: "Prestige Waterford", count: 2},
-                    {name: "Brigade Lakefront", count: 2},
                     {name: "Ramagondanahalli", count: 2},
-                    {name: "Immadihalli Main Road", count: 2},
-                    {name: "Lahari Apartments", count: 2}
+                    {name: "Immadihalli Main Road", count: 2}
                 ]
             },
             {
@@ -426,17 +400,17 @@
                     {name: "PR Layout", count: 3},
                     {name: "CKB Layout", count: 2},
                     {name: "Salarpuria Sanctity", count: 2},
-                    {name: "2nd Cross Road", count: 2},
                     {name: "Mantri Flora", count: 2},
                     {name: "Springfields Apartments", count: 2},
+                    {name: "UG Residency", count: 2}
+                ],
+                locations: [
+                    {name: "2nd Cross Road", count: 2},
                     {name: "1st Cross Road", count: 2},
                     {name: "SGR Dental College Road", count: 2},
-                    {name: "Sri Sai Abba", count: 2},
                     {name: "Sarjapur - Marathahalli Road", count: 2},
-                    {name: "UG Residency", count: 2},
                     {name: "Doddanekundi Main", count: 2},
-                    {name: "Kundalahalli", count: 2},
-                    {name: "RR Nest", count: 2}
+                    {name: "Kundalahalli", count: 2}
                 ]
             },
             {
@@ -450,12 +424,13 @@
                     {name: "Sector 1", count: 8},
                     {name: "Sector 2", count: 6},
                     {name: "Sector 3", count: 4},
-                    {name: "4th Cross Road", count: 4},
                     {name: "2nd Sector", count: 3},
                     {name: "Sector 7", count: 3},
-                    {name: "ITI Layout", count: 3},
+                    {name: "ITI Layout", count: 3}
+                ],
+                locations: [
+                    {name: "4th Cross Road", count: 4},
                     {name: "31A Main Road", count: 2},
-                    {name: "Forest View Comforts", count: 2},
                     {name: "Rajiv Gandhi Nagar", count: 2}
                 ]
             },
@@ -467,16 +442,17 @@
                 subAreas: ["Phase 1", "Electronics City Phase 1", "Electronic City Phase I"],
                 apartments: [
                     {name: "Phase 1", count: 13},
-                    {name: "Neeladri Road", count: 4},
                     {name: "Electronics City Phase 1", count: 3},
                     {name: "Celebrity Paradise Layout", count: 3},
-                    {name: "Hosa Road", count: 2},
-                    {name: "Neeladri Nagar", count: 2},
                     {name: "S A Residency", count: 2},
                     {name: "Electronic City Phase II", count: 2},
-                    {name: "ITTINA MAHAVEER", count: 2},
                     {name: "Sobha Silicon Oasis", count: 2},
                     {name: "Electronic city phase 2", count: 2}
+                ],
+                locations: [
+                    {name: "Neeladri Road", count: 4},
+                    {name: "Hosa Road", count: 2},
+                    {name: "Neeladri Nagar", count: 2}
                 ]
             },
             {
@@ -487,12 +463,12 @@
                 subAreas: ["Green Glen Layout", "Outer Ring Road", "Bellandur Main Road"],
                 apartments: [
                     {name: "Adarsh Palm Retreat", count: 4},
-                    {name: "Assetz East Point", count: 3},
-                    {name: "RMV Arcades", count: 2},
                     {name: "Raju Colony", count: 2},
                     {name: "Meda Heights", count: 2},
                     {name: "Green Glen Layout", count: 2},
-                    {name: "Sobha Carnation", count: 2},
+                    {name: "Sobha Carnation", count: 2}
+                ],
+                locations: [
                     {name: "Railway Station Road", count: 2}
                 ]
             },
@@ -503,15 +479,12 @@
                 percentage: 2.2,
                 subAreas: ["BTM Layout", "Abbaappa Layout", "VP Road"],
                 apartments: [
-                    {name: "BTM 2nd Stage", count: 14},
-                    {name: "Madiwala", count: 3},
                     {name: "BTM Layout", count: 2},
                     {name: "Galaxy Homes", count: 2},
                     {name: "Umar Residency", count: 2},
-                    {name: "BTM Layout 2nd Stage", count: 2},
-                    {name: "BTM 1st Stage", count: 2},
-                    {name: "Colive 1155 Brighton", count: 2}
-                ]
+                    {name: "BTM Layout 2nd Stage", count: 2}
+                ],
+                locations: []
             },
             {
                 rank: 8,
@@ -524,7 +497,8 @@
                     {name: "Embassy Meadows", count: 3},
                     {name: "4th Block", count: 2},
                     {name: "Raheja Residency", count: 2}
-                ]
+                ],
+                locations: []
             },
             {
                 rank: 9,
@@ -535,10 +509,11 @@
                 apartments: [
                     {name: "Sobha Dream Acres", count: 9},
                     {name: "Brigade Cornerstone Utopia", count: 7},
-                    {name: "DS max Sterling", count: 2},
-                    {name: "Varthur Lake", count: 2},
-                    {name: "Myhna Maple street", count: 2},
                     {name: "Prestige Lakeside Habitat", count: 2}
+                ],
+                locations: [
+                    {name: "Varthur Lake", count: 2},
+                    {name: "Myhna Maple street", count: 2}
                 ]
             },
             {
@@ -548,8 +523,10 @@
                 percentage: 1.7,
                 subAreas: ["Sarjapur Road", "Sarjapur Main Road", "Ambalipura - Sarjapur Road"],
                 apartments: [
+                    {name: "Suncity Gloria Apartments", count: 2}
+                ],
+                locations: [
                     {name: "Sarjapur Road", count: 7},
-                    {name: "Suncity Gloria Apartments", count: 2},
                     {name: "Gold's Gym Sarjapur Road - Gym in Sarjapur Road", count: 2}
                 ]
             },
@@ -561,9 +538,11 @@
                 subAreas: ["BEML Layout", "ITPL Main Road", "AECS Layout"],
                 apartments: [
                     {name: "BEML Layout", count: 6},
-                    {name: "Kundalahalli", count: 2},
                     {name: "Gopalan Habitat Splendour Apartments", count: 2},
                     {name: "Phase 2", count: 2}
+                ],
+                locations: [
+                    {name: "Kundalahalli", count: 2}
                 ]
             },
             {
@@ -574,7 +553,9 @@
                 subAreas: ["Eshwara Layout", "1st Cross Rd", "1st Cross Road"],
                 apartments: [
                     {name: "KP Towers", count: 2},
-                    {name: "Defence Colony", count: 2},
+                    {name: "Defence Colony", count: 2}
+                ],
+                locations: [
                     {name: "1st Cross Rd", count: 2}
                 ]
             },
@@ -584,7 +565,8 @@
                 bookings: 48,
                 percentage: 1.5,
                 subAreas: ["Maithri Layout", "3G Homes Crimson Layout", "AB Vajapayee Road"],
-                apartments: [
+                apartments: [],
+                locations: [
                     {name: "Hope farm Circle", count: 2}
                 ]
             },
@@ -595,9 +577,10 @@
                 percentage: 1.2,
                 subAreas: ["Kaverappa Layout", "New Kaverappa Layout", "Bhoganahalli Road"],
                 apartments: [
-                    {name: "Varthur Road", count: 2},
-                    {name: "Bhuvi By Amsha", count: 2},
                     {name: "Sree Casa Grande", count: 2}
+                ],
+                locations: [
+                    {name: "Varthur Road", count: 2}
                 ]
             },
             {
@@ -612,7 +595,8 @@
                     {name: "JP Nagar 6th Phase", count: 2},
                     {name: "Annaiah Reddy Layout", count: 2},
                     {name: "Shriram Southern Crest", count: 2}
-                ]
+                ],
+                locations: []
             }
         ];
 
@@ -629,12 +613,17 @@
                     `<span class="apartment-item">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
                 ).join(' ');
 
+                const locationsHtml = item.locations.map(loc => 
+                    `<span class="apartment-item">${loc.name}<span class="apartment-count">${loc.count}</span></span>`
+                ).join(' ');
+
                 row.innerHTML = `
                     <td class="rank-cell">${item.rank}</td>
                     <td class="area-name">${item.area}</td>
                     <td class="bookings">${item.bookings} <span class="percentage">(${item.percentage}%)</span></td>
                     <td class="sub-areas">${item.subAreas.join(', ')}</td>
                     <td class="apartments">${apartmentsHtml}</td>
+                    <td class="apartments">${locationsHtml}</td>
                 `;
                 
                 tableBody.appendChild(row);
@@ -657,7 +646,8 @@
             const filteredData = pickupData.filter(item => {
                 return item.area.toLowerCase().includes(searchTerm) ||
                        item.subAreas.some(sub => sub.toLowerCase().includes(searchTerm)) ||
-                       item.apartments.some(apt => apt.name.toLowerCase().includes(searchTerm));
+                       item.apartments.some(apt => apt.name.toLowerCase().includes(searchTerm)) ||
+                       item.locations.some(loc => loc.name.toLowerCase().includes(searchTerm));
             });
 
             populateTable(filteredData);
@@ -666,18 +656,20 @@
         // Export to Excel function
         function exportToExcel() {
             const ws_data = [
-                ['Rank', 'Area Name', 'Total Bookings', 'Percentage', 'Top Sub-Areas', 'Top Apartments with Counts']
+                ['Rank', 'Area Name', 'Total Bookings', 'Percentage', 'Top Sub-Areas', 'Apartments with Counts', 'Locations/Roads with Counts']
             ];
 
             pickupData.forEach(item => {
                 const apartmentsList = item.apartments.map(apt => `${apt.name} (${apt.count})`).join(', ');
+                const locationsList = item.locations.map(loc => `${loc.name} (${loc.count})`).join(', ');
                 ws_data.push([
                     item.rank,
                     item.area,
                     item.bookings,
                     `${item.percentage}%`,
                     item.subAreas.join(', '),
-                    apartmentsList
+                    apartmentsList,
+                    locationsList
                 ]);
             });
 
@@ -692,7 +684,8 @@
                 { wch: 15 },  // Bookings
                 { wch: 12 },  // Percentage
                 { wch: 40 },  // Sub-Areas
-                { wch: 60 }   // Apartments
+                { wch: 60 },  // Apartments
+                { wch: 60 }   // Locations
             ];
 
             // Add worksheet to workbook

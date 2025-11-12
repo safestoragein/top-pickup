@@ -1,0 +1,1348 @@
+{
+  "Unknown": {
+    "apartment": [
+      {
+        "name": "Ground Floor",
+        "count": 11
+      },
+      {
+        "name": "PURVA SEASONS",
+        "count": 2
+      },
+      {
+        "name": "DLF Woodland Heights Bangalore",
+        "count": 2
+      },
+      {
+        "name": "Provident Park Square",
+        "count": 6
+      },
+      {
+        "name": "Nikoo Homes 2 Bhartiya City",
+        "count": 3
+      },
+      {
+        "name": "NGR Layout",
+        "count": 2
+      },
+      {
+        "name": "Saptagiri Enclave",
+        "count": 2
+      },
+      {
+        "name": "Dollars Colony",
+        "count": 2
+      },
+      {
+        "name": "Prestige Lake Ridge",
+        "count": 2
+      },
+      {
+        "name": "Prestige Ferns Residency",
+        "count": 5
+      },
+      {
+        "name": "Poetree Apartment",
+        "count": 2
+      },
+      {
+        "name": "AJMERA GREEN ACRES",
+        "count": 2
+      },
+      {
+        "name": "RISE- Elegant Homes",
+        "count": 2
+      },
+      {
+        "name": "3RD FLOOR",
+        "count": 4
+      },
+      {
+        "name": "Jai Royal Park",
+        "count": 2
+      },
+      {
+        "name": "Lakshmi Layout",
+        "count": 4
+      },
+      {
+        "name": "NCC Urban Ivory Heights",
+        "count": 2
+      },
+      {
+        "name": "Sobha Dream Acres",
+        "count": 5
+      },
+      {
+        "name": "Telecom Layout",
+        "count": 3
+      },
+      {
+        "name": "Airavatam Apartments",
+        "count": 2
+      },
+      {
+        "name": "5th Phase",
+        "count": 5
+      },
+      {
+        "name": "Srinidhi Residency",
+        "count": 2
+      },
+      {
+        "name": "Shriram Greenfield",
+        "count": 2
+      },
+      {
+        "name": "OMBR Layout",
+        "count": 3
+      },
+      {
+        "name": "HRBR Layout 1st Block",
+        "count": 2
+      },
+      {
+        "name": "Mantri Tranquil",
+        "count": 3
+      },
+      {
+        "name": "NRI Layout",
+        "count": 2
+      },
+      {
+        "name": "Confident Pride",
+        "count": 3
+      },
+      {
+        "name": "Prestige Falcon City",
+        "count": 2
+      },
+      {
+        "name": "DLF Westend Heights Apartments",
+        "count": 4
+      },
+      {
+        "name": "Prestige Finsbury Park",
+        "count": 3
+      },
+      {
+        "name": "Sai Teja Fair Bower Block 1",
+        "count": 2
+      },
+      {
+        "name": "GM Infinite ECity Town Phase 2",
+        "count": 2
+      },
+      {
+        "name": "Brigade Metropolis",
+        "count": 3
+      },
+      {
+        "name": "Spice Garden Layout",
+        "count": 3
+      },
+      {
+        "name": "Montreal Manor",
+        "count": 2
+      },
+      {
+        "name": "PRESTIGE KENSINGTON GARDENS",
+        "count": 2
+      },
+      {
+        "name": "Epitome Crowne",
+        "count": 3
+      },
+      {
+        "name": "Purva Venezia",
+        "count": 3
+      },
+      {
+        "name": "SOBHA Dream Gardens (Residential Apartments in Thanisandra)",
+        "count": 2
+      },
+      {
+        "name": "Jal Vayu Towers",
+        "count": 2
+      },
+      {
+        "name": "HRBR Layout",
+        "count": 2
+      },
+      {
+        "name": "Dhruva Apartments",
+        "count": 3
+      },
+      {
+        "name": "Brigade meadows",
+        "count": 3
+      },
+      {
+        "name": "SS Signature Apartment",
+        "count": 2
+      },
+      {
+        "name": "Palace Garden Apartments",
+        "count": 2
+      },
+      {
+        "name": "Salarpuria Sattva Greenage",
+        "count": 2
+      },
+      {
+        "name": "SAM HEIGHTS",
+        "count": 2
+      },
+      {
+        "name": "Alpine Eco Apartments",
+        "count": 3
+      },
+      {
+        "name": "Pride Pegasus",
+        "count": 2
+      },
+      {
+        "name": "NAGARJUNA GREENWOODS",
+        "count": 2
+      },
+      {
+        "name": "Purva Westend",
+        "count": 2
+      },
+      {
+        "name": "Prestige Tranquility",
+        "count": 2
+      },
+      {
+        "name": "Thimappa Reddy Layout",
+        "count": 2
+      },
+      {
+        "name": "Sobha Hillview Apartments",
+        "count": 3
+      },
+      {
+        "name": "House Of Hiranandani Villas",
+        "count": 2
+      },
+      {
+        "name": "Brigade Buena vista",
+        "count": 2
+      },
+      {
+        "name": "Purple Woods Apartments",
+        "count": 2
+      },
+      {
+        "name": "BDA Layout BTM 4th Stage",
+        "count": 2
+      },
+      {
+        "name": "1st Phase",
+        "count": 2
+      },
+      {
+        "name": "3rd Block",
+        "count": 2
+      },
+      {
+        "name": "Nikoo Homes 2",
+        "count": 2
+      },
+      {
+        "name": "SJR Blue Waters Clarence Block",
+        "count": 3
+      },
+      {
+        "name": "1st Block",
+        "count": 2
+      },
+      {
+        "name": "4th Block",
+        "count": 2
+      },
+      {
+        "name": "PBR Residency",
+        "count": 2
+      },
+      {
+        "name": "CSR Samruddhi Apartment",
+        "count": 2
+      },
+      {
+        "name": "NKR Oaks",
+        "count": 2
+      },
+      {
+        "name": "BEML Layout",
+        "count": 2
+      },
+      {
+        "name": "Serene Brigade Cornerstone Utopia Road",
+        "count": 2
+      },
+      {
+        "name": "Sobha Ivory Block-2",
+        "count": 3
+      },
+      {
+        "name": "Bhadrappa Layout",
+        "count": 2
+      }
+    ],
+    "place": [
+      {
+        "name": "Somasundarapalya",
+        "count": 3
+      },
+      {
+        "name": "Margondanahalli",
+        "count": 2
+      },
+      {
+        "name": "2nd Cross Road",
+        "count": 4
+      },
+      {
+        "name": "Ramamurthy Nagar",
+        "count": 8
+      },
+      {
+        "name": "Bommanahalli",
+        "count": 3
+      },
+      {
+        "name": "1st Cross Road",
+        "count": 3
+      },
+      {
+        "name": "Mahadevapura",
+        "count": 12
+      },
+      {
+        "name": "Kasavanahalli",
+        "count": 4
+      },
+      {
+        "name": "K R Puram",
+        "count": 4
+      },
+      {
+        "name": "Ayyappa Nagar",
+        "count": 5
+      },
+      {
+        "name": "560059",
+        "count": 2
+      },
+      {
+        "name": "6th Cross Road",
+        "count": 2
+      },
+      {
+        "name": "4th Cross Road",
+        "count": 7
+      },
+      {
+        "name": "B Narayanapura",
+        "count": 2
+      },
+      {
+        "name": "560017",
+        "count": 2
+      },
+      {
+        "name": "Murugeshpalya",
+        "count": 3
+      },
+      {
+        "name": "15th Main Road",
+        "count": 2
+      },
+      {
+        "name": "2nd Main Road",
+        "count": 2
+      },
+      {
+        "name": "560100",
+        "count": 2
+      },
+      {
+        "name": "Kalyan Nagar",
+        "count": 5
+      },
+      {
+        "name": "Kaggadasapura",
+        "count": 7
+      },
+      {
+        "name": "Kodigehalli",
+        "count": 2
+      },
+      {
+        "name": "Vasanthapura",
+        "count": 3
+      },
+      {
+        "name": "Kasturi Nagar",
+        "count": 3
+      },
+      {
+        "name": "3rd Cross Road",
+        "count": 5
+      },
+      {
+        "name": "Lavelle Road",
+        "count": 2
+      },
+      {
+        "name": "Vimanapura",
+        "count": 2
+      },
+      {
+        "name": "S.G. Palya",
+        "count": 3
+      },
+      {
+        "name": "Malleshwaram",
+        "count": 2
+      },
+      {
+        "name": "Vishwapriya Nagar",
+        "count": 2
+      },
+      {
+        "name": "Seegehalli",
+        "count": 3
+      },
+      {
+        "name": "Zolo Eternal - Ladies PG in Ejipura | PG for Women",
+        "count": 2
+      },
+      {
+        "name": "Ejipura",
+        "count": 2
+      },
+      {
+        "name": "Jayanagar",
+        "count": 2
+      },
+      {
+        "name": "7th Cross Road",
+        "count": 3
+      },
+      {
+        "name": "J. P. Nagar",
+        "count": 5
+      },
+      {
+        "name": "GM Palya",
+        "count": 2
+      },
+      {
+        "name": "Sai Baba Temple Road",
+        "count": 2
+      },
+      {
+        "name": "Doddabanahalli",
+        "count": 2
+      },
+      {
+        "name": "Kammanahalli",
+        "count": 3
+      },
+      {
+        "name": "Devanahalli",
+        "count": 2
+      },
+      {
+        "name": "LBS Nagar",
+        "count": 2
+      },
+      {
+        "name": "Hosakerehalli",
+        "count": 2
+      },
+      {
+        "name": "Panduranga Nagar",
+        "count": 2
+      },
+      {
+        "name": "Belathur Main Road",
+        "count": 3
+      },
+      {
+        "name": "PARIMALA GOLDEN GATE",
+        "count": 2
+      },
+      {
+        "name": "Kodihalli Main Road",
+        "count": 2
+      },
+      {
+        "name": "Kudlu Gate",
+        "count": 5
+      },
+      {
+        "name": "Sahakar Nagar",
+        "count": 2
+      },
+      {
+        "name": "Ozone Urbana",
+        "count": 3
+      },
+      {
+        "name": "Rajajinagar",
+        "count": 3
+      },
+      {
+        "name": "1st Main Road",
+        "count": 2
+      },
+      {
+        "name": "C V Raman Nagar",
+        "count": 3
+      },
+      {
+        "name": "Vinayaka Nagar",
+        "count": 5
+      },
+      {
+        "name": "Malleshpalya",
+        "count": 3
+      },
+      {
+        "name": "Byrasandra Main Road",
+        "count": 2
+      },
+      {
+        "name": "National Law School of India University",
+        "count": 3
+      },
+      {
+        "name": "Vidyaranyapura",
+        "count": 2
+      },
+      {
+        "name": "4th Main Road",
+        "count": 2
+      },
+      {
+        "name": "Richmond Road",
+        "count": 2
+      },
+      {
+        "name": "Hebbal Kempapura",
+        "count": 3
+      },
+      {
+        "name": "Hosa Road",
+        "count": 5
+      },
+      {
+        "name": "Bannerghatta Road",
+        "count": 2
+      },
+      {
+        "name": "560068",
+        "count": 2
+      },
+      {
+        "name": "Kundalahalli Gate",
+        "count": 2
+      },
+      {
+        "name": "Devasandra industrial area",
+        "count": 2
+      },
+      {
+        "name": "Pragathi School",
+        "count": 2
+      },
+      {
+        "name": "Byatarayanapura",
+        "count": 2
+      },
+      {
+        "name": "Diamond District",
+        "count": 2
+      },
+      {
+        "name": "Babusapalya",
+        "count": 3
+      },
+      {
+        "name": "Kattigenahalli",
+        "count": 2
+      },
+      {
+        "name": "JC Industrial Estate",
+        "count": 2
+      }
+    ],
+    "ambiguous": [
+      {
+        "name": "MJ Lifestyle Amadeus",
+        "count": 2
+      },
+      {
+        "name": "Lakshmi Nilaya",
+        "count": 2
+      },
+      {
+        "name": "Hennur",
+        "count": 3
+      },
+      {
+        "name": "Munnekollal",
+        "count": 16
+      },
+      {
+        "name": "Pristine Woods",
+        "count": 2
+      },
+      {
+        "name": "Banashankari",
+        "count": 3
+      },
+      {
+        "name": "Panathur",
+        "count": 5
+      },
+      {
+        "name": "New Tippasandra",
+        "count": 5
+      },
+      {
+        "name": "Doddanekundi",
+        "count": 6
+      },
+      {
+        "name": "Aspire Aurum By Sumadhura",
+        "count": 3
+      },
+      {
+        "name": "SNN Raj Serenity",
+        "count": 2
+      },
+      {
+        "name": "Pattanagere",
+        "count": 2
+      },
+      {
+        "name": "Aspen Woods",
+        "count": 2
+      },
+      {
+        "name": "Jains Aashraya",
+        "count": 2
+      },
+      {
+        "name": "Banaswadi",
+        "count": 6
+      },
+      {
+        "name": "Indian Institute Of Management\u201a\u00c4\u00ecBangalore (IIM\u201a\u00c4\u00ecBangalore)",
+        "count": 5
+      },
+      {
+        "name": "Bangalore",
+        "count": 7
+      },
+      {
+        "name": "Arekere",
+        "count": 2
+      },
+      {
+        "name": "Domlur",
+        "count": 3
+      },
+      {
+        "name": "Prabhavathi Elegant",
+        "count": 2
+      },
+      {
+        "name": "Bengaluru",
+        "count": 9
+      },
+      {
+        "name": "Bren EdgeWaters",
+        "count": 2
+      },
+      {
+        "name": "Choodasandra",
+        "count": 3
+      },
+      {
+        "name": "Sandeep Vihar",
+        "count": 2
+      },
+      {
+        "name": "New Thippasandra",
+        "count": 2
+      },
+      {
+        "name": "Arvind Oasis",
+        "count": 2
+      },
+      {
+        "name": "Pradham Gardenia",
+        "count": 2
+      },
+      {
+        "name": "Yelahanka New Town",
+        "count": 2
+      },
+      {
+        "name": "Sai Sumukha Sameeksha",
+        "count": 3
+      },
+      {
+        "name": "BTM 1st Stage",
+        "count": 4
+      },
+      {
+        "name": "Kothanur",
+        "count": 4
+      },
+      {
+        "name": "WeWork",
+        "count": 10
+      },
+      {
+        "name": "Mathikere",
+        "count": 3
+      },
+      {
+        "name": "1st Stage",
+        "count": 2
+      },
+      {
+        "name": "Bren Avalon",
+        "count": 2
+      },
+      {
+        "name": "ICONEST3",
+        "count": 2
+      },
+      {
+        "name": "Jakkur",
+        "count": 2
+      },
+      {
+        "name": "DS & Jaks Needs3 Project 276",
+        "count": 2
+      },
+      {
+        "name": "SKYLINE ATLANTIS",
+        "count": 4
+      },
+      {
+        "name": "Singasandra",
+        "count": 3
+      },
+      {
+        "name": "no. 91",
+        "count": 2
+      },
+      {
+        "name": "Ahad Opus Rd",
+        "count": 3
+      },
+      {
+        "name": "KOTS Jour",
+        "count": 2
+      },
+      {
+        "name": "HAL 3rd Stage",
+        "count": 2
+      },
+      {
+        "name": "SNN Raj Etternia",
+        "count": 3
+      },
+      {
+        "name": "Adugodi",
+        "count": 2
+      },
+      {
+        "name": "Rohan Akriti",
+        "count": 2
+      },
+      {
+        "name": "Yelahanka",
+        "count": 3
+      },
+      {
+        "name": "Kannamangala",
+        "count": 2
+      },
+      {
+        "name": "BSK 2nd Stage",
+        "count": 2
+      },
+      {
+        "name": "Halasuru",
+        "count": 2
+      },
+      {
+        "name": "No.88",
+        "count": 2
+      },
+      {
+        "name": "Colive 1200 Birmingham",
+        "count": 2
+      },
+      {
+        "name": "Building No./Flat No.: A-71 Name Of Premises/Building: A-71 Road/Street: SECTOR 4 City/Town/Village: Noida District: Gautambuddha Nagar State: Uttar Pradesh PIN Code: 201301",
+        "count": 2
+      },
+      {
+        "name": "Intermodal Castle",
+        "count": 2
+      }
+    ]
+  },
+  "Whitefield": {
+    "apartment": [
+      {
+        "name": "White Rose Layout",
+        "count": 2
+      },
+      {
+        "name": "Prestige Lakeside Habitat",
+        "count": 4
+      },
+      {
+        "name": "Prestige Park View",
+        "count": 2
+      },
+      {
+        "name": "Prestige Shantiniketan Apartment Complex",
+        "count": 4
+      },
+      {
+        "name": "Prestige Waterford",
+        "count": 2
+      },
+      {
+        "name": "Brigade Lakefront",
+        "count": 2
+      },
+      {
+        "name": "22024 Prestige Shantiniketan Apartment Complex",
+        "count": 2
+      },
+      {
+        "name": "Lahari Apartments",
+        "count": 2
+      }
+    ],
+    "place": [
+      {
+        "name": "3rd Cross Vinayaka Nagar Road",
+        "count": 2
+      },
+      {
+        "name": "ECC Road",
+        "count": 32
+      },
+      {
+        "name": "16058",
+        "count": 2
+      },
+      {
+        "name": "Outer Circle",
+        "count": 2
+      },
+      {
+        "name": "Nallurhalli",
+        "count": 5
+      },
+      {
+        "name": "Immadihalli",
+        "count": 5
+      },
+      {
+        "name": "Siddapura",
+        "count": 2
+      },
+      {
+        "name": "Thubarahalli",
+        "count": 2
+      },
+      {
+        "name": "Ramagondanahalli",
+        "count": 2
+      },
+      {
+        "name": "Immadihalli Main Road",
+        "count": 2
+      }
+    ],
+    "ambiguous": [
+      {
+        "name": "Spectra Raaya",
+        "count": 2
+      },
+      {
+        "name": "Meenakshi Layout Road",
+        "count": 2
+      },
+      {
+        "name": "Mahaveer Tranquil",
+        "count": 2
+      },
+      {
+        "name": "Windmills",
+        "count": 2
+      },
+      {
+        "name": "Pattandur Agrahara",
+        "count": 2
+      },
+      {
+        "name": "Vaswani Brentwood",
+        "count": 2
+      },
+      {
+        "name": "Casa Gopalan",
+        "count": 2
+      },
+      {
+        "name": "DivyaSree Republic of Whitefield",
+        "count": 2
+      },
+      {
+        "name": "Sumadhura Shikharam",
+        "count": 3
+      }
+    ]
+  },
+  "Marathahalli": {
+    "apartment": [
+      {
+        "name": "CKB Layout",
+        "count": 2
+      },
+      {
+        "name": "Salarpuria Sanctity",
+        "count": 2
+      },
+      {
+        "name": "AECS Layout",
+        "count": 6
+      },
+      {
+        "name": "Mantri Flora",
+        "count": 2
+      },
+      {
+        "name": "Purva Fountain Square",
+        "count": 3
+      },
+      {
+        "name": "Springfields Apartments",
+        "count": 2
+      },
+      {
+        "name": "UG Residency",
+        "count": 2
+      },
+      {
+        "name": "PR Layout",
+        "count": 3
+      }
+    ],
+    "place": [
+      {
+        "name": "2nd Cross Road",
+        "count": 2
+      },
+      {
+        "name": "1st Cross Road",
+        "count": 2
+      },
+      {
+        "name": "SGR Dental College Road",
+        "count": 2
+      },
+      {
+        "name": "Sarjapur - Marathahalli Road",
+        "count": 2
+      },
+      {
+        "name": "Doddanekundi Main",
+        "count": 2
+      },
+      {
+        "name": "Kundalahalli",
+        "count": 2
+      }
+    ],
+    "ambiguous": [
+      {
+        "name": "Sri Sai Abba",
+        "count": 2
+      },
+      {
+        "name": "RR Nest",
+        "count": 2
+      }
+    ]
+  },
+  "Hsr Layout": {
+    "apartment": [
+      {
+        "name": "HSR Layout",
+        "count": 11
+      },
+      {
+        "name": "Sector 3",
+        "count": 4
+      },
+      {
+        "name": "Sector 1",
+        "count": 8
+      },
+      {
+        "name": "2nd Sector",
+        "count": 3
+      },
+      {
+        "name": "Sector 2",
+        "count": 6
+      },
+      {
+        "name": "Sector 7",
+        "count": 3
+      },
+      {
+        "name": "ITI Layout",
+        "count": 3
+      }
+    ],
+    "place": [
+      {
+        "name": "31A Main Road",
+        "count": 2
+      },
+      {
+        "name": "4th Cross Road",
+        "count": 4
+      },
+      {
+        "name": "Rajiv Gandhi Nagar",
+        "count": 2
+      }
+    ],
+    "ambiguous": [
+      {
+        "name": "Forest View Comforts",
+        "count": 2
+      }
+    ]
+  },
+  "Electronic City": {
+    "apartment": [
+      {
+        "name": "Phase 1",
+        "count": 13
+      },
+      {
+        "name": "Electronics City Phase 1",
+        "count": 3
+      },
+      {
+        "name": "Celebrity Paradise Layout",
+        "count": 3
+      },
+      {
+        "name": "S A Residency",
+        "count": 2
+      },
+      {
+        "name": "Electronic City Phase II",
+        "count": 2
+      },
+      {
+        "name": "Sobha Silicon Oasis",
+        "count": 2
+      },
+      {
+        "name": "Electronic city phase 2",
+        "count": 2
+      }
+    ],
+    "place": [
+      {
+        "name": "Hosa Road",
+        "count": 2
+      },
+      {
+        "name": "Neeladri Road",
+        "count": 4
+      },
+      {
+        "name": "Neeladri Nagar",
+        "count": 2
+      }
+    ],
+    "ambiguous": [
+      {
+        "name": "ITTINA MAHAVEER",
+        "count": 2
+      }
+    ]
+  },
+  "Bellandur": {
+    "apartment": [
+      {
+        "name": "Adarsh Palm Retreat",
+        "count": 4
+      },
+      {
+        "name": "Raju Colony",
+        "count": 2
+      },
+      {
+        "name": "Meda Heights",
+        "count": 2
+      },
+      {
+        "name": "Green Glen Layout",
+        "count": 2
+      },
+      {
+        "name": "Sobha Carnation",
+        "count": 2
+      }
+    ],
+    "place": [
+      {
+        "name": "Railway Station Road",
+        "count": 2
+      }
+    ],
+    "ambiguous": [
+      {
+        "name": "RMV Arcades",
+        "count": 2
+      },
+      {
+        "name": "Assetz East Point",
+        "count": 3
+      }
+    ]
+  },
+  "Btm Layout": {
+    "apartment": [
+      {
+        "name": "BTM Layout",
+        "count": 2
+      },
+      {
+        "name": "Galaxy Homes",
+        "count": 2
+      },
+      {
+        "name": "Umar Residency",
+        "count": 2
+      },
+      {
+        "name": "BTM Layout 2nd Stage",
+        "count": 2
+      }
+    ],
+    "place": [],
+    "ambiguous": [
+      {
+        "name": "BTM 2nd Stage",
+        "count": 14
+      },
+      {
+        "name": "Madiwala",
+        "count": 3
+      },
+      {
+        "name": "BTM 1st Stage",
+        "count": 2
+      },
+      {
+        "name": "Colive 1155 Brighton",
+        "count": 2
+      }
+    ]
+  },
+  "Koramangala": {
+    "apartment": [
+      {
+        "name": "4th Block",
+        "count": 2
+      },
+      {
+        "name": "Koramangala 1st Block",
+        "count": 3
+      },
+      {
+        "name": "Embassy Meadows",
+        "count": 3
+      },
+      {
+        "name": "Raheja Residency",
+        "count": 2
+      }
+    ],
+    "place": [],
+    "ambiguous": []
+  },
+  "Varthur": {
+    "apartment": [
+      {
+        "name": "Sobha Dream Acres",
+        "count": 9
+      },
+      {
+        "name": "Brigade Cornerstone Utopia",
+        "count": 7
+      },
+      {
+        "name": "Prestige Lakeside Habitat",
+        "count": 2
+      }
+    ],
+    "place": [
+      {
+        "name": "Varthur Lake",
+        "count": 2
+      },
+      {
+        "name": "Myhna Maple street",
+        "count": 2
+      }
+    ],
+    "ambiguous": [
+      {
+        "name": "DS max Sterling",
+        "count": 2
+      }
+    ]
+  },
+  "Sarjapur": {
+    "apartment": [
+      {
+        "name": "Suncity Gloria Apartments",
+        "count": 2
+      }
+    ],
+    "place": [
+      {
+        "name": "Sarjapur Road",
+        "count": 7
+      },
+      {
+        "name": "Gold's Gym Sarjapur Road - Gym in Sarjapur Road",
+        "count": 2
+      }
+    ],
+    "ambiguous": []
+  },
+  "Brookefield": {
+    "apartment": [
+      {
+        "name": "BEML Layout",
+        "count": 6
+      },
+      {
+        "name": "Gopalan Habitat Splendour Apartments",
+        "count": 2
+      },
+      {
+        "name": "Phase 2",
+        "count": 2
+      }
+    ],
+    "place": [
+      {
+        "name": "Kundalahalli",
+        "count": 2
+      }
+    ],
+    "ambiguous": []
+  },
+  "Indiranagar": {
+    "apartment": [
+      {
+        "name": "KP Towers",
+        "count": 2
+      },
+      {
+        "name": "Defence Colony",
+        "count": 2
+      }
+    ],
+    "place": [
+      {
+        "name": "1st Cross Rd",
+        "count": 2
+      }
+    ],
+    "ambiguous": []
+  },
+  "Kadugodi": {
+    "apartment": [],
+    "place": [
+      {
+        "name": "Hope farm Circle",
+        "count": 2
+      }
+    ],
+    "ambiguous": []
+  },
+  "Kadubeesanahalli": {
+    "apartment": [
+      {
+        "name": "Sree Casa Grande",
+        "count": 2
+      }
+    ],
+    "place": [
+      {
+        "name": "Varthur Road",
+        "count": 2
+      }
+    ],
+    "ambiguous": [
+      {
+        "name": "Bhuvi By Amsha",
+        "count": 2
+      }
+    ]
+  },
+  "Jp Nagar": {
+    "apartment": [
+      {
+        "name": "JP Nagar 6th Phase",
+        "count": 2
+      },
+      {
+        "name": "JP Nagar 7th Phase",
+        "count": 4
+      },
+      {
+        "name": "Annaiah Reddy Layout",
+        "count": 2
+      },
+      {
+        "name": "JP Nagar 8th Phase",
+        "count": 4
+      },
+      {
+        "name": "Shriram Southern Crest",
+        "count": 2
+      }
+    ],
+    "place": [],
+    "ambiguous": []
+  }
+}
