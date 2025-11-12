@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bangalore Pickup Data Analysis - Google Verified</title>
+    <title>All Bangalore Apartments - Including Single Pickups</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <style>
@@ -21,7 +21,7 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -49,7 +49,7 @@
 
         .stats-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             padding: 30px;
             background: #f8f9fa;
@@ -69,24 +69,24 @@
         }
 
         .stat-card .icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 15px;
         }
 
         .stat-card.total .icon { color: #3498db; }
         .stat-card.areas .icon { color: #e74c3c; }
-        .stat-card.coverage .icon { color: #27ae60; }
-        .stat-card.top .icon { color: #f39c12; }
+        .stat-card.apts .icon { color: #27ae60; }
+        .stat-card.single .icon { color: #f39c12; }
 
         .stat-card h3 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 10px;
             font-weight: 700;
         }
 
         .stat-card p {
             color: #666;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .controls {
@@ -168,19 +168,20 @@
         }
 
         .data-table th {
-            padding: 20px 15px;
+            padding: 15px 10px;
             text-align: left;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.9rem;
             position: sticky;
             top: 0;
             z-index: 10;
         }
 
         .data-table td {
-            padding: 15px;
+            padding: 12px 10px;
             border-bottom: 1px solid #eee;
             vertical-align: top;
+            font-size: 0.85rem;
         }
 
         .data-table tbody tr:hover {
@@ -191,13 +192,13 @@
             text-align: center;
             font-weight: 700;
             color: #3498db;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .area-name {
             font-weight: 600;
             color: #2c3e50;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .bookings {
@@ -206,158 +207,126 @@
         }
 
         .percentage {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #666;
         }
 
-        .sub-areas {
-            font-style: italic;
-            color: #7f8c8d;
-            line-height: 1.4;
-        }
-
         .apartments {
-            line-height: 1.6;
+            line-height: 1.4;
+            max-height: 200px;
+            overflow-y: auto;
         }
 
         .apartment-item {
             background: #ecf0f1;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            margin: 2px;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            margin: 1px;
             display: inline-block;
         }
 
         .apartment-count {
             background: #3498db;
             color: white;
-            padding: 2px 6px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            margin-left: 5px;
+            padding: 1px 4px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-left: 3px;
         }
 
-        .verified-badge {
-            background: #27ae60;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-left: 10px;
+        .high-pickup {
+            border-left: 4px solid #27ae60;
+            background: #e8f5e8;
+        }
+
+        .medium-pickup {
+            border-left: 4px solid #f39c12;
+            background: #fef9e7;
+        }
+
+        .single-pickup {
+            border-left: 4px solid #95a5a6;
+            background: #f8f9fa;
+        }
+
+        .section-header {
             font-weight: 600;
+            margin: 5px 0 3px 0;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        .section-header.high { color: #27ae60; }
+        .section-header.medium { color: #f39c12; }
+        .section-header.single { color: #95a5a6; }
+
+        .stats-summary {
+            background: #f1f2f6;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 0.8rem;
         }
 
         @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                border-radius: 15px;
-            }
-
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .stats-container {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 15px;
-                padding: 20px;
-            }
-
-            .controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .search-box {
-                min-width: unset;
-            }
-
-            .table-container {
-                padding: 0 15px 20px;
-            }
-
             .data-table th,
             .data-table td {
-                padding: 10px 8px;
-                font-size: 0.9rem;
+                padding: 8px 5px;
+                font-size: 0.75rem;
             }
-        }
-
-        .loading {
-            display: none;
-            text-align: center;
-            padding: 50px;
-            font-size: 1.2rem;
-            color: #666;
-        }
-
-        .no-results {
-            display: none;
-            text-align: center;
-            padding: 50px;
-            color: #999;
-            font-style: italic;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1><i class="fas fa-map-marker-alt"></i> Bangalore Pickup Data Analysis</h1>
-            <p>Google-verified apartment complexes vs locations <span class="verified-badge">✓ Verified</span></p>
+            <h1><i class="fas fa-building"></i> All Bangalore Apartments</h1>
+            <p>Complete list including single pickups • 459 apartment complexes total</p>
         </div>
 
         <div class="stats-container">
             <div class="stat-card total">
                 <div class="icon"><i class="fas fa-chart-bar"></i></div>
-                <h3 id="totalPickups">3,207</h3>
+                <h3>3,266</h3>
                 <p>Total Pickup Records</p>
             </div>
             <div class="stat-card areas">
                 <div class="icon"><i class="fas fa-map"></i></div>
                 <h3>15</h3>
-                <p>Top Performing Areas</p>
+                <p>Top Areas</p>
             </div>
-            <div class="stat-card coverage">
-                <div class="icon"><i class="fas fa-percentage"></i></div>
-                <h3 id="coverage">48.2%</h3>
-                <p>Coverage by Top 15</p>
+            <div class="stat-card apts">
+                <div class="icon"><i class="fas fa-building"></i></div>
+                <h3>459</h3>
+                <p>Total Apartments</p>
             </div>
-            <div class="stat-card top">
-                <div class="icon"><i class="fas fa-trophy"></i></div>
-                <h3>Whitefield</h3>
-                <p>Leading Area (259 bookings)</p>
+            <div class="stat-card single">
+                <div class="icon"><i class="fas fa-home"></i></div>
+                <h3>397</h3>
+                <p>Single Pickup Apartments</p>
             </div>
         </div>
 
         <div class="controls">
             <div class="search-box">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" id="searchInput" placeholder="Search areas, apartments, or locations...">
+                <input type="text" id="searchInput" placeholder="Search apartments...">
             </div>
             <button class="export-btn" onclick="exportToExcel()">
                 <i class="fas fa-download"></i>
-                Export to Excel
+                Export All
             </button>
         </div>
 
         <div class="table-container">
-            <div class="loading" id="loading">
-                <i class="fas fa-spinner fa-spin"></i> Loading data...
-            </div>
-            <div class="no-results" id="noResults">
-                <i class="fas fa-search"></i> No results found for your search.
-            </div>
             <table class="data-table" id="dataTable">
                 <thead>
                     <tr>
-                        <th width="6%">Rank</th>
-                        <th width="12%">Area Name</th>
-                        <th width="10%">Bookings</th>
-                        <th width="22%">Top Sub-Areas</th>
-                        <th width="25%">🏢 Verified Apartments (Count)</th>
-                        <th width="25%">📍 Areas/Roads (Count)</th>
+                        <th width="5%">Rank</th>
+                        <th width="10%">Area</th>
+                        <th width="8%">Bookings</th>
+                        <th width="77%">All Apartments (High Pickup • Medium Pickup • Single Pickup)</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
@@ -368,284 +337,189 @@
     </div>
 
     <script>
-        // Google-verified apartment complexes data for Bangalore pickup analysis
-        const pickupData = [
-            {
-                rank: 1,
-                area: "Unknown",
-                bookings: 1923,
-                percentage: 60.0,
-                subAreas: ["Multiple Areas", "Various Locations", "Citywide"],
-                apartments: [
-                    {name: "Prestige Ferns Residency", count: 5},
-                    {name: "Provident Park Square", count: 6},
-                    {name: "Sobha Dream Acres", count: 5},
-                    {name: "DLF Westend Heights Apartments", count: 4},
-                    {name: "Brigade Metropolis", count: 3},
-                    {name: "Prestige Finsbury Park", count: 3},
-                    {name: "Purva Venezia", count: 3}
-                ],
-                locations: [
-                    {name: "Ramamurthy Nagar", count: 8},
-                    {name: "Mahadevapura", count: 12},
-                    {name: "Kaggadasapura", count: 7},
-                    {name: "Kalyan Nagar", count: 5},
-                    {name: "Ayyappa Nagar", count: 5},
-                    {name: "Vinayaka Nagar", count: 5},
-                    {name: "Hosa Road", count: 5}
-                ]
-            },
-            {
-                rank: 2,
-                area: "Whitefield",
-                bookings: 259,
-                percentage: 8.1,
-                subAreas: ["ECC Road", "Nallurhalli", "Immadihalli"],
-                apartments: [
-                    {name: "Prestige Lakeside Habitat", count: 4},
-                    {name: "Prestige Shantiniketan Apartment Complex", count: 4},
-                    {name: "Brigade Lakefront", count: 2},
-                    {name: "Prestige Waterford", count: 2},
-                    {name: "Prestige Park View", count: 2},
-                    {name: "Lahari Apartments", count: 2}
-                ],
-                locations: [
-                    {name: "ECC Road", count: 32},
-                    {name: "Nallurhalli", count: 5},
-                    {name: "Immadihalli", count: 5},
-                    {name: "Immadihalli Main Road", count: 2},
-                    {name: "3rd Cross Vinayaka Nagar Road", count: 2},
-                    {name: "Outer Circle", count: 2},
-                    {name: "Siddapura", count: 2}
-                ]
-            },
-            {
-                rank: 3,
-                area: "Marathahalli",
-                bookings: 142,
-                percentage: 4.4,
-                subAreas: ["Sarjapur Road", "Kundalahalli", "Doddanekundi"],
-                apartments: [
-                    {name: "Purva Fountain Square", count: 3},
-                    {name: "Salarpuria Sanctity", count: 2},
-                    {name: "Mantri Flora", count: 2},
-                    {name: "Springfields Apartments", count: 2},
-                    {name: "UG Residency", count: 2}
-                ],
-                locations: [
-                    {name: "AECS Layout", count: 6},
-                    {name: "CKB Layout", count: 2},
-                    {name: "PR Layout", count: 3},
-                    {name: "Sarjapur - Marathahalli Road", count: 2},
-                    {name: "SGR Dental College Road", count: 2},
-                    {name: "Kundalahalli", count: 2},
-                    {name: "Doddanekundi Main", count: 2}
-                ]
-            },
-            {
-                rank: 4,
-                area: "HSR Layout",
-                bookings: 135,
-                percentage: 4.2,
-                subAreas: ["Sector Areas", "Cross Roads", "Main Roads"],
-                apartments: [
-                    {name: "Total Environment Learning To Fly", count: 4},
-                    {name: "Brigade Gardenia", count: 3},
-                    {name: "Elita Promenade", count: 3},
-                    {name: "Sobha Windfall", count: 2},
-                    {name: "Purva Riviera", count: 2}
-                ],
-                locations: [
-                    {name: "HSR Layout Sector 1", count: 8},
-                    {name: "HSR Layout Sector 2", count: 6},
-                    {name: "HSR Layout Sector 3", count: 4},
-                    {name: "HSR Layout Sector 7", count: 3},
-                    {name: "4th Cross Road", count: 4},
-                    {name: "31A Main Road", count: 2},
-                    {name: "Rajiv Gandhi Nagar", count: 2}
-                ]
-            },
-            {
-                rank: 5,
-                area: "Electronic City",
-                bookings: 111,
-                percentage: 3.5,
-                subAreas: ["Phase Areas", "Neeladri Road", "Hosa Road"],
-                apartments: [
-                    {name: "Celebrity Paradise Layout", count: 3},
-                    {name: "S A Residency", count: 2},
-                    {name: "Sobha Silicon Oasis", count: 2},
-                    {name: "SNN Raj Neeladri", count: 2},
-                    {name: "Godrej Nurture Electronic City", count: 2}
-                ],
-                locations: [
-                    {name: "Electronic City Phase 1", count: 16},
-                    {name: "Electronic City Phase II", count: 4},
-                    {name: "Neeladri Road", count: 4},
-                    {name: "Hosa Road", count: 2},
-                    {name: "Neeladri Nagar", count: 2}
-                ]
-            },
-            {
-                rank: 6,
-                area: "Bellandur",
-                bookings: 89,
-                percentage: 2.8,
-                subAreas: ["Outer Ring Road", "Green Glen Layout", "Railway Station Road"],
-                apartments: [
-                    {name: "Adarsh Palm Retreat", count: 4},
-                    {name: "Sobha Carnation", count: 2},
-                    {name: "Meda Heights", count: 2},
-                    {name: "Assetz East Point", count: 3},
-                    {name: "RMV Arcades", count: 2}
-                ],
-                locations: [
-                    {name: "Green Glen Layout", count: 2},
-                    {name: "Railway Station Road", count: 2},
-                    {name: "Raju Colony", count: 2}
-                ]
-            },
-            {
-                rank: 7,
-                area: "BTM Layout",
-                bookings: 69,
-                percentage: 2.2,
-                subAreas: ["BTM Stages", "Madiwala", "VP Road"],
-                apartments: [
-                    {name: "Galaxy Homes", count: 2},
-                    {name: "Umar Residency", count: 2},
-                    {name: "Colive Brighton", count: 2}
-                ],
-                locations: [
-                    {name: "BTM Layout 1st Stage", count: 4},
-                    {name: "BTM Layout 2nd Stage", count: 16},
-                    {name: "Madiwala", count: 3}
-                ]
-            },
-            {
-                rank: 8,
-                area: "Koramangala",
-                bookings: 69,
-                percentage: 2.2,
-                subAreas: ["Block Areas", "Cross Roads", "HSR Layout 5th Sector"],
-                apartments: [
-                    {name: "Embassy Meadows", count: 3},
-                    {name: "Raheja Residency", count: 2}
-                ],
-                locations: [
-                    {name: "Koramangala 1st Block", count: 3},
-                    {name: "Koramangala 4th Block", count: 2},
-                    {name: "7th Cross Road", count: 2},
-                    {name: "8th Cross Road", count: 2}
-                ]
-            },
-            {
-                rank: 9,
-                area: "Varthur",
-                bookings: 66,
-                percentage: 2.1,
-                subAreas: ["Balagere Road", "Varthur Road", "Varthur Lake"],
-                apartments: [
-                    {name: "Sobha Dream Acres", count: 9},
-                    {name: "Brigade Cornerstone Utopia", count: 7},
-                    {name: "Prestige Lakeside Habitat", count: 2}
-                ],
-                locations: [
-                    {name: "Varthur Lake", count: 2},
-                    {name: "Myhna Maple Street", count: 2},
-                    {name: "Balagere Road", count: 2}
-                ]
-            },
-            {
-                rank: 10,
-                area: "Sarjapur",
-                bookings: 55,
-                percentage: 1.7,
-                subAreas: ["Sarjapur Road", "Sarjapur Main Road", "Ambalipura"],
-                apartments: [
-                    {name: "Suncity Gloria Apartments", count: 2}
-                ],
-                locations: [
-                    {name: "Sarjapur Road", count: 7},
-                    {name: "Gold's Gym Sarjapur Road", count: 2}
-                ]
-            },
-            {
-                rank: 11,
-                area: "Brookefield",
-                bookings: 51,
-                percentage: 1.6,
-                subAreas: ["ITPL Main Road", "Kundalahalli"],
-                apartments: [
-                    {name: "Gopalan Habitat Splendour Apartments", count: 2}
-                ],
-                locations: [
-                    {name: "BEML Layout", count: 6},
-                    {name: "Kundalahalli", count: 2},
-                    {name: "ITPL Main Road", count: 2}
-                ]
-            },
-            {
-                rank: 12,
-                area: "Indiranagar",
-                bookings: 50,
-                percentage: 1.6,
-                subAreas: ["Eshwara Layout", "Cross Roads"],
-                apartments: [
-                    {name: "KP Towers", count: 2},
-                    {name: "Defence Colony", count: 2}
-                ],
-                locations: [
-                    {name: "1st Cross Road", count: 2},
-                    {name: "Eshwara Layout", count: 2}
-                ]
-            },
-            {
-                rank: 13,
-                area: "Kadugodi",
-                bookings: 48,
-                percentage: 1.5,
-                subAreas: ["Maithri Layout", "AB Vajapayee Road"],
-                apartments: [],
-                locations: [
-                    {name: "Maithri Layout", count: 2},
-                    {name: "Hope Farm Circle", count: 2},
-                    {name: "AB Vajapayee Road", count: 2}
-                ]
-            },
-            {
-                rank: 14,
-                area: "Kadubeesanahalli",
-                bookings: 38,
-                percentage: 1.2,
-                subAreas: ["Kaverappa Layout", "Varthur Road"],
-                apartments: [
-                    {name: "Sree Casa Grande", count: 2}
-                ],
-                locations: [
-                    {name: "Kaverappa Layout", count: 2},
-                    {name: "Varthur Road", count: 2}
-                ]
-            },
-            {
-                rank: 15,
-                area: "JP Nagar",
-                bookings: 34,
-                percentage: 1.1,
-                subAreas: ["JP Nagar Phases", "Annaiah Reddy Layout"],
-                apartments: [
-                    {name: "Shriram Southern Crest", count: 2},
-                    {name: "Brigade Gardenia", count: 2},
-                    {name: "Total Environment Learning To Fly", count: 2}
-                ],
-                locations: [
-                    {name: "JP Nagar 7th Phase", count: 4},
-                    {name: "JP Nagar 8th Phase", count: 4},
-                    {name: "JP Nagar 6th Phase", count: 2},
-                    {name: "Annaiah Reddy Layout", count: 2}
-                ]
-            }
-        ];
+        // All apartment complexes (including single pickups) - Google verified
+const pickupData = [
+    {
+        rank: 1,
+        area: "Unknown",
+        bookings: 1672,
+        percentage: 51.2,
+        subAreas: ["2PH4+2Q7 Battarahalli Bengaluru Karnataka 560049 India", "Ahmedabad Gujarat India", "ParkwayHomes Rayasandra Main Road Rayasandra Bangalore Karnataka India"],
+        apartmentsHigh: [{"name": "Ground Floor Unit 4 B wing Business at Mantri Vima...", "count": 11}, {"name": "WeWork Cinnabar Hills Embassy Golf Links Business ...", "count": 10}, {"name": "DLF Westend Heights Apartments DLF Westend Avenue ...", "count": 4}, {"name": "Provident Park Square Kanakapura Rd Judicial Layou...", "count": 3}, {"name": "Sobha Dream Acres Outer Ring Rd Balagere Bengaluru...", "count": 3}, {"name": "Mantri Tranquil Mantri Tranquil Road Gubbalala Sub...", "count": 3}, {"name": "Prestige Finsbury Park near Shell Technologies KIA...", "count": 3}, {"name": "Brigade Metropolis Garudachar Palya Mahadevapura B...", "count": 3}, {"name": "SJR Blue Waters Clarence Block Sai Sree Layout Par...", "count": 3}, {"name": "Sobha Ivory Block-2 Saint Johns Road Hermit Colony...", "count": 3}],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "Dollars Colony R.M.V. 2nd Stage Bengaluru Karnatak...", "count": 2}, {"name": "AJMERA GREEN ACRES Kalena Agrahara Bengaluru Karna...", "count": 2}, {"name": "Telecom Layout Jakkuru Bengaluru Karnataka India", "count": 2}, {"name": "Shriram Greenfield HOBLI Bengaluru Karnataka India", "count": 2}, {"name": "Vinayaka Nagar Nanjundeswara Layout J P Nagar Phas...", "count": 2}, {"name": "SOBHA Dream Gardens (Residential Apartments in Tha...", "count": 2}, {"name": "Pride Pegasus Visthar Bengaluru Karnataka India", "count": 2}, {"name": "Purva Westend Service Road Kudlu Gate Garebhavipal...", "count": 2}, {"name": "Thimappa Reddy Layout Syndicate Bank Colony Omkar ...", "count": 2}, {"name": "KOTS Jour Byreshwara Layout Hennur Bande HBR Layou...", "count": 2}, {"name": "House Of Hiranandani Villas Devanahalli North Beng...", "count": 2}, {"name": "BDA Layout BTM 4th Stage Bengaluru Karnataka India", "count": 2}, {"name": "4th Block Kormangala Bengaluru Karnataka India", "count": 2}, {"name": "PBR Residency Munireddy Layout Munnireddy Layout P...", "count": 2}, {"name": "No.88 Flat No. 201 Second Floor Ashok Avenue m K.R...", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "NCR Heights Doddanekundi Doddanekkundi Bengaluru K...", "count": 1}, {"name": "Sector 92 Gurugram Haryana India", "count": 1}, {"name": "Block-2 Suncity Gloria Carmelaram Doddakannelli Be...", "count": 1}, {"name": "DLF Woodland Heights Bangalore Karnataka 560105 In...", "count": 1}, {"name": "Abbaiah Reddy Layout Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Dream Acres Wing 29 Balagere Bengaluru Karna...", "count": 1}, {"name": "Sapthagiri Splendor BTM 4th Stage 2nd Block BDA La...", "count": 1}, {"name": "Prestige Glenwood Prestige Glenwood Mandur Bengalu...", "count": 1}, {"name": "Sneha Grandeur Subbanna Layout Hoodi Bengaluru Kar...", "count": 1}, {"name": "KNSS colony Horamavu Bengaluru Karnataka India", "count": 1}, {"name": "Srinivasam Apartment Muniswamy Layout Rayasandra B...", "count": 1}, {"name": "Sobha Coral behind Jakkur Jakkuru Bengaluru Karnat...", "count": 1}, {"name": "Diya Apartment Reliable Residency Layout Phase 3 R...", "count": 1}, {"name": "GODREJ UNITED Bengaluru Karnataka 560048 India", "count": 1}, {"name": "5th Block Phase 3 BSK Bengaluru Karnataka India", "count": 1}, {"name": "Arkavathy Layout Thanisandra Bengaluru Karnataka I...", "count": 1}, {"name": "55/9 Reliable Lake Dew Residency Phase 2 Lakedew R...", "count": 1}, {"name": "Prestige Lake Ridge Thurahalli Road Subramanyapura...", "count": 1}, {"name": "G3 310 chourasia manor phase 2 kaverappa layout ka...", "count": 1}, {"name": "Sannidhi homes Jigani Bande Nalla Sandra Bangalore...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 249,
+        singlePickupCount: 223
+    },
+    {
+        rank: 2,
+        area: "Whitefield",
+        bookings: 259,
+        percentage: 7.9,
+        subAreas: ["Ravoos Rainbow Apartment Hagadur Main Road Hagadur Narayanappa Garden Whitefield Bengaluru Karnataka India", "Hagadur Immadihalli Whitefield Bengaluru Karnataka India", "Graphite India Limited Whitefield Main Rd Doddanakundi Industrial Area 2 Industrial Area Vishueswaraya Bengaluru Karnataka India"],
+        apartmentsHigh: [{"name": "Whitefield Varthur Kodi Palm Meadows Whitefield Be...", "count": 4}, {"name": "Prestige Lakeside Habitat Marathahalli", "count": 3}],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "Prestige Waterford ECC Road Pattandur Agrahara Whi...", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "Prestige Silver Oak ECC Road Pattandur Agrahara Wh...", "count": 1}, {"name": "White Rose Layout Prithvi Layout Whitefield Bengal...", "count": 1}, {"name": "Sri Balaji Sunflower Apartment Siddappa Layout Imm...", "count": 1}, {"name": "Apartment Summer Paradise Lane Nallurhalli Whitefi...", "count": 1}, {"name": "Reddy Mansion Palm Meadows Whitefield Bengaluru Ka...", "count": 1}, {"name": "Prasanth Layout Prasanth Extension Whitefield Beng...", "count": 1}, {"name": "Incor Carmel Heights Taluk Prestige Ozone Whitefie...", "count": 1}, {"name": "Wild Jasmine Layout Phase 1 Whitefield Bengaluru K...", "count": 1}, {"name": "Vinayaka Layout Whitefield Bengaluru Karnataka Ind...", "count": 1}, {"name": "D615 Brigade Lakefront Seetharama Palya epip White...", "count": 1}, {"name": "ASN Srikaram Nallurahalli Palm Meadows Village Whi...", "count": 1}, {"name": "Prithvi Layout Whitefield Bengaluru Karnataka Indi...", "count": 1}, {"name": "102 first floor Sri Mahalasa Residency AECS Layout...", "count": 1}, {"name": "Brigade woods ECC Road Whitefield Bengaluru Karnat...", "count": 1}, {"name": "Suite #6SE 6th floor Neil Tower of Neil Rao Towers...", "count": 1}, {"name": "Dwarakamai Nilayam Palm Meadows Whitefield Bengalu...", "count": 1}, {"name": "Brigade Lakefront Seetharampalya", "count": 1}, {"name": "3023 Sobha Habitech Road Pattandur Agrahara Whitef...", "count": 1}, {"name": "RR Residency #6/A Dodsworth Layout Whitefield Beng...", "count": 1}, {"name": "Ittina Anu Apartment Maithri Layout Whitefield Ben...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 31,
+        singlePickupCount: 28
+    },
+    {
+        rank: 3,
+        area: "HSR Layout",
+        bookings: 147,
+        percentage: 4.5,
+        subAreas: ["DoubleTree Suites by Hilton Bengaluru Outer Ring Road Sarjapur Main Road Amblipura PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India", "31A Main Road PWD Quarters Sector 2 HSR Layout Bengaluru Karnataka India", "HSR layout 14th A Cross Road Sector 6 HSR Layout Bangalore Karnataka 560102 India"],
+        apartmentsHigh: [{"name": "HSR Layout Bengaluru Karnataka India", "count": 10}, {"name": "Sector 1 HSR Layout Bengaluru Karnataka India", "count": 8}, {"name": "Sector 2 HSR Layout Bengaluru Karnataka India", "count": 6}, {"name": "Sector 3 HSR Layout Bengaluru Karnataka India", "count": 4}, {"name": "Koramangala 1st Block HSR Layout 5th Sector Bengal...", "count": 3}, {"name": "Sector 7 HSR Layout Bengaluru Karnataka India", "count": 3}],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "2nd Sector HSR Layout Bengaluru Karnataka India", "count": 2}, {"name": "ITI Layout 7th Sector HSR Layout Bengaluru Karnata...", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "1st Block Koramangala HSR Layout 5th Sector Bengal...", "count": 1}, {"name": "HSR Layout Bangalore Karnataka India", "count": 1}, {"name": "Poorvika Beauty Salon Garden Layout Sector 2 HSR L...", "count": 1}, {"name": "Block-17 PWD Quarters 1st Sector HSR Layout Bengal...", "count": 1}, {"name": "Agara Village 1st Sector HSR Layout Bengaluru Karn...", "count": 1}, {"name": "Jakkasandra 1st Block Koramangala HSR Layout 5th S...", "count": 1}, {"name": "Sobha Daffodil Club House 1 PWD Quarters 1st Secto...", "count": 1}, {"name": "Sunchees Oak 1st Sector HSR Layout Bengaluru Karna...", "count": 1}, {"name": "Berry Nest Parangi Palaya Sector 2 HSR Layout Beng...", "count": 1}, {"name": "Hsr layout Madiwala New Extension HSR layout Secto...", "count": 1}, {"name": "2nd Sector HSR Layout Bangalore Karnataka 560102 I...", "count": 1}, {"name": "B 605 Manar Elegance Somasundarapalya HSR layout s...", "count": 1}, {"name": "PURVA FAIRMONT APARTMENT Garden Layout Sector 2 HS...", "count": 1}, {"name": "7th Sector HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Agara Bus stop Agara Village 1st Sector HSR Layout...", "count": 1}, {"name": "109 2nd Avenue Teacher's Colony Santhosapuram 1st ...", "count": 1}, {"name": "ITI Layout Sector 7 HSR Layout Bengaluru Karnataka...", "count": 1}, {"name": "Agara Lake Agara Village 1st Sector HSR Layout Ben...", "count": 1}, {"name": "Rajiv Gandhi Nagar Rajiv Gandhi Nagar Muneswara Na...", "count": 1}, {"name": "Agara 1st Sector HSR Layout Bengaluru Karnataka In...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 32,
+        singlePickupCount: 24
+    },
+    {
+        rank: 4,
+        area: "Marathahalli",
+        bookings: 142,
+        percentage: 4.3,
+        subAreas: ["CKB Layout Marathahalli Bengaluru Karnataka India", "SGR Dental College SGR Dental College Road Kasavanahalli Village Marathahalli Bengaluru Karnataka India", "AECS Layout Marathahalli Bengaluru Karnataka India"],
+        apartmentsHigh: [],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "Mantri Flora Sarjapur", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "Salarpuria Sanctity Sarjapur", "count": 1}, {"name": "suvarnaraju homes Vinayaka Layout Dodda Nekkundi E...", "count": 1}, {"name": "Kaveri Layout Marathahalli Village Marathahalli Be...", "count": 1}, {"name": "RFB-007 (BLOCK 5) Purva Riviera Lakshminarayana Pu...", "count": 1}, {"name": "Manjunatha Layout Marathahalli Village Marathahall...", "count": 1}, {"name": "Sattva Senorita Salarpuria Tower C Flat 1601 Sarja...", "count": 1}, {"name": "AJR plaza Rainbow Layout Kasavanahalli Village Mar...", "count": 1}, {"name": "Purva Fountain Square HAL Old Airport Road Near Ra...", "count": 1}, {"name": "Rajatha Enclave Kaveri Layout Marathahalli Village...", "count": 1}, {"name": "Salarpuria Sanctity Sarjapur", "count": 1}, {"name": "Koushika Enclave Felice Enclave Rainbow Layout Mar...", "count": 1}, {"name": "S V Pride B Block AECS Layout Marathahalli Bengalu...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 13,
+        singlePickupCount: 12
+    },
+    {
+        rank: 5,
+        area: "Electronic City",
+        bookings: 111,
+        percentage: 3.4,
+        subAreas: ["Gopalan Lakefront Veerasandra Main Road Veer Sandra Electronic City Bengaluru Karnataka India", "Electronic City Bengaluru Karnataka India", "Hosa Road Chennakeshava Nagar Lavakusha Nagar Pragathi Nagar Electronic City Bengaluru Karnataka 560100 India"],
+        apartmentsHigh: [{"name": "Phase 1 Electronic City Bengaluru Karnataka India", "count": 9}, {"name": "Electronics City Phase 1 Electronic City Bengaluru...", "count": 3}, {"name": "Phase 1 Electronic City Bengaluru Karnataka 560100...", "count": 3}],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "S A Residency Kammasandra Electronic City Bengalur...", "count": 2}, {"name": "Electronic City Phase II Electronic City Bengaluru...", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "Nisarga Residency Sai Sarana Layout Phase 1 Kammas...", "count": 1}, {"name": "Neeladri Investment Layout Doddathoguru Electronic...", "count": 1}, {"name": "Site number 14 Fortune Munireddy Layout Doddanagam...", "count": 1}, {"name": "SHRIRAM SIGNIAA Electronics City Phase 1 Electroni...", "count": 1}, {"name": "Shri Lakshminarasimha Swamy Temple Green House Lay...", "count": 1}, {"name": "Prestige Sunrise Park Birchwood Neotown Road Phase...", "count": 1}, {"name": "Celebrity Paradise Layout Doddathoguru Electronics...", "count": 1}, {"name": "Prestige Sunrise Park", "count": 1}, {"name": "Celebrity Paradise Layout Doddathoguru Phase 1 Ele...", "count": 1}, {"name": "Bimadhar Building 69 Chikkathoguru Konappana Agrah...", "count": 1}, {"name": "Harshu lake view apartment near NBR lake view apar...", "count": 1}, {"name": "Electronic city BTM Phase 1 Phase 2 Electronic Cit...", "count": 1}, {"name": "Tech City Layout Celebrity Paradise Layout Doddath...", "count": 1}, {"name": "Pavani Chandana Phase 2 Electronic City Bengaluru ...", "count": 1}, {"name": "Sobha Silicon Oasis Hosa Road Doddanagamangala Vil...", "count": 1}, {"name": "Pragathi Royale- II Doddathoguru Electronic City P...", "count": 1}, {"name": "Shriram Summitt Electronic City Bengaluru Karnatak...", "count": 1}, {"name": "Phase 2 Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Silicon Oasis Hosa Road Doddanagamangala Vil...", "count": 1}, {"name": "Shriram Summit Wing 3 Electronic City Phase I Elec...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 30,
+        singlePickupCount: 25
+    },
+    {
+        rank: 6,
+        area: "Bellandur",
+        bookings: 94,
+        percentage: 2.9,
+        subAreas: ["Devarabeesana Halli Bellandur Bengaluru Karnataka India", "RMV Arcades Kariyammana Agrahara Bellandur Bengaluru Karnataka India", "RMZ Ecoworld Road Adarsh Palm Retreat Bellandur Bengaluru Karnataka 560103 India"],
+        apartmentsHigh: [{"name": "Adarsh Palm Retreat Bellandur Bengaluru Karnataka ...", "count": 4}],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "Meda Heights near AET circle behind Adarsh Palm Re...", "count": 2}, {"name": "Green Glen Layout Bellandur Bengaluru Karnataka In...", "count": 2}, {"name": "Sobha Carnation Margosa Avenue Green Glen Layout B...", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "Muni Reddy Garden Adarsh Palm Retreat Bellandur Be...", "count": 1}, {"name": "Venkata krishna Ladies Pg| Near Embassy Tech Villa...", "count": 1}, {"name": "Margosa Avenue Green Glen Layout Bellandur Bengalu...", "count": 1}, {"name": "Raju Colony Yemalur Bellandur Bangalore Karnataka ...", "count": 1}, {"name": "Tower 2 Adarsh Palm Retreat Bellandur Bengaluru Ka...", "count": 1}, {"name": "SOBHA AQUAMARINE Green Glen Layout Bellandur Benga...", "count": 1}, {"name": "Lakshmi Residency Shan Boga Colony Yemalur Belland...", "count": 1}, {"name": "Prabha Residency Green Glen Layout Bellandur", "count": 1}, {"name": "Oxygen PG For Ladies Joy Avenue Green Glen Layout ...", "count": 1}, {"name": "EMBASSY PRISTINE Suncity Apartments Lane Ibbaluru ...", "count": 1}, {"name": "Uber Verdant Phase 2 Carmelaram Janatha Colony Chi...", "count": 1}, {"name": "DNR REFLECTION Green Glen Layout Bellandur Bengalu...", "count": 1}, {"name": "Prestige Kew Gardens Kariyammana Agrahara Road Sha...", "count": 1}, {"name": "VARS Parkwood Adarsh Palm Retreat Bellandur Bengal...", "count": 1}, {"name": "Sobha Hibiscus Green Glen Layout Bellandur Bengalu...", "count": 1}, {"name": "Ushodaya Eleganza Happiness Avenue Green Glen Layo...", "count": 1}, {"name": "Sobha Aquamarine Palm Avenue Green Glen Layout Bel...", "count": 1}, {"name": "Rohan Jharoka phase II Yamalur Bellandur Bengaluru...", "count": 1}, {"name": "Oceanus Freesia Enclave Block-E Oceanus Freesia En...", "count": 1}, {"name": "Abhiram Enclave Lake View Residency Bellandur Beng...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 29,
+        singlePickupCount: 25
+    },
+    {
+        rank: 7,
+        area: "Varthur",
+        bookings: 71,
+        percentage: 2.2,
+        subAreas: ["ATZ Estrella Halasahalli Road Near Varthur Police Station Varthur Karnataka India", "SANKALP CHERRY BLOSSOM Eidgah Road Devasthanagalu Varthur Karnataka 560087 India", "DS max Sterling Rajbhavi Road Varthur Karnataka India"],
+        apartmentsHigh: [{"name": "Sobha Dream Acres Balagere Road Devasthanagalu Var...", "count": 8}],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "Brigade Cornerstone Utopia Varthur Rd Bengaluru Ka...", "count": 2}, {"name": "Prestige Lakeside Habitat Cinderella Avenue Devast...", "count": 2}, {"name": "Brigade Cornerstone Utopia Varthur Road Varthur Be...", "count": 2}, {"name": "Brigade Cornerstone Utopia Varthur Road Bengaluru ...", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "TOWER-12 Prestige Lakeside Habitat Devasthanagalu ...", "count": 1}, {"name": "Sobha Dream Acres Balagere Road Devasthanagalu Var...", "count": 1}, {"name": "A 303 Krishnasiri Residency Subbaiah Garden Devast...", "count": 1}, {"name": "Sankalpa layout varthur Varthur Karnataka India", "count": 1}, {"name": "Sobha Dream Acres Wing 5 Balagere Road Balagere Va...", "count": 1}, {"name": "Brigade Cornerstone Utopia Varthur Rd Varthur Beng...", "count": 1}, {"name": "Prakash Layout Varthur Karnataka India", "count": 1}, {"name": "Brigade Cornerstone utopia Varthur", "count": 1}, {"name": "Eden", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 14,
+        singlePickupCount: 9
+    },
+    {
+        rank: 8,
+        area: "BTM Layout",
+        bookings: 68,
+        percentage: 2.1,
+        subAreas: ["AB Residency 13th Main Road Sunshine Colony Stage 2 BTM Layout Bengaluru Karnataka India", "905 16th Main Road BTM 2nd Stage Kuvempu Nagar Stage 2 BTM Layout Bengaluru Karnataka India", "N R NILAYA RESIDENCY 5th Cross Road Tavarekere Maruti Nagar 1st Stage BTM Layout Bengaluru Karnataka India"],
+        apartmentsHigh: [{"name": "BTM 2nd Stage BTM Layout Bengaluru Karnataka India", "count": 13}, {"name": "Madiwala 1st Stage BTM Layout Bengaluru Karnataka ...", "count": 3}],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "BTM Layout Bengaluru Karnataka India", "count": 2}, {"name": "Galaxy Homes VP Road Old Madiwala Dollar Scheme Co...", "count": 2}, {"name": "BTM Layout 2nd Stage BTM Layout Bengaluru Karnatak...", "count": 2}, {"name": "Colive 1155 Brighton Dollar Layout BTM 2nd Stage B...", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "68 Abbaappa Layout Stage 2 BTM Layout Bengaluru Ka...", "count": 1}, {"name": "Confident Pride KAS Officers Colony Stage 2 BTM La...", "count": 1}, {"name": "Aradhana Residency NS Palya BTM 2nd Stage BTM Layo...", "count": 1}, {"name": "MCHS Colony BTM 2nd Stage BTM Layout Bengaluru Kar...", "count": 1}, {"name": "Tavarekere Ramappa layout 1st Stage BTM Layout Ben...", "count": 1}, {"name": "BTM 1st Stage BTM Layout 1 Bengaluru Karnataka Ind...", "count": 1}, {"name": "Laa Emerald KAS Officers Colony Stage 2 BTM Layout...", "count": 1}, {"name": "Aryan Residency BTM 2nd Stage Kuvempu Nagar Stage ...", "count": 1}, {"name": "Stage 2nd BTM Layout BTM Layout Bengaluru Karnatak...", "count": 1}, {"name": "EWS Colony BTM 2nd Stage BTM Layout Bengaluru Karn...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 16,
+        singlePickupCount: 10
+    },
+    {
+        rank: 9,
+        area: "Koramangala",
+        bookings: 59,
+        percentage: 1.8,
+        subAreas: ["Nextdoor Bumble Co-Living PG 100 Feet Road 4th Block Koramangala Bengaluru Karnataka India", "Dreamhigh Communication Austin Town Koramangala Bengaluru Karnataka India", "Koramangala Bengaluru Karnataka India"],
+        apartmentsHigh: [],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "4th Block Koramangala Bengaluru Karnataka India", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "2nd Block Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "S.T. Bed Cauvery Colony Koramangala Bengaluru Karn...", "count": 1}, {"name": "ESTEEM ROYALE S.T. Bed Cauvery Colony Koramangala ...", "count": 1}, {"name": "SRIJA PG FOR LADIES National Games Village Complex...", "count": 1}, {"name": "3rd Block Koramangala 1A Block Koramangala 3 Block...", "count": 1}, {"name": "6th Block Koramangala Koramangala Bengaluru Karnat...", "count": 1}, {"name": "Gem Regency Nirguna Mandir Layout Koramangala", "count": 1}, {"name": "Venkatapura Teacher's Colony Jakkasandra 1st Block...", "count": 1}, {"name": "Jyoti Vilas Pawar KHB Colony 5th Block Koramangala...", "count": 1}, {"name": "NATIONAL GAMES VILLAGE National Games Village Comp...", "count": 1}, {"name": "No.15 KHB MIG Colony 5th Block Koramangala Bengalu...", "count": 1}, {"name": "KHB Games Village Koramangala Bengaluru Karnataka ...", "count": 1}, {"name": "Sahana nilaya apartment Chandra Reddy Layout S T B...", "count": 1}, {"name": "Sri Ranga Luxury Ladies PG opposite to krishna sag...", "count": 1}, {"name": "ANAA Infra's Signature Nirguna Mandir Extn 1st Blo...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 16,
+        singlePickupCount: 15
+    },
+    {
+        rank: 10,
+        area: "Indiranagar",
+        bookings: 50,
+        percentage: 1.5,
+        subAreas: ["19 NGEF Lane Stage 1 Indiranagar Bengaluru Karnataka India", "430 11th Main HAL 2nd Stage Indiranagar Bengaluru Karnataka India", "4053 19th Main Road HAL 2nd Stage Indiranagar Bengaluru Karnataka India"],
+        apartmentsHigh: [],  // 3+ pickups (top 10)
+        apartmentsMedium: [],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "INDUS SIGNATURE APARTMENT Eshwara Layout Indiranag...", "count": 1}, {"name": "2nd stage Indiranagar BDA Colony Domlur Village Do...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 2,
+        singlePickupCount: 2
+    },
+    {
+        rank: 11,
+        area: "Brookefield",
+        bookings: 50,
+        percentage: 1.5,
+        subAreas: ["Sterling Shalom EPIP Zone Brookefield Chinnapanahalli Karnataka India", "MILLENNIUM HABITAT ITPL Main Road Kundalahalli Brookefield Bengaluru Karnataka 560037 India", "Brookefield Bengaluru Karnataka India"],
+        apartmentsHigh: [{"name": "BEML Layout Brookefield Bengaluru Karnataka India", "count": 6}],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "Phase 2 Brookefield Bengaluru Karnataka India", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "Sreenivas Reddy Layout Rd Sri Nivasa Reddy Layout ...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 3,
+        singlePickupCount: 1
+    },
+    {
+        rank: 12,
+        area: "Kadugodi",
+        bookings: 48,
+        percentage: 1.5,
+        subAreas: ["73 2nd Main Rd Maithri Layout Kadugodi Bengaluru Karnataka 560067 India", "Channasandra Main Road 3G Homes Crimson Layout Kadugodi Bengaluru Karnataka India", "Kadugodi Bengaluru Karnataka India"],
+        apartmentsHigh: [],  // 3+ pickups (top 10)
+        apartmentsMedium: [],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "Siddhartha Layout Kadugodi Bengaluru Karnataka Ind...", "count": 1}, {"name": "ARK SERENE COUNTY 3G Homes Crimson Layout Kadugodi...", "count": 1}, {"name": "V S Reddy Colony Kadugodi Bengaluru Karnataka Indi...", "count": 1}, {"name": "VSR layout Maithri Layout Kadugodi Bengaluru Karna...", "count": 1}, {"name": "Pavani Maithri Apartment Maithri Layout Kadugodi B...", "count": 1}, {"name": "Maithri Layout Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "Patalamma Layout V S Reddy Colony Kadugodi Bengalu...", "count": 1}, {"name": "Patel's Green Valley Kadugodi Bengaluru Karnataka ...", "count": 1}, {"name": "Prabhavathi Elegant Apartment Apartment Kumbena Ag...", "count": 1}, {"name": "Kadugodi Kadugodi Flyover Belatur Colony Brindavan...", "count": 1}, {"name": "XQP4+WF9 Maithri Layout Kadugodi Bengaluru Karnata...", "count": 1}, {"name": "Belathur colony Kadugodi Colony Kumbena Agrahara K...", "count": 1}, {"name": "N.V. Residency Patalamma Layout V S Reddy Colony K...", "count": 1}, {"name": "4144 Prestige Park View Internal Rd Kadugodi Colon...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 14,
+        singlePickupCount: 14
+    },
+    {
+        rank: 13,
+        area: "Sarjapur",
+        bookings: 47,
+        percentage: 1.4,
+        subAreas: ["Ambalipura - Sarjapur Road Kaikondrahalli Bengaluru Karnataka India", "Prestige Silver Dale Sarjapur Main Road Rainbow Drive Halanayakanahalli Bengaluru Karnataka India", "DSR PARKWAY Sarjapur Main Road Carmelaram P.O Bhoganhalli Bengaluru Karnataka India"],
+        apartmentsHigh: [],  // 3+ pickups (top 10)
+        apartmentsMedium: [],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "Shriram Malhaar Sarjapur Hobli Ittangur Bengaluru ...", "count": 1}, {"name": "Peninsula Solitaire villas Thindlu Sarjapur 562125", "count": 1}, {"name": "Lio Naga Chaitanya Stay Inn", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 3,
+        singlePickupCount: 3
+    },
+    {
+        rank: 14,
+        area: "Kadubeesanahalli",
+        bookings: 36,
+        percentage: 1.1,
+        subAreas: ["Kadubeesanahalli Bengaluru Karnataka India", "Kadubeesanahalli Bengaluru Karnataka India", "Kadubeesanahalli Bengaluru Karnataka India"],
+        apartmentsHigh: [],  // 3+ pickups (top 10)
+        apartmentsMedium: [],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "VILLA-15 PRESTIGE TECH VISTA Kadubeesanahalli Beng...", "count": 1}, {"name": "BLOCK-2 Kaverappa Layout Kadubeesanahalli Bengalur...", "count": 1}, {"name": "Krishna Residency opp. to CISCO Kaverappa Layout K...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 3,
+        singlePickupCount: 3
+    },
+    {
+        rank: 15,
+        area: "JP Nagar",
+        bookings: 34,
+        percentage: 1.0,
+        subAreas: ["JP Nagar 6th Phase Krishna Devaraya Nagar Yelachenahalli Kumaraswamy Layout Bengaluru Karnataka India", "JP Nagar 7th Phase Bangalore Karnataka India", "JP Nagar 8th Phase J. P. Nagar Bengaluru Karnataka India"],
+        apartmentsHigh: [],  // 3+ pickups (top 10)
+        apartmentsMedium: [{"name": "Annaiah Reddy Layout JP Nagar Phase 6 J. P. Nagar ...", "count": 2}],  // 2 pickups (top 15)  
+        apartmentsSingle: [{"name": "Brigade Millenium Rd Lakshmi Layout JP Nagar 7th P...", "count": 1}, {"name": "MS Ramaiah City Layout JP Nagar 7th Phase Bengalur...", "count": 1}, {"name": "Century Pragati Apartment Lakshmi Layout JP Nagar ...", "count": 1}],  // 1 pickup (top 20)
+        totalApartments: 4,
+        singlePickupCount: 3
+    }
+];
 
         // Populate table
         function populateTable(data = pickupData) {
@@ -655,30 +529,54 @@
             data.forEach(item => {
                 const row = document.createElement('tr');
                 
-                // Format apartments
-                const apartmentsHtml = item.apartments.map(apt => 
-                    `<span class="apartment-item">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
-                ).join(' ');
-
-                const locationsHtml = item.locations.map(loc => 
-                    `<span class="apartment-item">${loc.name}<span class="apartment-count">${loc.count}</span></span>`
-                ).join(' ');
+                // Create apartments HTML with sections
+                let apartmentsHtml = '';
+                
+                // Stats summary
+                apartmentsHtml += `<div class="stats-summary">
+                    <strong>${item.totalApartments}</strong> total apartments | 
+                    <span style="color:#27ae60">${item.apartmentsHigh.length}</span> high pickup | 
+                    <span style="color:#f39c12">${item.apartmentsMedium.length}</span> medium pickup | 
+                    <span style="color:#95a5a6">${item.singlePickupCount}</span> single pickup
+                </div>`;
+                
+                // High pickup apartments (3+)
+                if (item.apartmentsHigh.length > 0) {
+                    apartmentsHtml += '<div class="section-header high">🔥 High Pickup (3+)</div>';
+                    apartmentsHtml += item.apartmentsHigh.map(apt => 
+                        `<span class="apartment-item high-pickup">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
+                    ).join(' ');
+                }
+                
+                // Medium pickup apartments (2)
+                if (item.apartmentsMedium.length > 0) {
+                    apartmentsHtml += '<div class="section-header medium">📈 Medium Pickup (2)</div>';
+                    apartmentsHtml += item.apartmentsMedium.map(apt => 
+                        `<span class="apartment-item medium-pickup">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
+                    ).join(' ');
+                }
+                
+                // Single pickup apartments (1) - show first 20
+                if (item.apartmentsSingle.length > 0) {
+                    apartmentsHtml += '<div class="section-header single">🏠 Single Pickup (1) - First 20</div>';
+                    apartmentsHtml += item.apartmentsSingle.map(apt => 
+                        `<span class="apartment-item single-pickup">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
+                    ).join(' ');
+                    
+                    if (item.singlePickupCount > 20) {
+                        apartmentsHtml += `<span class="apartment-item" style="background:#ddd; font-style:italic;">...and ${item.singlePickupCount - 20} more</span>`;
+                    }
+                }
 
                 row.innerHTML = `
                     <td class="rank-cell">${item.rank}</td>
                     <td class="area-name">${item.area}</td>
                     <td class="bookings">${item.bookings} <span class="percentage">(${item.percentage}%)</span></td>
-                    <td class="sub-areas">${item.subAreas.join(', ')}</td>
                     <td class="apartments">${apartmentsHtml}</td>
-                    <td class="apartments">${locationsHtml}</td>
                 `;
                 
                 tableBody.appendChild(row);
             });
-
-            // Show/hide no results message
-            document.getElementById('noResults').style.display = data.length === 0 ? 'block' : 'none';
-            document.getElementById('dataTable').style.display = data.length === 0 ? 'none' : 'table';
         }
 
         // Search functionality
@@ -692,9 +590,9 @@
 
             const filteredData = pickupData.filter(item => {
                 return item.area.toLowerCase().includes(searchTerm) ||
-                       item.subAreas.some(sub => sub.toLowerCase().includes(searchTerm)) ||
-                       item.apartments.some(apt => apt.name.toLowerCase().includes(searchTerm)) ||
-                       item.locations.some(loc => loc.name.toLowerCase().includes(searchTerm));
+                       item.apartmentsHigh.some(apt => apt.name.toLowerCase().includes(searchTerm)) ||
+                       item.apartmentsMedium.some(apt => apt.name.toLowerCase().includes(searchTerm)) ||
+                       item.apartmentsSingle.some(apt => apt.name.toLowerCase().includes(searchTerm));
             });
 
             populateTable(filteredData);
@@ -703,20 +601,23 @@
         // Export to Excel function
         function exportToExcel() {
             const ws_data = [
-                ['Rank', 'Area Name', 'Total Bookings', 'Percentage', 'Top Sub-Areas', 'Verified Apartments (Count)', 'Areas/Roads (Count)']
+                ['Rank', 'Area Name', 'Total Bookings', 'Percentage', 'Total Apartments', 'All Apartment Names and Pickup Counts']
             ];
 
             pickupData.forEach(item => {
-                const apartmentsList = item.apartments.map(apt => `${apt.name} (${apt.count})`).join(', ');
-                const locationsList = item.locations.map(loc => `${loc.name} (${loc.count})`).join(', ');
+                const allApartments = [
+                    ...item.apartmentsHigh.map(apt => `${apt.name} (${apt.count})`),
+                    ...item.apartmentsMedium.map(apt => `${apt.name} (${apt.count})`),
+                    ...item.apartmentsSingle.map(apt => `${apt.name} (${apt.count})`)
+                ].join(', ');
+                
                 ws_data.push([
                     item.rank,
                     item.area,
                     item.bookings,
                     `${item.percentage}%`,
-                    item.subAreas.join(', '),
-                    apartmentsList,
-                    locationsList
+                    item.totalApartments,
+                    allApartments
                 ]);
             });
 
@@ -730,17 +631,16 @@
                 { wch: 20 },  // Area Name
                 { wch: 15 },  // Bookings
                 { wch: 12 },  // Percentage
-                { wch: 40 },  // Sub-Areas
-                { wch: 60 },  // Apartments
-                { wch: 60 }   // Locations
+                { wch: 15 },  // Total Apartments
+                { wch: 100 }  // All Apartments
             ];
 
             // Add worksheet to workbook
-            XLSX.utils.book_append_sheet(wb, ws, "Google Verified Bangalore Analysis");
+            XLSX.utils.book_append_sheet(wb, ws, "All Bangalore Apartments");
 
             // Generate filename with current date
             const now = new Date();
-            const filename = `Google_Verified_Bangalore_Analysis_${now.getFullYear()}-${(now.getMonth()+1).toString().padStart(2,'0')}-${now.getDate().toString().padStart(2,'0')}.xlsx`;
+            const filename = `All_Bangalore_Apartments_${now.getFullYear()}-${(now.getMonth()+1).toString().padStart(2,'0')}-${now.getDate().toString().padStart(2,'0')}.xlsx`;
 
             // Save file
             XLSX.writeFile(wb, filename);
@@ -749,15 +649,6 @@
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             populateTable();
-            
-            // Add some loading animation
-            document.getElementById('loading').style.display = 'block';
-            document.getElementById('dataTable').style.display = 'none';
-            
-            setTimeout(() => {
-                document.getElementById('loading').style.display = 'none';
-                document.getElementById('dataTable').style.display = 'table';
-            }, 1000);
         });
     </script>
 </body>
