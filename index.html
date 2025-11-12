@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Bangalore Apartments - Including Single Pickups</title>
+    <title>All Bangalore Apartments - Complete Database</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <style>
@@ -213,26 +213,29 @@
 
         .apartments {
             line-height: 1.4;
-            max-height: 200px;
+            max-height: 300px;
             overflow-y: auto;
         }
 
         .apartment-item {
             background: #ecf0f1;
-            padding: 2px 6px;
+            padding: 4px 8px;
             border-radius: 8px;
             font-size: 0.75rem;
-            margin: 1px;
+            margin: 2px;
             display: inline-block;
+            word-break: break-word;
+            max-width: 100%;
         }
 
         .apartment-count {
             background: #3498db;
             color: white;
-            padding: 1px 4px;
+            padding: 2px 5px;
             border-radius: 4px;
             font-size: 0.7rem;
-            margin-left: 3px;
+            margin-left: 5px;
+            font-weight: bold;
         }
 
         .high-pickup {
@@ -252,9 +255,11 @@
 
         .section-header {
             font-weight: 600;
-            margin: 5px 0 3px 0;
-            font-size: 0.7rem;
+            margin: 8px 0 4px 0;
+            font-size: 0.75rem;
             text-transform: uppercase;
+            display: block;
+            width: 100%;
         }
 
         .section-header.high { color: #27ae60; }
@@ -267,6 +272,32 @@
             border-radius: 8px;
             margin-bottom: 10px;
             font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .show-more-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            margin: 5px 2px;
+            transition: all 0.3s ease;
+        }
+
+        .show-more-btn:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .hidden-apartments {
+            display: none;
+        }
+
+        .hidden-apartments.show {
+            display: inline;
         }
 
         @media (max-width: 768px) {
@@ -275,6 +306,11 @@
                 padding: 8px 5px;
                 font-size: 0.75rem;
             }
+            
+            .apartment-item {
+                font-size: 0.7rem;
+                padding: 3px 6px;
+            }
         }
     </style>
 </head>
@@ -282,7 +318,7 @@
     <div class="container">
         <div class="header">
             <h1><i class="fas fa-building"></i> All Bangalore Apartments</h1>
-            <p>Complete list including single pickups • 459 apartment complexes total</p>
+            <p>Complete database with full addresses • 459 apartment complexes • Expandable lists</p>
         </div>
 
         <div class="stats-container">
@@ -311,7 +347,7 @@
         <div class="controls">
             <div class="search-box">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" id="searchInput" placeholder="Search apartments...">
+                <input type="text" id="searchInput" placeholder="Search apartments by name or address...">
             </div>
             <button class="export-btn" onclick="exportToExcel()">
                 <i class="fas fa-download"></i>
@@ -326,7 +362,7 @@
                         <th width="5%">Rank</th>
                         <th width="10%">Area</th>
                         <th width="8%">Bookings</th>
-                        <th width="77%">All Apartments (High Pickup • Medium Pickup • Single Pickup)</th>
+                        <th width="77%">All Apartments (Full Addresses • Expandable Lists)</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
@@ -337,7 +373,7 @@
     </div>
 
     <script>
-        // All apartment complexes (including single pickups) - Google verified
+        // All apartment complexes (including single pickups) - Full addresses
 const pickupData = [
     {
         rank: 1,
@@ -345,9 +381,9 @@ const pickupData = [
         bookings: 1672,
         percentage: 51.2,
         subAreas: ["2PH4+2Q7 Battarahalli Bengaluru Karnataka 560049 India", "Ahmedabad Gujarat India", "ParkwayHomes Rayasandra Main Road Rayasandra Bangalore Karnataka India"],
-        apartmentsHigh: [{"name": "Ground Floor Unit 4 B wing Business at Mantri Vima...", "count": 11}, {"name": "WeWork Cinnabar Hills Embassy Golf Links Business ...", "count": 10}, {"name": "DLF Westend Heights Apartments DLF Westend Avenue ...", "count": 4}, {"name": "Provident Park Square Kanakapura Rd Judicial Layou...", "count": 3}, {"name": "Sobha Dream Acres Outer Ring Rd Balagere Bengaluru...", "count": 3}, {"name": "Mantri Tranquil Mantri Tranquil Road Gubbalala Sub...", "count": 3}, {"name": "Prestige Finsbury Park near Shell Technologies KIA...", "count": 3}, {"name": "Brigade Metropolis Garudachar Palya Mahadevapura B...", "count": 3}, {"name": "SJR Blue Waters Clarence Block Sai Sree Layout Par...", "count": 3}, {"name": "Sobha Ivory Block-2 Saint Johns Road Hermit Colony...", "count": 3}],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "Dollars Colony R.M.V. 2nd Stage Bengaluru Karnatak...", "count": 2}, {"name": "AJMERA GREEN ACRES Kalena Agrahara Bengaluru Karna...", "count": 2}, {"name": "Telecom Layout Jakkuru Bengaluru Karnataka India", "count": 2}, {"name": "Shriram Greenfield HOBLI Bengaluru Karnataka India", "count": 2}, {"name": "Vinayaka Nagar Nanjundeswara Layout J P Nagar Phas...", "count": 2}, {"name": "SOBHA Dream Gardens (Residential Apartments in Tha...", "count": 2}, {"name": "Pride Pegasus Visthar Bengaluru Karnataka India", "count": 2}, {"name": "Purva Westend Service Road Kudlu Gate Garebhavipal...", "count": 2}, {"name": "Thimappa Reddy Layout Syndicate Bank Colony Omkar ...", "count": 2}, {"name": "KOTS Jour Byreshwara Layout Hennur Bande HBR Layou...", "count": 2}, {"name": "House Of Hiranandani Villas Devanahalli North Beng...", "count": 2}, {"name": "BDA Layout BTM 4th Stage Bengaluru Karnataka India", "count": 2}, {"name": "4th Block Kormangala Bengaluru Karnataka India", "count": 2}, {"name": "PBR Residency Munireddy Layout Munnireddy Layout P...", "count": 2}, {"name": "No.88 Flat No. 201 Second Floor Ashok Avenue m K.R...", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "NCR Heights Doddanekundi Doddanekkundi Bengaluru K...", "count": 1}, {"name": "Sector 92 Gurugram Haryana India", "count": 1}, {"name": "Block-2 Suncity Gloria Carmelaram Doddakannelli Be...", "count": 1}, {"name": "DLF Woodland Heights Bangalore Karnataka 560105 In...", "count": 1}, {"name": "Abbaiah Reddy Layout Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Dream Acres Wing 29 Balagere Bengaluru Karna...", "count": 1}, {"name": "Sapthagiri Splendor BTM 4th Stage 2nd Block BDA La...", "count": 1}, {"name": "Prestige Glenwood Prestige Glenwood Mandur Bengalu...", "count": 1}, {"name": "Sneha Grandeur Subbanna Layout Hoodi Bengaluru Kar...", "count": 1}, {"name": "KNSS colony Horamavu Bengaluru Karnataka India", "count": 1}, {"name": "Srinivasam Apartment Muniswamy Layout Rayasandra B...", "count": 1}, {"name": "Sobha Coral behind Jakkur Jakkuru Bengaluru Karnat...", "count": 1}, {"name": "Diya Apartment Reliable Residency Layout Phase 3 R...", "count": 1}, {"name": "GODREJ UNITED Bengaluru Karnataka 560048 India", "count": 1}, {"name": "5th Block Phase 3 BSK Bengaluru Karnataka India", "count": 1}, {"name": "Arkavathy Layout Thanisandra Bengaluru Karnataka I...", "count": 1}, {"name": "55/9 Reliable Lake Dew Residency Phase 2 Lakedew R...", "count": 1}, {"name": "Prestige Lake Ridge Thurahalli Road Subramanyapura...", "count": 1}, {"name": "G3 310 chourasia manor phase 2 kaverappa layout ka...", "count": 1}, {"name": "Sannidhi homes Jigani Bande Nalla Sandra Bangalore...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [{"name": "Ground Floor Unit 4 B wing Business at Mantri Viman Nagar Viman Nagar Pune Maharashtra 411014", "count": 11}, {"name": "WeWork Cinnabar Hills Embassy Golf Links Business Park Challaghatta Bangalore Karnataka 560071 India", "count": 10}, {"name": "DLF Westend Heights Apartments DLF Westend Avenue DLF Newtown Akshayanagar Bengaluru Karnataka India", "count": 4}, {"name": "Provident Park Square Kanakapura Rd Judicial Layout 2nd Phase Vakil Garden City Bengaluru Karnataka India", "count": 3}, {"name": "Sobha Dream Acres Outer Ring Rd Balagere Bengaluru Karnataka India", "count": 3}, {"name": "Mantri Tranquil Mantri Tranquil Road Gubbalala Subramanyapura Bengaluru Karnataka India", "count": 3}, {"name": "Prestige Finsbury Park near Shell Technologies KIADB Gummanahalli Bagaluru Bengaluru Karnataka India", "count": 3}, {"name": "Brigade Metropolis Garudachar Palya Mahadevapura Bengaluru Karnataka India", "count": 3}, {"name": "SJR Blue Waters Clarence Block Sai Sree Layout Parappana Agrahara Bengaluru Karnataka India", "count": 3}, {"name": "Sobha Ivory Block-2 Saint Johns Road Hermit Colony Sivanchetti Gardens Bengaluru Karnataka India", "count": 3}],  // All high pickup apartments
+        apartmentsMedium: [{"name": "Dollars Colony R.M.V. 2nd Stage Bengaluru Karnataka 560094 India", "count": 2}, {"name": "AJMERA GREEN ACRES Kalena Agrahara Bengaluru Karnataka India", "count": 2}, {"name": "Telecom Layout Jakkuru Bengaluru Karnataka India", "count": 2}, {"name": "Shriram Greenfield HOBLI Bengaluru Karnataka India", "count": 2}, {"name": "Vinayaka Nagar Nanjundeswara Layout J P Nagar Phase 5 J. P. Nagar Bengaluru Karnataka India", "count": 2}, {"name": "SOBHA Dream Gardens (Residential Apartments in Thanisandra) Kannuru Road Mitganahalli Bellahalli Bengaluru Karnataka India", "count": 2}, {"name": "Pride Pegasus Visthar Bengaluru Karnataka India", "count": 2}, {"name": "Purva Westend Service Road Kudlu Gate Garebhavipalya Garvebhavi Palya Bengaluru Karnataka India", "count": 2}, {"name": "Thimappa Reddy Layout Syndicate Bank Colony Omkar Nagar Arekere Bengaluru Karnataka India", "count": 2}, {"name": "KOTS Jour Byreshwara Layout Hennur Bande HBR Layout Bengaluru Karnataka India", "count": 2}, {"name": "House Of Hiranandani Villas Devanahalli North Bengaluru Devanahalli Southegowdanahalli Karnataka India", "count": 2}, {"name": "BDA Layout BTM 4th Stage Bengaluru Karnataka India", "count": 2}, {"name": "4th Block Kormangala Bengaluru Karnataka India", "count": 2}, {"name": "PBR Residency Munireddy Layout Munnireddy Layout Panathur Bengaluru Karnataka India", "count": 2}, {"name": "No.88 Flat No. 201 Second Floor Ashok Avenue m K.R.Garden Murugeshpalya Bangalore - 560017", "count": 2}, {"name": "Serene Brigade Cornerstone Utopia Road Bengaluru Karnataka India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "NCR Heights Doddanekundi Doddanekkundi Bengaluru Karnataka India", "count": 1}, {"name": "Sector 92 Gurugram Haryana India", "count": 1}, {"name": "Block-2 Suncity Gloria Carmelaram Doddakannelli Bengaluru Karnataka India", "count": 1}, {"name": "DLF Woodland Heights Bangalore Karnataka 560105 India", "count": 1}, {"name": "Abbaiah Reddy Layout Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Dream Acres Wing 29 Balagere Bengaluru Karnataka India", "count": 1}, {"name": "Sapthagiri Splendor BTM 4th Stage 2nd Block BDA Layout BTM 4th Stage Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Glenwood Prestige Glenwood Mandur Bengaluru Karnataka India", "count": 1}, {"name": "Sneha Grandeur Subbanna Layout Hoodi Bengaluru Karnataka India", "count": 1}, {"name": "KNSS colony Horamavu Bengaluru Karnataka India", "count": 1}, {"name": "Srinivasam Apartment Muniswamy Layout Rayasandra Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Coral behind Jakkur Jakkuru Bengaluru Karnataka India", "count": 1}, {"name": "Diya Apartment Reliable Residency Layout Phase 3 Reliable Tranquil Layout Bengaluru Karnataka India", "count": 1}, {"name": "GODREJ UNITED Bengaluru Karnataka 560048 India", "count": 1}, {"name": "5th Block Phase 3 BSK Bengaluru Karnataka India", "count": 1}, {"name": "Arkavathy Layout Thanisandra Bengaluru Karnataka India", "count": 1}, {"name": "55/9 Reliable Lake Dew Residency Phase 2 Lakedew Residency Haralur Karnataka India", "count": 1}, {"name": "Prestige Lake Ridge Thurahalli Road Subramanyapura Bengaluru Karnataka India", "count": 1}, {"name": "G3 310 chourasia manor phase 2 kaverappa layout kadubeeshnahalli bangalore 560103", "count": 1}, {"name": "Sannidhi homes Jigani Bande Nalla Sandra Bangalore Division Karnataka India", "count": 1}, {"name": "Sobha Dream Acres Wing 12 Sobha Dream Acres Balagere Bengaluru Karnataka India", "count": 1}, {"name": "Vijaya Bank Colony Gokula Layout K R Puram Bengaluru Karnataka 560036 India", "count": 1}, {"name": "AECS Layout Singasandra Bengaluru Karnataka India", "count": 1}, {"name": "Flat No 203 HS Towers Owners Court Layout West Road Kasavanahalli Bangalore - 560035", "count": 1}, {"name": "Naveen apartment Classic Colony Kasavanahalli Bengaluru Karnataka 560035", "count": 1}, {"name": "Godrej 24 Bangalore Anekal Rd Anekal Bengaluru Karnataka India", "count": 1}, {"name": "Karpagam Garden layout Hosur Tamil Nadu India", "count": 1}, {"name": "Sneha Grandeur Hoodi Bengaluru Karnataka India", "count": 1}, {"name": "ZENITH RESIDENCES DadaMastan Layout Manayata Tech Park Nagavara Bengaluru Karnataka", "count": 1}, {"name": "Sobha City Sobha City Road Devin Paradise Enclave Thanisandra Bengaluru Karnataka India", "count": 1}, {"name": "Skyline Apartment Papreddy Palya 2nd Stage Chandra Layout Bengaluru Karnataka India", "count": 1}, {"name": "VTP BelAir Bluewaters Township Pune Maharashtra India", "count": 1}, {"name": "Lakshmi Layout Arekere Bengaluru Karnataka 560076 India", "count": 1}, {"name": "101 1st floor SuMahesh Mansion Site #5 SurveyNo:224/4 Papayya Reddy Layout Sri LekshmiNarayana tmpl road Munnekollal BENGALURU KARNATAKA 560037", "count": 1}, {"name": "Vijaya Springwoods Manipal County Rd AECS C Block Begur Bengaluru Karnataka India", "count": 1}, {"name": "501 Gokul Residency YMR Colony Proddutur Kadapa (district Andrapradesh -516360", "count": 1}, {"name": "Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka 560066 India", "count": 1}, {"name": "Flat 1 Sushila Heights Kaverappa Layout Kadubessnahalli Bengaluru - 560103", "count": 1}, {"name": "Tower 12 Prestige Shantiniketan Thigalarapalya Hoodi Bengaluru Karnataka India", "count": 1}, {"name": "VBN Classic #72 Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "Fifth Element Gunjur Village Bengaluru Karnataka India", "count": 1}, {"name": "Adithya Palatial Apartment Dynasty layout Thanisandra Bengaluru Karnataka 560024 India", "count": 1}, {"name": "kothanur Rammana Layout Byrathi Karnataka India", "count": 1}, {"name": "Avalappa Layout Ammanamma Layout Murgesh Pallya Bengaluru Karnataka India", "count": 1}, {"name": "Fifth Element Apartment Gunjur village Bangalore", "count": 1}, {"name": "Vishnu Enclave Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "NRI Layout Bengaluru Karnataka India", "count": 1}, {"name": "Purva Promenade Hennur Road Essel gardens Bengaluru Karnataka 560077 India", "count": 1}, {"name": "Alsa Terraces Langford Gardens Bengaluru Karnataka India", "count": 1}, {"name": "Mico Layout Hongasandra Bengaluru Karnataka 560068 India", "count": 1}, {"name": "Brigade 7 Gardens Bharath Housing Society Layout Uttarahalli Hobli Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Ruby Platinum Tumkur Road Block-2 Havanur Layout Nagasandra Bengaluru Karnataka India", "count": 1}, {"name": "FIRST 102 SAI SUMA HBR 4TH BLOCK HENNUR 1ST STAGE Bengaluru Urban Karnataka 560043", "count": 1}, {"name": "Mahaveer Ranches Sai Sree Layout Parappana Agrahara Bengaluru Karnataka", "count": 1}, {"name": "Sobha Apartments Nagasandra Bengaluru Karnataka India", "count": 1}, {"name": "Friend's Home ISRO Layout Rajeshwari Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "407 11LH Lanco Hills Lanco Hills Residential Towers Rd Gachibowli Manikonda Telangana 500089", "count": 1}, {"name": "Royal SLV Homes Ward Number 85 Dodda Nekkundi Extension Doddanekkundi Bengaluru Karnataka India", "count": 1}, {"name": "AMR OAKS APARTMENT Iggaluru Village Bommasandra Karnataka India", "count": 1}, {"name": "United Green City Apartment hobli BETQ East Bidarahalli Bengaluru Bangalore Division Karnataka India", "count": 1}, {"name": "Shriram Sameeksha Shriniketh Layout Singapura Bengaluru Karnataka India", "count": 1}, {"name": "PRESTIGE OASIS Adde Vishwanathapura Rajanukunte Karnataka India", "count": 1}, {"name": "Prestige Finsbury Park Regent taluk jala hobli Gummanahalli Bagaluru Bengaluru Karnataka India", "count": 1}, {"name": "VMQ2+PJJ AMARACHANDRA ROYAL [ACR LIFESTYLE] SITE NO.36/2 AND 36/3 Kudlu Main Rd Kudlu AECS Layout - A Block VGP Layout Singasandra Bengaluru Karnataka 560068", "count": 1}, {"name": "Casa Paradiso 2 Block 3 - Sobha City Thanisandra Main Rd Devin Paradise Enclave RK Hegde Nagar Bengaluru Karnataka India", "count": 1}, {"name": "Kumari Brundavan 18th Avenue Junnasandra Karnataka India", "count": 1}, {"name": "Hillcrest House of Hiranandani Akshaya Gardens Akshayanagar Bengaluru Karnataka India", "count": 1}, {"name": "TOWER-2 Prestige Lakeside Habitat Gunjur Village Bengaluru Karnataka India", "count": 1}, {"name": "1st stage 3rd block Al- Hilal nagar HBR layout. Bangalore 560043", "count": 1}, {"name": "Royal Nest Vijaya Bank Layout Bilekahalli Bengaluru Karnataka India", "count": 1}, {"name": "Vaattika Doctors Layout Shivanna Layout Gundappa Layout Gottigere Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Song Of The South Tower-15 Begur - Koppa Road Nobanagar Akshaya Vana Akshayanagar Bengaluru Karnataka India", "count": 1}, {"name": "BLOCK-G Purva Skywood Silver County Road off Kudlu Haralur Bengaluru Karnataka India", "count": 1}, {"name": "TOWER-15 Clayton St Devasthanagalu Gunjur Village Bengaluru Karnataka 560087", "count": 1}, {"name": "Mahalakshmi Layout Bengaluru Karnataka India", "count": 1}, {"name": "DLF Maiden Heights rajapura Jigani Karnataka 560105 India", "count": 1}, {"name": "Brew drop cafe DLF city road Akshayanagar", "count": 1}, {"name": "Flat no 504 C wing Vani Apartment Wadiwali Village Dr. C. G. Road Chembur East Mumbai Maharashtra 400074", "count": 1}, {"name": "Dishwet\u201a\u00c4\u00f4s home Pragathi Layout Doddanekundi Doddanekkundi Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Garrison Tumkur Road Nagasandra Bengaluru Karnataka 560073 India", "count": 1}, {"name": "Brigade meadows Kanakapura Road Bengaluru Karnataka India", "count": 1}, {"name": "DLF Woodland Heights Bangalore Karnataka India", "count": 1}, {"name": "S R PRIDE Apartment 60 Feet Road Thimappa Reddy Layout Doddanekundi Doddanekkundi Bengaluru Karnataka India", "count": 1}, {"name": "Ganesha Block Nandini Layout Bengaluru Karnataka India", "count": 1}, {"name": "Mithila enclave State Highway 35 Dommasandra Bengaluru Karnataka India", "count": 1}, {"name": "Brigade Golden Triangle Sannatammanahalli Bengaluru Karnataka India", "count": 1}, {"name": "Pavani Oakridge Sai Baba Temple Road Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "Nizantha Grandeur Apartment Gulmohar Enclave Road Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "Purva Palm Beach Elu's Road Hanumanthappa Layout Kyalasanahalli Bengaluru Karnataka India", "count": 1}, {"name": "SOBHA ETERNIA Haralur Road Eastwood Township Bengaluru Haralur Karnataka India", "count": 1}, {"name": "2153 Layout Rd Carmelaram Janatha Colony Doddakannelli Bengaluru Karnataka 560035 India", "count": 1}, {"name": "Naidu Layout Chikkalasandra Bengaluru Karnataka IN", "count": 1}, {"name": "Arekere MICO Layout Lakshmi Layout Arekere Bengaluru Karnataka India", "count": 1}, {"name": "Lakshmi Layout Arekere Bengaluru Karnataka India", "count": 1}, {"name": "BHARATHY OAKRIDGE Reddy Avenue NGR Layout P.Krishnappa Layout Doddakannelli Bengaluru Karnataka India", "count": 1}, {"name": "Marks Hotel & Banquets Sector 63 A Noida Uttar Pradesh India", "count": 1}, {"name": "1004 Block-3 SJR Bluewaters Haralur Bangalore 560100", "count": 1}, {"name": "Sobha Dream Acres Wing 10 Balagere Bengaluru Karnataka India", "count": 1}, {"name": "Cloud 9 Apartments Vaishali Sector 3F Block C Sector-1 Vaishali Ghaziabad Uttar Pradesh India", "count": 1}, {"name": "Ruby Homes ISRO Layout Rajeshwari Layout Munnekollal East Taluk Karnataka India", "count": 1}, {"name": "#97 ASR Homes Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "ISRO Layout Rajeshwari Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "Bluewaters by SJR Primecorp Silver County Road Lakedew Residency- Phase 2 Sai Meadows Parappana Agrahara Haralur Karnataka India", "count": 1}, {"name": "Chervith Apartment Gurijiya Gutta East of NGEF Layout Bennigana Halli Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Lake Ridge flat number 1091 tower 1 Uttarahalli Bangalore-560061", "count": 1}, {"name": "Raghu Pride near Royal English School Chinnappanahalli Hanuma Reddy Layout Chinnapanna Halli Bengaluru Karnataka India", "count": 1}, {"name": "Purvi Khosala Silver Spring Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "Habitat Eden Heights Hoodi Hoodi Bengaluru Karnataka India", "count": 1}, {"name": "Spring Leaf Apartments Nanjappa Layout Venugopal Reddy Layout Arekere Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Tranquility Budigere Road Bommenahalli Karnataka India", "count": 1}, {"name": "Cambridge Layout Jogupalya Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Royale Gardens Doddaballapur Road Bengaluru Karnataka 560064 India", "count": 1}, {"name": "Pruthvi Layout Channasandra Koralur Karnataka India", "count": 1}, {"name": "SRJ Residency PR Layout Chandra Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Ferns Residency Haralur Road Eastwood Township Haralur Bangalore Division Karnataka India", "count": 1}, {"name": "Southern Winds Layout Sai Sree Layout Parappana Agrahara Bengaluru Karnataka India", "count": 1}, {"name": "Sri Sai Enclave opposite to shell petrol bunk Owners Court Layout east Kasavanahalli Bengaluru Karnataka India", "count": 1}, {"name": "Home AECS Layout - A Block Yellama Layout Singasandra Bengaluru Karnataka India", "count": 1}, {"name": "Nikoo Homes Rd Thanisandra Bengaluru Karnataka 560077", "count": 1}, {"name": "Sai Ganesh apartment Sai Colony Krishnarajapuram Bengaluru Karnataka India", "count": 1}, {"name": "Saroj Symphony Phase-2 Block-C Nagondanahalli Bengaluru Karnataka India", "count": 1}, {"name": "MVS Paradise Prestige Mayberry Road opposite to Green Earth Atrium behind Prestige Elms Park Channasandra Bengaluru Karnataka India", "count": 1}, {"name": "Pragathi Layout Doddanekundi Doddanekkundi Bengaluru Karnataka 560037 India", "count": 1}, {"name": "Tower-2 SHRIRAM CHIRPING WOODS Eastwood Township Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Dream Acres Wing 27 Balagere Bengaluru Karnataka India", "count": 1}, {"name": "Shriram Blue Apartment Sonnenahalli Colony Krishnarajapuram Kurudusonnenahalli Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Bella Vista Poonamallee Road Iyyappanthangal Chennai Tamil Nadu India", "count": 1}, {"name": "Baldota Serenity Venkataswamy Layout Rayasandra Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Casabella Neeladri Road Chikkathoguru Bengaluru Karnataka India", "count": 1}, {"name": "Telecom Layout HBR Layout Bengaluru Karnataka India", "count": 1}, {"name": "2 Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "GVR OAks Ardendale Kannamangala Bengaluru Karnataka India", "count": 1}, {"name": "Block N2 Flat no 306 Purva Panorama Kalena Agrahara Bannerghatta Road", "count": 1}, {"name": "Sobha City - Mykonos Devin Paradise Enclave Bengaluru Karnataka India", "count": 1}, {"name": "Green House Layout Doddathoguru Bengaluru Karnataka India", "count": 1}, {"name": "Sona Vistaas Apartment Bannerghatta Rd near Vijaya Bank Layout Classic Paradise Layout Devarachikkana Halli Bengaluru Karnataka India", "count": 1}, {"name": "CKR enclave pragathi layout doddanekundi Bangalore", "count": 1}, {"name": "A block PURVA VENEZIA Vignana Kendra Bengaluru Karnataka 560065 India", "count": 1}, {"name": "Plama Heights North Punappa Layout Hennur Gardens corrs Bengaluru Karnataka India", "count": 1}, {"name": "RRMR ENCLAVE Ayyappa Society Survey of India Colony Chanda Naik Nagar Madhapur Hyderabad Telangana India", "count": 1}, {"name": "VPMV+C94 Dommasandra Rd Janatha colony Dommasandra Bengaluru Karnataka 562125 India", "count": 1}, {"name": "Provident Park Square Judicial Layout 2nd Phase Talaghattapura Bengaluru Karnataka India", "count": 1}, {"name": "AB Nivasa Joseph Layout Srinivasa Reddy Layout Begur Bengaluru Karnataka India", "count": 1}, {"name": "Brigade Buena vista Budigere Road Bengaluru Karnataka India", "count": 1}, {"name": "Pragnya pg for ladies near brigade nalapadu near bagmane Kamadhenu layout Kamadhenu Nagar B Narayanapura Mahadevapura Bengaluru Karnataka 560016 India", "count": 1}, {"name": "BTR Gardens AECS Layout - A Block AECS Layout Singasandra Bengaluru Karnataka India", "count": 1}, {"name": "Assetz Marq Phase-1 Kannamangala Karnataka 560067 India", "count": 1}, {"name": "Kavya Nest Livingg Space Creators near BBT factory Nanjappa Layout Venugopal Reddy Layout Arekere Bengaluru Karnataka India", "count": 1}, {"name": "HBR Layout 3rd Block HBR Layout Bengaluru Karnataka 560043 India", "count": 1}, {"name": "Casagrand Boulevard Post Sonam Layout Visthar Bengaluru Karnataka India", "count": 1}, {"name": "HAL 3rd Stage Puttappa layout New Tippasandra Bengaluru Karnataka India", "count": 1}, {"name": "DLF Phase 5 Sector 43 Gurugram Haryana India", "count": 1}, {"name": "Sobha Dream Acres Outer Ring Rd Balagere Bangalore Karnataka 560087 India", "count": 1}, {"name": "Brigade Orchards Devanahalli Bangalore Karnataka India", "count": 1}, {"name": "A block AECS Layout 1st floor - 560037", "count": 1}, {"name": "Shri Kempanna Residency AECS Layout - A Block Singasandra Bengaluru Karnataka India", "count": 1}, {"name": "Geethanjali Layout HAL 3rd Stage Bhoomi Reddy Colony New Tippasandra Bengaluru Karnataka India", "count": 1}, {"name": "Sree JD Gardens KNSS colony Horamavu Bengaluru Karnataka India", "count": 1}, {"name": "Venkatappa Layout Postal Colony Sanjaynagar Bengaluru Karnataka India", "count": 1}, {"name": "Gallium at Brigade Eldorado Gummanahalli Bengaluru Karnataka India", "count": 1}, {"name": "No 23 pooja residency AECS Layout Singasandra Bengaluru Karnataka India", "count": 1}, {"name": "MVRS RESIDENCY Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "Swapna Residency NRI Layout Bengaluru Karnataka 560016", "count": 1}, {"name": "Bidare Agrahara colony Bidare Agraha Bengaluru Karnataka 560049 India", "count": 1}, {"name": "Om Shakti Nilayam Carmelaram Janatha Colony Doddakannelli Bengaluru Karnataka India", "count": 1}, {"name": "3rd Block HBR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Aagama Residency Raju Colony Yemalur 560037 Bangalore", "count": 1}, {"name": "Brigade Buena vista Budigere Cross Bengaluru Karnataka 560049 India", "count": 1}, {"name": "JBN Residency Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "Vaishnavi Terrace Dollars Colony Phase 4 J. P. Nagar Bengaluru Karnataka India", "count": 1}, {"name": "Ponnar Nilayam 1st Block Royal Shelters Stage 4 BDA Layout BTM 4th Stage Bengaluru Karnataka India", "count": 1}, {"name": "Tamara Site nos 25 & 26 VGP Arjun Town Kudlu VGP Layout Bengaluru Karnataka 560068", "count": 1}, {"name": "Bhavisha Bentley Goldberg Phase 2 Phase 2 Chikkadunnasandra Kada Agrahara Bengaluru Karnataka India", "count": 1}, {"name": "Rama Villas Reliable Residency Layout Phase 3 Reliable Tranquil Layout Bengaluru Karnataka India", "count": 1}, {"name": "Shreyas residency BTR gardens near kudlugate 560068", "count": 1}, {"name": "Shree Gatti residency munekollala", "count": 1}, {"name": "NBR Lallu Paradise Pragathi Layout Doddanekundi Doddanekkundi Bengaluru Karnataka India", "count": 1}, {"name": "DS MAX Springfield Block-A4 Phase - 3 Anagalapura Bengaluru Karnataka India", "count": 1}, {"name": "Sri Balaji Enclave Junnasandra Bengaluru Karnataka 560035 India", "count": 1}, {"name": "UBER VERDANT Hobli Janatha Colony Doddakannelli Bengaluru Karnataka India", "count": 1}, {"name": "N.D. Sepal Apartment HSR Sector 2 Somasundarapalya Bengaluru Karnataka India", "count": 1}, {"name": "Sree sai residency Junnasandra Bangalore Karnataka India", "count": 1}, {"name": "Garuda Vista Apartments Sri Venkateswara Layout Mahadevapura Bengaluru Karnataka India", "count": 1}, {"name": "Colive 1167 Manchester Anthem Prasanth Layout White Rose Layout extension Bengaluru Karnataka India", "count": 1}, {"name": "Sector 75 Noida Uttar Pradesh 201301\u00ac\u221154", "count": 1}, {"name": "Purva Skywood Silver County Road Lakedew Residency- Phase 2 Haralur Karnataka India", "count": 1}, {"name": "Godrej Royale Woods Devanahalli Bangalore Bengaluru Karnataka India", "count": 1}, {"name": "#37 Tarun nilayam Munnekolal near Ishan homes. Banglore 560037", "count": 1}, {"name": "Vybhav Apartments Cambridge Road Halasuru Udani Layout Bengaluru Karnataka India", "count": 1}, {"name": "Gopalan Sanskriti Apartment Mailasandra Bengaluru Karnataka India", "count": 1}, {"name": "#11 SLV Luxury PG for Ladies Victorian Meadows Silver Spring Layout Munnekolala Silver Spring Layout Bangalore Karnataka 560037", "count": 1}, {"name": "Ebony Block Salarpuria Sattva Greenage Begur Road Hongasandra Bengaluru Karnataka India", "count": 1}, {"name": "Bren EdgeWaters Owners Court Layout Eastwood Township Kasavanahalli Bengaluru Bangalore Division Karnataka India", "count": 1}, {"name": "Kumaraswamy Layout Bengaluru Karnataka India", "count": 1}, {"name": "Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "MANTRI LITHOS Thanisandra Bengaluru Karnataka India", "count": 1}, {"name": "Classic Emerald Apartment Begur Rd Classic Paradise Layout Devarachikkana Halli Bengaluru Karnataka 560114 India", "count": 1}, {"name": "Royal Manor Sahakar Nagar Bengaluru Karnataka India", "count": 1}, {"name": "IAS Layout Eastwood Township Bengaluru Karnataka India", "count": 1}, {"name": "Aahika Apartment Complex Ranka Colony Road Munivenkatppa Layout Bilekahalli Bengaluru Karnataka India", "count": 1}, {"name": "KapishHouse JCR Layout Panathur Bengaluru Karnataka India", "count": 1}, {"name": "Anugraha Layout Ramanashree Enclave Bilekahalli Bengaluru Karnataka 560076 India", "count": 1}, {"name": "LENDEE SENTOSA Adarsh Palm Retreat Doddakannelli Bengaluru Karnataka India", "count": 1}, {"name": "Royal Fountain Square DRDO Phase 2 Township apartment Kaggadasapura Bengaluru Karnataka India", "count": 1}, {"name": "Salarpuria Cadenza Apartments Kudlu Gate Krishna Reddy Industrial Area Hosapalaya Muneshwara Nagar Bengaluru Karnataka India", "count": 1}, {"name": "LAKE POINT TOWER Lake Point Tower Avenue AECS C Block Begur Bengaluru Karnataka India", "count": 1}, {"name": "Ganga Chelston Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Song of the South Begur - Koppa Road Chandrashekarapura Village Yelenahalli Akshayanagar Bengaluru Karnataka India", "count": 1}, {"name": "SLV Residency Silver Springs Layout Munnekollal Bengaluru Karnataka India", "count": 1}, {"name": "Panathur Dinne Dinne Lords Steps layout Panathur Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Dream Acres Shoba Dream Acres Balagere Bengaluru Karnataka India", "count": 1}, {"name": "KSM Enclave Dodda Kempaiah Layout Kalkere Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Tranquility Budigere Road Budigere Cross Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Finsbury Park Hyde - Tower 10 Gummanahalli Bengaluru Karnataka India", "count": 1}, {"name": "Sarojini Residency Back gate AECS Layout - A Block AECS Layout Singasandra Bengaluru Karnataka India", "count": 1}, {"name": "KOMMAGHATTA BDA FLATS. PHASE-2 PHASE-2 Kommaghatta Karnataka India", "count": 1}, {"name": "SOBHA Arena Kanakapura Road Judicial Layout Talaghattapura Bengaluru Karnataka India", "count": 1}, {"name": "L&T South City Apartments Arekere MICO Layout 2nd stage South City Phase 7 Arekere Bengaluru Karnataka India", "count": 1}, {"name": "AH Residency Thomas Layout Hado Siddapura Carmelaram Doddakannelli Bengaluru Karnataka India", "count": 1}, {"name": "prestige Finsbury park hyde gummanahalli bagalur Bengaluru 562149", "count": 1}, {"name": "TOWER-B Purva Westend Kudlu Gate Munireddy layout Industrial Layout Garvebhavi Palya Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Finsbury Park Hyde - Tower 9 Gummanahalli Bengaluru Karnataka India", "count": 1}, {"name": "Princeville Tower-C Vijayashree Layout RV Vidyaniketan Mailasandra Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 249,
         singlePickupCount: 223
     },
@@ -357,9 +393,9 @@ const pickupData = [
         bookings: 259,
         percentage: 7.9,
         subAreas: ["Ravoos Rainbow Apartment Hagadur Main Road Hagadur Narayanappa Garden Whitefield Bengaluru Karnataka India", "Hagadur Immadihalli Whitefield Bengaluru Karnataka India", "Graphite India Limited Whitefield Main Rd Doddanakundi Industrial Area 2 Industrial Area Vishueswaraya Bengaluru Karnataka India"],
-        apartmentsHigh: [{"name": "Whitefield Varthur Kodi Palm Meadows Whitefield Be...", "count": 4}, {"name": "Prestige Lakeside Habitat Marathahalli", "count": 3}],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "Prestige Waterford ECC Road Pattandur Agrahara Whi...", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "Prestige Silver Oak ECC Road Pattandur Agrahara Wh...", "count": 1}, {"name": "White Rose Layout Prithvi Layout Whitefield Bengal...", "count": 1}, {"name": "Sri Balaji Sunflower Apartment Siddappa Layout Imm...", "count": 1}, {"name": "Apartment Summer Paradise Lane Nallurhalli Whitefi...", "count": 1}, {"name": "Reddy Mansion Palm Meadows Whitefield Bengaluru Ka...", "count": 1}, {"name": "Prasanth Layout Prasanth Extension Whitefield Beng...", "count": 1}, {"name": "Incor Carmel Heights Taluk Prestige Ozone Whitefie...", "count": 1}, {"name": "Wild Jasmine Layout Phase 1 Whitefield Bengaluru K...", "count": 1}, {"name": "Vinayaka Layout Whitefield Bengaluru Karnataka Ind...", "count": 1}, {"name": "D615 Brigade Lakefront Seetharama Palya epip White...", "count": 1}, {"name": "ASN Srikaram Nallurahalli Palm Meadows Village Whi...", "count": 1}, {"name": "Prithvi Layout Whitefield Bengaluru Karnataka Indi...", "count": 1}, {"name": "102 first floor Sri Mahalasa Residency AECS Layout...", "count": 1}, {"name": "Brigade woods ECC Road Whitefield Bengaluru Karnat...", "count": 1}, {"name": "Suite #6SE 6th floor Neil Tower of Neil Rao Towers...", "count": 1}, {"name": "Dwarakamai Nilayam Palm Meadows Whitefield Bengalu...", "count": 1}, {"name": "Brigade Lakefront Seetharampalya", "count": 1}, {"name": "3023 Sobha Habitech Road Pattandur Agrahara Whitef...", "count": 1}, {"name": "RR Residency #6/A Dodsworth Layout Whitefield Beng...", "count": 1}, {"name": "Ittina Anu Apartment Maithri Layout Whitefield Ben...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [{"name": "Whitefield Varthur Kodi Palm Meadows Whitefield Bengaluru Karnataka 560066 India", "count": 4}, {"name": "Prestige Lakeside Habitat Marathahalli - Sarjapur Rd Whitefield Bengaluru Karnataka India", "count": 3}],  // All high pickup apartments
+        apartmentsMedium: [{"name": "Prestige Waterford ECC Road Pattandur Agrahara Whitefield Bengaluru Karnataka India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "Prestige Silver Oak ECC Road Pattandur Agrahara Whitefield Bangalore Karnataka 560066 India", "count": 1}, {"name": "White Rose Layout Prithvi Layout Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Sri Balaji Sunflower Apartment Siddappa Layout Immadihalli Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Apartment Summer Paradise Lane Nallurhalli Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Reddy Mansion Palm Meadows Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Prasanth Layout Prasanth Extension Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Incor Carmel Heights Taluk Prestige Ozone Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Wild Jasmine Layout Phase 1 Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Vinayaka Layout Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "D615 Brigade Lakefront Seetharama Palya epip Whitefield Bangalore 560048", "count": 1}, {"name": "ASN Srikaram Nallurahalli Palm Meadows Village Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Prithvi Layout Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "102 first floor Sri Mahalasa Residency AECS Layout Sri Nivasa reddy layout Whitefield", "count": 1}, {"name": "Brigade woods ECC Road Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Suite #6SE 6th floor Neil Tower of Neil Rao Towers Plot no 117 Road No 3 EPIP Phase 1 Whitefield Road Bangalore 560066.", "count": 1}, {"name": "Dwarakamai Nilayam Palm Meadows Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Brigade Lakefront Seetharampalya - Hoodi Road Near SAP Labs Seetharampalya Whitefield Bangalore Karnataka India", "count": 1}, {"name": "3023 Sobha Habitech Road Pattandur Agrahara Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "RR Residency #6/A Dodsworth Layout Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Ittina Anu Apartment Maithri Layout Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Dodsworth Layout Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "XP7M+RP6 Palm Meadows Whitefield Bengaluru Karnataka 560066 India", "count": 1}, {"name": "Q668 brigade Lakefront Seetharampalya - Hoodi Rd Near SAP Labs EPIP Zone Whitefield Bengaluru Karnataka 560048", "count": 1}, {"name": "White Rose Layout Pattandur Agrahara Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "DSR Green Vista Apartments ECC Road Upkar Layout Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Upkar Layout Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "DNA APARTMENT Palm Meadows Whitefield Bengaluru Karnataka India", "count": 1}, {"name": "Vrushabadri Towers Whitefield Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 31,
         singlePickupCount: 28
     },
@@ -369,9 +405,9 @@ const pickupData = [
         bookings: 147,
         percentage: 4.5,
         subAreas: ["DoubleTree Suites by Hilton Bengaluru Outer Ring Road Sarjapur Main Road Amblipura PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India", "31A Main Road PWD Quarters Sector 2 HSR Layout Bengaluru Karnataka India", "HSR layout 14th A Cross Road Sector 6 HSR Layout Bangalore Karnataka 560102 India"],
-        apartmentsHigh: [{"name": "HSR Layout Bengaluru Karnataka India", "count": 10}, {"name": "Sector 1 HSR Layout Bengaluru Karnataka India", "count": 8}, {"name": "Sector 2 HSR Layout Bengaluru Karnataka India", "count": 6}, {"name": "Sector 3 HSR Layout Bengaluru Karnataka India", "count": 4}, {"name": "Koramangala 1st Block HSR Layout 5th Sector Bengal...", "count": 3}, {"name": "Sector 7 HSR Layout Bengaluru Karnataka India", "count": 3}],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "2nd Sector HSR Layout Bengaluru Karnataka India", "count": 2}, {"name": "ITI Layout 7th Sector HSR Layout Bengaluru Karnata...", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "1st Block Koramangala HSR Layout 5th Sector Bengal...", "count": 1}, {"name": "HSR Layout Bangalore Karnataka India", "count": 1}, {"name": "Poorvika Beauty Salon Garden Layout Sector 2 HSR L...", "count": 1}, {"name": "Block-17 PWD Quarters 1st Sector HSR Layout Bengal...", "count": 1}, {"name": "Agara Village 1st Sector HSR Layout Bengaluru Karn...", "count": 1}, {"name": "Jakkasandra 1st Block Koramangala HSR Layout 5th S...", "count": 1}, {"name": "Sobha Daffodil Club House 1 PWD Quarters 1st Secto...", "count": 1}, {"name": "Sunchees Oak 1st Sector HSR Layout Bengaluru Karna...", "count": 1}, {"name": "Berry Nest Parangi Palaya Sector 2 HSR Layout Beng...", "count": 1}, {"name": "Hsr layout Madiwala New Extension HSR layout Secto...", "count": 1}, {"name": "2nd Sector HSR Layout Bangalore Karnataka 560102 I...", "count": 1}, {"name": "B 605 Manar Elegance Somasundarapalya HSR layout s...", "count": 1}, {"name": "PURVA FAIRMONT APARTMENT Garden Layout Sector 2 HS...", "count": 1}, {"name": "7th Sector HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Agara Bus stop Agara Village 1st Sector HSR Layout...", "count": 1}, {"name": "109 2nd Avenue Teacher's Colony Santhosapuram 1st ...", "count": 1}, {"name": "ITI Layout Sector 7 HSR Layout Bengaluru Karnataka...", "count": 1}, {"name": "Agara Lake Agara Village 1st Sector HSR Layout Ben...", "count": 1}, {"name": "Rajiv Gandhi Nagar Rajiv Gandhi Nagar Muneswara Na...", "count": 1}, {"name": "Agara 1st Sector HSR Layout Bengaluru Karnataka In...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [{"name": "HSR Layout Bengaluru Karnataka India", "count": 10}, {"name": "Sector 1 HSR Layout Bengaluru Karnataka India", "count": 8}, {"name": "Sector 2 HSR Layout Bengaluru Karnataka India", "count": 6}, {"name": "Sector 3 HSR Layout Bengaluru Karnataka India", "count": 4}, {"name": "Koramangala 1st Block HSR Layout 5th Sector Bengaluru Karnataka India", "count": 3}, {"name": "Sector 7 HSR Layout Bengaluru Karnataka India", "count": 3}],  // All high pickup apartments
+        apartmentsMedium: [{"name": "2nd Sector HSR Layout Bengaluru Karnataka India", "count": 2}, {"name": "ITI Layout 7th Sector HSR Layout Bengaluru Karnataka India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "1st Block Koramangala HSR Layout 5th Sector Bengaluru Karnataka India", "count": 1}, {"name": "HSR Layout Bangalore Karnataka India", "count": 1}, {"name": "Poorvika Beauty Salon Garden Layout Sector 2 HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Block-17 PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Agara Village 1st Sector HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Jakkasandra 1st Block Koramangala HSR Layout 5th Sector Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Daffodil Club House 1 PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Sunchees Oak 1st Sector HSR Layout Bengaluru Karnataka 560102 India", "count": 1}, {"name": "Berry Nest Parangi Palaya Sector 2 HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Hsr layout Madiwala New Extension HSR layout Sector 2 1st Stage BTM Layout Bengaluru Karnataka 560068 India", "count": 1}, {"name": "2nd Sector HSR Layout Bangalore Karnataka 560102 India", "count": 1}, {"name": "B 605 Manar Elegance Somasundarapalya HSR layout sector 2 Bengaluru 560102", "count": 1}, {"name": "PURVA FAIRMONT APARTMENT Garden Layout Sector 2 HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "7th Sector HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Agara Bus stop Agara Village 1st Sector HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "109 2nd Avenue Teacher's Colony Santhosapuram 1st Block Koramangala HSR Layout 5th Sector Bengaluru Karnataka India", "count": 1}, {"name": "ITI Layout Sector 7 HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Agara Lake Agara Village 1st Sector HSR Layout Bengaluru Karnataka", "count": 1}, {"name": "Rajiv Gandhi Nagar Rajiv Gandhi Nagar Muneswara Nagar Sector 6 HSR Layout Bangalore Karnataka 560068 India", "count": 1}, {"name": "Agara 1st Sector HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "Sector 6 HSR Layout Bengaluru Karnataka India", "count": 1}, {"name": "201 building 243 ITI Layout Main ITI Layout Sector 7 HSR Layout Bengaluru Karnataka 560068 India", "count": 1}, {"name": "Garden Layout Rd Garden Layout Sector 2 HSR Layout Bengaluru Karnataka 560102 India", "count": 1}, {"name": "BSR Mantralaya ITI Layout Sector 2 HSR Layout Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 32,
         singlePickupCount: 24
     },
@@ -381,9 +417,9 @@ const pickupData = [
         bookings: 142,
         percentage: 4.3,
         subAreas: ["CKB Layout Marathahalli Bengaluru Karnataka India", "SGR Dental College SGR Dental College Road Kasavanahalli Village Marathahalli Bengaluru Karnataka India", "AECS Layout Marathahalli Bengaluru Karnataka India"],
-        apartmentsHigh: [],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "Mantri Flora Sarjapur", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "Salarpuria Sanctity Sarjapur", "count": 1}, {"name": "suvarnaraju homes Vinayaka Layout Dodda Nekkundi E...", "count": 1}, {"name": "Kaveri Layout Marathahalli Village Marathahalli Be...", "count": 1}, {"name": "RFB-007 (BLOCK 5) Purva Riviera Lakshminarayana Pu...", "count": 1}, {"name": "Manjunatha Layout Marathahalli Village Marathahall...", "count": 1}, {"name": "Sattva Senorita Salarpuria Tower C Flat 1601 Sarja...", "count": 1}, {"name": "AJR plaza Rainbow Layout Kasavanahalli Village Mar...", "count": 1}, {"name": "Purva Fountain Square HAL Old Airport Road Near Ra...", "count": 1}, {"name": "Rajatha Enclave Kaveri Layout Marathahalli Village...", "count": 1}, {"name": "Salarpuria Sanctity Sarjapur", "count": 1}, {"name": "Koushika Enclave Felice Enclave Rainbow Layout Mar...", "count": 1}, {"name": "S V Pride B Block AECS Layout Marathahalli Bengalu...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [],  // All high pickup apartments
+        apartmentsMedium: [{"name": "Mantri Flora Sarjapur - Marathahalli Road Amblipura PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "Salarpuria Sanctity Sarjapur - Marathahalli Road Kaikondrahalli Bengaluru Karnataka India", "count": 1}, {"name": "suvarnaraju homes Vinayaka Layout Dodda Nekkundi Extension Marathahalli Bengaluru Karnataka India", "count": 1}, {"name": "Kaveri Layout Marathahalli Village Marathahalli Bengaluru Karnataka 560037 India", "count": 1}, {"name": "RFB-007 (BLOCK 5) Purva Riviera Lakshminarayana Pura AECS Layout Marathahalli Bengaluru Karnataka India", "count": 1}, {"name": "Manjunatha Layout Marathahalli Village Marathahalli Bengaluru Karnataka India", "count": 1}, {"name": "Sattva Senorita Salarpuria Tower C Flat 1601 Sarjapur Marathahalli Road Bangalore 560035", "count": 1}, {"name": "AJR plaza Rainbow Layout Kasavanahalli Village Marathahalli Bengaluru Karnataka India", "count": 1}, {"name": "Purva Fountain Square HAL Old Airport Road Near Railway Over Bridge Lakshminarayana Pura Marathahalli Bengaluru Karnataka 560037 India", "count": 1}, {"name": "Rajatha Enclave Kaveri Layout Marathahalli Village Marathahalli Bengaluru Karnataka India", "count": 1}, {"name": "Salarpuria Sanctity Sarjapur - Marathahalli Road Halanayakanahalli Karnataka India", "count": 1}, {"name": "Koushika Enclave Felice Enclave Rainbow Layout Marathahalli Bengaluru Karnataka 560037 India", "count": 1}, {"name": "S V Pride B Block AECS Layout Marathahalli Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 13,
         singlePickupCount: 12
     },
@@ -393,9 +429,9 @@ const pickupData = [
         bookings: 111,
         percentage: 3.4,
         subAreas: ["Gopalan Lakefront Veerasandra Main Road Veer Sandra Electronic City Bengaluru Karnataka India", "Electronic City Bengaluru Karnataka India", "Hosa Road Chennakeshava Nagar Lavakusha Nagar Pragathi Nagar Electronic City Bengaluru Karnataka 560100 India"],
-        apartmentsHigh: [{"name": "Phase 1 Electronic City Bengaluru Karnataka India", "count": 9}, {"name": "Electronics City Phase 1 Electronic City Bengaluru...", "count": 3}, {"name": "Phase 1 Electronic City Bengaluru Karnataka 560100...", "count": 3}],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "S A Residency Kammasandra Electronic City Bengalur...", "count": 2}, {"name": "Electronic City Phase II Electronic City Bengaluru...", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "Nisarga Residency Sai Sarana Layout Phase 1 Kammas...", "count": 1}, {"name": "Neeladri Investment Layout Doddathoguru Electronic...", "count": 1}, {"name": "Site number 14 Fortune Munireddy Layout Doddanagam...", "count": 1}, {"name": "SHRIRAM SIGNIAA Electronics City Phase 1 Electroni...", "count": 1}, {"name": "Shri Lakshminarasimha Swamy Temple Green House Lay...", "count": 1}, {"name": "Prestige Sunrise Park Birchwood Neotown Road Phase...", "count": 1}, {"name": "Celebrity Paradise Layout Doddathoguru Electronics...", "count": 1}, {"name": "Prestige Sunrise Park", "count": 1}, {"name": "Celebrity Paradise Layout Doddathoguru Phase 1 Ele...", "count": 1}, {"name": "Bimadhar Building 69 Chikkathoguru Konappana Agrah...", "count": 1}, {"name": "Harshu lake view apartment near NBR lake view apar...", "count": 1}, {"name": "Electronic city BTM Phase 1 Phase 2 Electronic Cit...", "count": 1}, {"name": "Tech City Layout Celebrity Paradise Layout Doddath...", "count": 1}, {"name": "Pavani Chandana Phase 2 Electronic City Bengaluru ...", "count": 1}, {"name": "Sobha Silicon Oasis Hosa Road Doddanagamangala Vil...", "count": 1}, {"name": "Pragathi Royale- II Doddathoguru Electronic City P...", "count": 1}, {"name": "Shriram Summitt Electronic City Bengaluru Karnatak...", "count": 1}, {"name": "Phase 2 Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Silicon Oasis Hosa Road Doddanagamangala Vil...", "count": 1}, {"name": "Shriram Summit Wing 3 Electronic City Phase I Elec...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [{"name": "Phase 1 Electronic City Bengaluru Karnataka India", "count": 9}, {"name": "Electronics City Phase 1 Electronic City Bengaluru Karnataka India", "count": 3}, {"name": "Phase 1 Electronic City Bengaluru Karnataka 560100 India", "count": 3}],  // All high pickup apartments
+        apartmentsMedium: [{"name": "S A Residency Kammasandra Electronic City Bengaluru Karnataka India", "count": 2}, {"name": "Electronic City Phase II Electronic City Bengaluru Karnataka India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "Nisarga Residency Sai Sarana Layout Phase 1 Kammasandra Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Neeladri Investment Layout Doddathoguru Electronics City Phase 1 Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Site number 14 Fortune Munireddy Layout Doddanagamangala Electronic City Phase -2 Bangalore. Silicon Town Electronic City Bengaluru Karnataka 560100.", "count": 1}, {"name": "SHRIRAM SIGNIAA Electronics City Phase 1 Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Shri Lakshminarasimha Swamy Temple Green House Layout Doddathoguru Electronics City Phase 1 Electronic City Bengaluru Karnataka 560100 India", "count": 1}, {"name": "Prestige Sunrise Park Birchwood Neotown Road Phase 1 Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Celebrity Paradise Layout Doddathoguru Electronics City Phase 1 Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Prestige Sunrise Park - Birchwood Tower 4 Electronics City Phase 1 Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Celebrity Paradise Layout Doddathoguru Phase 1 Electronic City Bengaluru Karnataka 560100 India", "count": 1}, {"name": "Bimadhar Building 69 Chikkathoguru Konappana Agrahara Electronic City Bengaluru Karnataka 560100 India", "count": 1}, {"name": "Harshu lake view apartment near NBR lake view apartment inside Vasundhara Layout Vasundhara Layout Glass Factory Layout Electronic City Bengaluru Karnataka 560100 India", "count": 1}, {"name": "Electronic city BTM Phase 1 Phase 2 Electronic City Bengaluru Karnataka 560100 India", "count": 1}, {"name": "Tech City Layout Celebrity Paradise Layout Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Pavani Chandana Phase 2 Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Silicon Oasis Hosa Road Doddanagamangala Village Pragathi Nagar Electronic City Bengaluru Karnataka 560100 India", "count": 1}, {"name": "Pragathi Royale- II Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Shriram Summitt Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Phase 2 Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Silicon Oasis Hosa Road Doddanagamangala Village Pragathi Nagar Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Shriram Summit Wing 3 Electronic City Phase I Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Vaibhav Reddy Building Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Phase 1 Kammasandra Electronic City Bengaluru Karnataka 560100 India", "count": 1}, {"name": "Celebrity Paradise Layout Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India", "count": 1}, {"name": "Shriram Liberty Square Glass Factory Layout Electronic City Andapura Karnataka India", "count": 1}, {"name": "Concorde Silicon Valley Electronic City Phase I Electronic City Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 30,
         singlePickupCount: 25
     },
@@ -405,9 +441,9 @@ const pickupData = [
         bookings: 94,
         percentage: 2.9,
         subAreas: ["Devarabeesana Halli Bellandur Bengaluru Karnataka India", "RMV Arcades Kariyammana Agrahara Bellandur Bengaluru Karnataka India", "RMZ Ecoworld Road Adarsh Palm Retreat Bellandur Bengaluru Karnataka 560103 India"],
-        apartmentsHigh: [{"name": "Adarsh Palm Retreat Bellandur Bengaluru Karnataka ...", "count": 4}],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "Meda Heights near AET circle behind Adarsh Palm Re...", "count": 2}, {"name": "Green Glen Layout Bellandur Bengaluru Karnataka In...", "count": 2}, {"name": "Sobha Carnation Margosa Avenue Green Glen Layout B...", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "Muni Reddy Garden Adarsh Palm Retreat Bellandur Be...", "count": 1}, {"name": "Venkata krishna Ladies Pg| Near Embassy Tech Villa...", "count": 1}, {"name": "Margosa Avenue Green Glen Layout Bellandur Bengalu...", "count": 1}, {"name": "Raju Colony Yemalur Bellandur Bangalore Karnataka ...", "count": 1}, {"name": "Tower 2 Adarsh Palm Retreat Bellandur Bengaluru Ka...", "count": 1}, {"name": "SOBHA AQUAMARINE Green Glen Layout Bellandur Benga...", "count": 1}, {"name": "Lakshmi Residency Shan Boga Colony Yemalur Belland...", "count": 1}, {"name": "Prabha Residency Green Glen Layout Bellandur", "count": 1}, {"name": "Oxygen PG For Ladies Joy Avenue Green Glen Layout ...", "count": 1}, {"name": "EMBASSY PRISTINE Suncity Apartments Lane Ibbaluru ...", "count": 1}, {"name": "Uber Verdant Phase 2 Carmelaram Janatha Colony Chi...", "count": 1}, {"name": "DNR REFLECTION Green Glen Layout Bellandur Bengalu...", "count": 1}, {"name": "Prestige Kew Gardens Kariyammana Agrahara Road Sha...", "count": 1}, {"name": "VARS Parkwood Adarsh Palm Retreat Bellandur Bengal...", "count": 1}, {"name": "Sobha Hibiscus Green Glen Layout Bellandur Bengalu...", "count": 1}, {"name": "Ushodaya Eleganza Happiness Avenue Green Glen Layo...", "count": 1}, {"name": "Sobha Aquamarine Palm Avenue Green Glen Layout Bel...", "count": 1}, {"name": "Rohan Jharoka phase II Yamalur Bellandur Bengaluru...", "count": 1}, {"name": "Oceanus Freesia Enclave Block-E Oceanus Freesia En...", "count": 1}, {"name": "Abhiram Enclave Lake View Residency Bellandur Beng...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [{"name": "Adarsh Palm Retreat Bellandur Bengaluru Karnataka India", "count": 4}],  // All high pickup apartments
+        apartmentsMedium: [{"name": "Meda Heights near AET circle behind Adarsh Palm Retreat Bellandur Bengaluru Karnataka India", "count": 2}, {"name": "Green Glen Layout Bellandur Bengaluru Karnataka India", "count": 2}, {"name": "Sobha Carnation Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "Muni Reddy Garden Adarsh Palm Retreat Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Venkata krishna Ladies Pg| Near Embassy Tech Village | Flipkart Chawdeshri Layouts Road devarabeeshanahalli Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Raju Colony Yemalur Bellandur Bangalore Karnataka 560037 India", "count": 1}, {"name": "Tower 2 Adarsh Palm Retreat Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "SOBHA AQUAMARINE Green Glen Layout Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Lakshmi Residency Shan Boga Colony Yemalur Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Prabha Residency Green Glen Layout Bellandur", "count": 1}, {"name": "Oxygen PG For Ladies Joy Avenue Green Glen Layout Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "EMBASSY PRISTINE Suncity Apartments Lane Ibbaluru Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Uber Verdant Phase 2 Carmelaram Janatha Colony Chikkabellandur Bengaluru Karnataka India", "count": 1}, {"name": "DNR REFLECTION Green Glen Layout Bellandur Bengaluru Karnataka 560103 India", "count": 1}, {"name": "Prestige Kew Gardens Kariyammana Agrahara Road Shan Boga Colony Kempapura Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "VARS Parkwood Adarsh Palm Retreat Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Hibiscus Green Glen Layout Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Ushodaya Eleganza Happiness Avenue Green Glen Layout Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Aquamarine Palm Avenue Green Glen Layout Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Rohan Jharoka phase II Yamalur Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Oceanus Freesia Enclave Block-E Oceanus Freesia Enclave Bellandur Bengaluru Karnataka 560103 India", "count": 1}, {"name": "Abhiram Enclave Lake View Residency Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "Malibu Bonita Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "ADARSH PALM RETREAT Adarsh Palm Retreat Bellandur Bengaluru Karnataka 560103 India", "count": 1}, {"name": "Raju Colony Yamalur Bellandur Bengaluru KA 560037 India", "count": 1}, {"name": "Sobha Primrose Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India", "count": 1}, {"name": "SOBHA Insignia Outer Ring Rd Devarabisanahalli Bellandur Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 29,
         singlePickupCount: 25
     },
@@ -417,9 +453,9 @@ const pickupData = [
         bookings: 71,
         percentage: 2.2,
         subAreas: ["ATZ Estrella Halasahalli Road Near Varthur Police Station Varthur Karnataka India", "SANKALP CHERRY BLOSSOM Eidgah Road Devasthanagalu Varthur Karnataka 560087 India", "DS max Sterling Rajbhavi Road Varthur Karnataka India"],
-        apartmentsHigh: [{"name": "Sobha Dream Acres Balagere Road Devasthanagalu Var...", "count": 8}],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "Brigade Cornerstone Utopia Varthur Rd Bengaluru Ka...", "count": 2}, {"name": "Prestige Lakeside Habitat Cinderella Avenue Devast...", "count": 2}, {"name": "Brigade Cornerstone Utopia Varthur Road Varthur Be...", "count": 2}, {"name": "Brigade Cornerstone Utopia Varthur Road Bengaluru ...", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "TOWER-12 Prestige Lakeside Habitat Devasthanagalu ...", "count": 1}, {"name": "Sobha Dream Acres Balagere Road Devasthanagalu Var...", "count": 1}, {"name": "A 303 Krishnasiri Residency Subbaiah Garden Devast...", "count": 1}, {"name": "Sankalpa layout varthur Varthur Karnataka India", "count": 1}, {"name": "Sobha Dream Acres Wing 5 Balagere Road Balagere Va...", "count": 1}, {"name": "Brigade Cornerstone Utopia Varthur Rd Varthur Beng...", "count": 1}, {"name": "Prakash Layout Varthur Karnataka India", "count": 1}, {"name": "Brigade Cornerstone utopia Varthur", "count": 1}, {"name": "Eden", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [{"name": "Sobha Dream Acres Balagere Road Devasthanagalu Varthur Karnataka India", "count": 8}],  // All high pickup apartments
+        apartmentsMedium: [{"name": "Brigade Cornerstone Utopia Varthur Rd Bengaluru Karnataka India", "count": 2}, {"name": "Prestige Lakeside Habitat Cinderella Avenue Devasthanagalu Varthur Bengaluru Karnataka India", "count": 2}, {"name": "Brigade Cornerstone Utopia Varthur Road Varthur Bengaluru Karnataka India", "count": 2}, {"name": "Brigade Cornerstone Utopia Varthur Road Bengaluru Karnataka India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "TOWER-12 Prestige Lakeside Habitat Devasthanagalu Gunjur Village Varthur Bengaluru Karnataka India", "count": 1}, {"name": "Sobha Dream Acres Balagere Road Devasthanagalu Varthur Karnataka 560087 India", "count": 1}, {"name": "A 303 Krishnasiri Residency Subbaiah Garden Devasthanagalu Varthur Karnataka India", "count": 1}, {"name": "Sankalpa layout varthur Varthur Karnataka India", "count": 1}, {"name": "Sobha Dream Acres Wing 5 Balagere Road Balagere Varthur Karnataka India", "count": 1}, {"name": "Brigade Cornerstone Utopia Varthur Rd Varthur Bengaluru Bangalore Division Karnataka India", "count": 1}, {"name": "Prakash Layout Varthur Karnataka India", "count": 1}, {"name": "Brigade Cornerstone utopia Varthur", "count": 1}, {"name": "Eden - Brigade Cornerstone Utopia Varthur Rd Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 14,
         singlePickupCount: 9
     },
@@ -429,9 +465,9 @@ const pickupData = [
         bookings: 68,
         percentage: 2.1,
         subAreas: ["AB Residency 13th Main Road Sunshine Colony Stage 2 BTM Layout Bengaluru Karnataka India", "905 16th Main Road BTM 2nd Stage Kuvempu Nagar Stage 2 BTM Layout Bengaluru Karnataka India", "N R NILAYA RESIDENCY 5th Cross Road Tavarekere Maruti Nagar 1st Stage BTM Layout Bengaluru Karnataka India"],
-        apartmentsHigh: [{"name": "BTM 2nd Stage BTM Layout Bengaluru Karnataka India", "count": 13}, {"name": "Madiwala 1st Stage BTM Layout Bengaluru Karnataka ...", "count": 3}],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "BTM Layout Bengaluru Karnataka India", "count": 2}, {"name": "Galaxy Homes VP Road Old Madiwala Dollar Scheme Co...", "count": 2}, {"name": "BTM Layout 2nd Stage BTM Layout Bengaluru Karnatak...", "count": 2}, {"name": "Colive 1155 Brighton Dollar Layout BTM 2nd Stage B...", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "68 Abbaappa Layout Stage 2 BTM Layout Bengaluru Ka...", "count": 1}, {"name": "Confident Pride KAS Officers Colony Stage 2 BTM La...", "count": 1}, {"name": "Aradhana Residency NS Palya BTM 2nd Stage BTM Layo...", "count": 1}, {"name": "MCHS Colony BTM 2nd Stage BTM Layout Bengaluru Kar...", "count": 1}, {"name": "Tavarekere Ramappa layout 1st Stage BTM Layout Ben...", "count": 1}, {"name": "BTM 1st Stage BTM Layout 1 Bengaluru Karnataka Ind...", "count": 1}, {"name": "Laa Emerald KAS Officers Colony Stage 2 BTM Layout...", "count": 1}, {"name": "Aryan Residency BTM 2nd Stage Kuvempu Nagar Stage ...", "count": 1}, {"name": "Stage 2nd BTM Layout BTM Layout Bengaluru Karnatak...", "count": 1}, {"name": "EWS Colony BTM 2nd Stage BTM Layout Bengaluru Karn...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [{"name": "BTM 2nd Stage BTM Layout Bengaluru Karnataka India", "count": 13}, {"name": "Madiwala 1st Stage BTM Layout Bengaluru Karnataka India", "count": 3}],  // All high pickup apartments
+        apartmentsMedium: [{"name": "BTM Layout Bengaluru Karnataka India", "count": 2}, {"name": "Galaxy Homes VP Road Old Madiwala Dollar Scheme Colony 1st Stage BTM Layout Bengaluru Karnataka India", "count": 2}, {"name": "BTM Layout 2nd Stage BTM Layout Bengaluru Karnataka India", "count": 2}, {"name": "Colive 1155 Brighton Dollar Layout BTM 2nd Stage BTM Layout Bengaluru Karnataka India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "68 Abbaappa Layout Stage 2 BTM Layout Bengaluru Karnataka 560076 India", "count": 1}, {"name": "Confident Pride KAS Officers Colony Stage 2 BTM Layout Bengaluru Karnataka India", "count": 1}, {"name": "Aradhana Residency NS Palya BTM 2nd Stage BTM Layout Bengaluru Karnataka India", "count": 1}, {"name": "MCHS Colony BTM 2nd Stage BTM Layout Bengaluru Karnataka India", "count": 1}, {"name": "Tavarekere Ramappa layout 1st Stage BTM Layout Bengaluru Karnataka 560029 India", "count": 1}, {"name": "BTM 1st Stage BTM Layout 1 Bengaluru Karnataka India", "count": 1}, {"name": "Laa Emerald KAS Officers Colony Stage 2 BTM Layout Bengaluru Karnataka India", "count": 1}, {"name": "Aryan Residency BTM 2nd Stage Kuvempu Nagar Stage 2 BTM Layout Bengaluru Karnataka India", "count": 1}, {"name": "Stage 2nd BTM Layout BTM Layout Bengaluru Karnataka India", "count": 1}, {"name": "EWS Colony BTM 2nd Stage BTM Layout Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 16,
         singlePickupCount: 10
     },
@@ -441,9 +477,9 @@ const pickupData = [
         bookings: 59,
         percentage: 1.8,
         subAreas: ["Nextdoor Bumble Co-Living PG 100 Feet Road 4th Block Koramangala Bengaluru Karnataka India", "Dreamhigh Communication Austin Town Koramangala Bengaluru Karnataka India", "Koramangala Bengaluru Karnataka India"],
-        apartmentsHigh: [],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "4th Block Koramangala Bengaluru Karnataka India", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "2nd Block Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "S.T. Bed Cauvery Colony Koramangala Bengaluru Karn...", "count": 1}, {"name": "ESTEEM ROYALE S.T. Bed Cauvery Colony Koramangala ...", "count": 1}, {"name": "SRIJA PG FOR LADIES National Games Village Complex...", "count": 1}, {"name": "3rd Block Koramangala 1A Block Koramangala 3 Block...", "count": 1}, {"name": "6th Block Koramangala Koramangala Bengaluru Karnat...", "count": 1}, {"name": "Gem Regency Nirguna Mandir Layout Koramangala", "count": 1}, {"name": "Venkatapura Teacher's Colony Jakkasandra 1st Block...", "count": 1}, {"name": "Jyoti Vilas Pawar KHB Colony 5th Block Koramangala...", "count": 1}, {"name": "NATIONAL GAMES VILLAGE National Games Village Comp...", "count": 1}, {"name": "No.15 KHB MIG Colony 5th Block Koramangala Bengalu...", "count": 1}, {"name": "KHB Games Village Koramangala Bengaluru Karnataka ...", "count": 1}, {"name": "Sahana nilaya apartment Chandra Reddy Layout S T B...", "count": 1}, {"name": "Sri Ranga Luxury Ladies PG opposite to krishna sag...", "count": 1}, {"name": "ANAA Infra's Signature Nirguna Mandir Extn 1st Blo...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [],  // All high pickup apartments
+        apartmentsMedium: [{"name": "4th Block Koramangala Bengaluru Karnataka India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "2nd Block Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "S.T. Bed Cauvery Colony Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "ESTEEM ROYALE S.T. Bed Cauvery Colony Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "SRIJA PG FOR LADIES National Games Village Complex 6th Block Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "3rd Block Koramangala 1A Block Koramangala 3 Block Koramangala Bengaluru Karnataka 560034 India", "count": 1}, {"name": "6th Block Koramangala Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "Gem Regency Nirguna Mandir Layout Koramangala", "count": 1}, {"name": "Venkatapura Teacher's Colony Jakkasandra 1st Block Koramangala Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "Jyoti Vilas Pawar KHB Colony 5th Block Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "NATIONAL GAMES VILLAGE National Games Village Complex KHB Games Village Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "No.15 KHB MIG Colony 5th Block Koramangala Bengaluru Karnataka 560030", "count": 1}, {"name": "KHB Games Village Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "Sahana nilaya apartment Chandra Reddy Layout S T Bed Layout Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "Sri Ranga Luxury Ladies PG opposite to krishna sagar hotel near Madiwala Underpass Sidharata Colony Santhosapuram Koramangala 2nd Block Koramangala Bengaluru Karnataka India", "count": 1}, {"name": "ANAA Infra's Signature Nirguna Mandir Extn 1st Block Koramangala Koramangala Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 16,
         singlePickupCount: 15
     },
@@ -453,9 +489,9 @@ const pickupData = [
         bookings: 50,
         percentage: 1.5,
         subAreas: ["19 NGEF Lane Stage 1 Indiranagar Bengaluru Karnataka India", "430 11th Main HAL 2nd Stage Indiranagar Bengaluru Karnataka India", "4053 19th Main Road HAL 2nd Stage Indiranagar Bengaluru Karnataka India"],
-        apartmentsHigh: [],  // 3+ pickups (top 10)
-        apartmentsMedium: [],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "INDUS SIGNATURE APARTMENT Eshwara Layout Indiranag...", "count": 1}, {"name": "2nd stage Indiranagar BDA Colony Domlur Village Do...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [],  // All high pickup apartments
+        apartmentsMedium: [],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "INDUS SIGNATURE APARTMENT Eshwara Layout Indiranagar Bengaluru Karnataka India", "count": 1}, {"name": "2nd stage Indiranagar BDA Colony Domlur Village Domlur Bengaluru Karnataka 560071 India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 2,
         singlePickupCount: 2
     },
@@ -465,9 +501,9 @@ const pickupData = [
         bookings: 50,
         percentage: 1.5,
         subAreas: ["Sterling Shalom EPIP Zone Brookefield Chinnapanahalli Karnataka India", "MILLENNIUM HABITAT ITPL Main Road Kundalahalli Brookefield Bengaluru Karnataka 560037 India", "Brookefield Bengaluru Karnataka India"],
-        apartmentsHigh: [{"name": "BEML Layout Brookefield Bengaluru Karnataka India", "count": 6}],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "Phase 2 Brookefield Bengaluru Karnataka India", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "Sreenivas Reddy Layout Rd Sri Nivasa Reddy Layout ...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [{"name": "BEML Layout Brookefield Bengaluru Karnataka India", "count": 6}],  // All high pickup apartments
+        apartmentsMedium: [{"name": "Phase 2 Brookefield Bengaluru Karnataka India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "Sreenivas Reddy Layout Rd Sri Nivasa Reddy Layout AECS Layout Brookefield Bengaluru Karnataka 560037 India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 3,
         singlePickupCount: 1
     },
@@ -477,9 +513,9 @@ const pickupData = [
         bookings: 48,
         percentage: 1.5,
         subAreas: ["73 2nd Main Rd Maithri Layout Kadugodi Bengaluru Karnataka 560067 India", "Channasandra Main Road 3G Homes Crimson Layout Kadugodi Bengaluru Karnataka India", "Kadugodi Bengaluru Karnataka India"],
-        apartmentsHigh: [],  // 3+ pickups (top 10)
-        apartmentsMedium: [],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "Siddhartha Layout Kadugodi Bengaluru Karnataka Ind...", "count": 1}, {"name": "ARK SERENE COUNTY 3G Homes Crimson Layout Kadugodi...", "count": 1}, {"name": "V S Reddy Colony Kadugodi Bengaluru Karnataka Indi...", "count": 1}, {"name": "VSR layout Maithri Layout Kadugodi Bengaluru Karna...", "count": 1}, {"name": "Pavani Maithri Apartment Maithri Layout Kadugodi B...", "count": 1}, {"name": "Maithri Layout Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "Patalamma Layout V S Reddy Colony Kadugodi Bengalu...", "count": 1}, {"name": "Patel's Green Valley Kadugodi Bengaluru Karnataka ...", "count": 1}, {"name": "Prabhavathi Elegant Apartment Apartment Kumbena Ag...", "count": 1}, {"name": "Kadugodi Kadugodi Flyover Belatur Colony Brindavan...", "count": 1}, {"name": "XQP4+WF9 Maithri Layout Kadugodi Bengaluru Karnata...", "count": 1}, {"name": "Belathur colony Kadugodi Colony Kumbena Agrahara K...", "count": 1}, {"name": "N.V. Residency Patalamma Layout V S Reddy Colony K...", "count": 1}, {"name": "4144 Prestige Park View Internal Rd Kadugodi Colon...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [],  // All high pickup apartments
+        apartmentsMedium: [],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "Siddhartha Layout Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "ARK SERENE COUNTY 3G Homes Crimson Layout Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "V S Reddy Colony Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "VSR layout Maithri Layout Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "Pavani Maithri Apartment Maithri Layout Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "Maithri Layout Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "Patalamma Layout V S Reddy Colony Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "Patel's Green Valley Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "Prabhavathi Elegant Apartment Apartment Kumbena Agrahara Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "Kadugodi Kadugodi Flyover Belatur Colony Brindavan Layout Bangalore Karnataka India", "count": 1}, {"name": "XQP4+WF9 Maithri Layout Kadugodi Bengaluru Karnataka 560066 India", "count": 1}, {"name": "Belathur colony Kadugodi Colony Kumbena Agrahara Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "N.V. Residency Patalamma Layout V S Reddy Colony Kadugodi Bengaluru Karnataka India", "count": 1}, {"name": "4144 Prestige Park View Internal Rd Kadugodi Colony Kadugodi Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 14,
         singlePickupCount: 14
     },
@@ -489,9 +525,9 @@ const pickupData = [
         bookings: 47,
         percentage: 1.4,
         subAreas: ["Ambalipura - Sarjapur Road Kaikondrahalli Bengaluru Karnataka India", "Prestige Silver Dale Sarjapur Main Road Rainbow Drive Halanayakanahalli Bengaluru Karnataka India", "DSR PARKWAY Sarjapur Main Road Carmelaram P.O Bhoganhalli Bengaluru Karnataka India"],
-        apartmentsHigh: [],  // 3+ pickups (top 10)
-        apartmentsMedium: [],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "Shriram Malhaar Sarjapur Hobli Ittangur Bengaluru ...", "count": 1}, {"name": "Peninsula Solitaire villas Thindlu Sarjapur 562125", "count": 1}, {"name": "Lio Naga Chaitanya Stay Inn", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [],  // All high pickup apartments
+        apartmentsMedium: [],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "Shriram Malhaar Sarjapur Hobli Ittangur Bengaluru Karnataka India", "count": 1}, {"name": "Peninsula Solitaire villas Thindlu Sarjapur 562125", "count": 1}, {"name": "Lio Naga Chaitanya Stay Inn - Ladies PG Gents PG Accommodation (Hostel) in Sarjapur Kanare Dew Marythi Garden Layout Rainbow Drive Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 3,
         singlePickupCount: 3
     },
@@ -501,9 +537,9 @@ const pickupData = [
         bookings: 36,
         percentage: 1.1,
         subAreas: ["Kadubeesanahalli Bengaluru Karnataka India", "Kadubeesanahalli Bengaluru Karnataka India", "Kadubeesanahalli Bengaluru Karnataka India"],
-        apartmentsHigh: [],  // 3+ pickups (top 10)
-        apartmentsMedium: [],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "VILLA-15 PRESTIGE TECH VISTA Kadubeesanahalli Beng...", "count": 1}, {"name": "BLOCK-2 Kaverappa Layout Kadubeesanahalli Bengalur...", "count": 1}, {"name": "Krishna Residency opp. to CISCO Kaverappa Layout K...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [],  // All high pickup apartments
+        apartmentsMedium: [],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "VILLA-15 PRESTIGE TECH VISTA Kadubeesanahalli Bengaluru Karnataka India", "count": 1}, {"name": "BLOCK-2 Kaverappa Layout Kadubeesanahalli Bengaluru Karnataka India", "count": 1}, {"name": "Krishna Residency opp. to CISCO Kaverappa Layout Kadubeesanahalli Bengaluru Karnataka 560103 India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 3,
         singlePickupCount: 3
     },
@@ -513,15 +549,63 @@ const pickupData = [
         bookings: 34,
         percentage: 1.0,
         subAreas: ["JP Nagar 6th Phase Krishna Devaraya Nagar Yelachenahalli Kumaraswamy Layout Bengaluru Karnataka India", "JP Nagar 7th Phase Bangalore Karnataka India", "JP Nagar 8th Phase J. P. Nagar Bengaluru Karnataka India"],
-        apartmentsHigh: [],  // 3+ pickups (top 10)
-        apartmentsMedium: [{"name": "Annaiah Reddy Layout JP Nagar Phase 6 J. P. Nagar ...", "count": 2}],  // 2 pickups (top 15)  
-        apartmentsSingle: [{"name": "Brigade Millenium Rd Lakshmi Layout JP Nagar 7th P...", "count": 1}, {"name": "MS Ramaiah City Layout JP Nagar 7th Phase Bengalur...", "count": 1}, {"name": "Century Pragati Apartment Lakshmi Layout JP Nagar ...", "count": 1}],  // 1 pickup (top 20)
+        apartmentsHigh: [],  // All high pickup apartments
+        apartmentsMedium: [{"name": "Annaiah Reddy Layout JP Nagar Phase 6 J. P. Nagar Bengaluru Karnataka 560078 India", "count": 2}],  // All medium pickup apartments
+        apartmentsSingle: [{"name": "Brigade Millenium Rd Lakshmi Layout JP Nagar 7th Phase Arekere Bengaluru Karnataka 560076", "count": 1}, {"name": "MS Ramaiah City Layout JP Nagar 7th Phase Bengaluru Karnataka India", "count": 1}, {"name": "Century Pragati Apartment Lakshmi Layout JP Nagar 7th Phase Arekere Bengaluru Karnataka India", "count": 1}],  // ALL single pickup apartments
         totalApartments: 4,
         singlePickupCount: 3
     }
 ];
 
-        // Populate table
+        // Function to create apartment section with show more functionality
+        function createApartmentSection(apartments, sectionClass, sectionTitle, areaId) {
+            if (apartments.length === 0) return '';
+            
+            let html = `<div class="section-header ${sectionClass}">${sectionTitle}</div>`;
+            
+            // Show first 10 apartments
+            const visibleApts = apartments.slice(0, 10);
+            const hiddenApts = apartments.slice(10);
+            
+            // Add visible apartments
+            html += visibleApts.map(apt => 
+                `<span class="apartment-item ${sectionClass}-pickup">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
+            ).join(' ');
+            
+            // Add hidden apartments with unique ID
+            if (hiddenApts.length > 0) {
+                const hiddenId = `hidden-${areaId}-${sectionClass}`;
+                html += `<span class="hidden-apartments" id="${hiddenId}">`;
+                html += hiddenApts.map(apt => 
+                    `<span class="apartment-item ${sectionClass}-pickup">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
+                ).join(' ');
+                html += '</span>';
+                
+                // Add show more button
+                html += `<button class="show-more-btn" onclick="toggleShowMore('${hiddenId}', this)">
+                    <i class="fas fa-plus"></i> Show ${hiddenApts.length} more
+                </button>`;
+            }
+            
+            return html;
+        }
+
+        // Toggle show more functionality
+        function toggleShowMore(hiddenId, button) {
+            const hiddenSection = document.getElementById(hiddenId);
+            const isShowing = hiddenSection.classList.contains('show');
+            
+            if (isShowing) {
+                hiddenSection.classList.remove('show');
+                const hiddenCount = hiddenSection.querySelectorAll('.apartment-item').length;
+                button.innerHTML = `<i class="fas fa-plus"></i> Show ${hiddenCount} more`;
+            } else {
+                hiddenSection.classList.add('show');
+                button.innerHTML = `<i class="fas fa-minus"></i> Show less`;
+            }
+        }
+
+        // Populate table with full addresses and expandable sections
         function populateTable(data = pickupData) {
             const tableBody = document.getElementById('tableBody');
             tableBody.innerHTML = '';
@@ -540,33 +624,32 @@ const pickupData = [
                     <span style="color:#95a5a6">${item.singlePickupCount}</span> single pickup
                 </div>`;
                 
+                // Create unique area ID for this row
+                const areaId = `area-${item.rank}`;
+                
                 // High pickup apartments (3+)
-                if (item.apartmentsHigh.length > 0) {
-                    apartmentsHtml += '<div class="section-header high">🔥 High Pickup (3+)</div>';
-                    apartmentsHtml += item.apartmentsHigh.map(apt => 
-                        `<span class="apartment-item high-pickup">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
-                    ).join(' ');
-                }
+                apartmentsHtml += createApartmentSection(
+                    item.apartmentsHigh, 
+                    'high', 
+                    '🔥 High Pickup (3+)', 
+                    areaId
+                );
                 
                 // Medium pickup apartments (2)
-                if (item.apartmentsMedium.length > 0) {
-                    apartmentsHtml += '<div class="section-header medium">📈 Medium Pickup (2)</div>';
-                    apartmentsHtml += item.apartmentsMedium.map(apt => 
-                        `<span class="apartment-item medium-pickup">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
-                    ).join(' ');
-                }
+                apartmentsHtml += createApartmentSection(
+                    item.apartmentsMedium, 
+                    'medium', 
+                    '📈 Medium Pickup (2)', 
+                    areaId
+                );
                 
-                // Single pickup apartments (1) - show first 20
-                if (item.apartmentsSingle.length > 0) {
-                    apartmentsHtml += '<div class="section-header single">🏠 Single Pickup (1) - First 20</div>';
-                    apartmentsHtml += item.apartmentsSingle.map(apt => 
-                        `<span class="apartment-item single-pickup">${apt.name}<span class="apartment-count">${apt.count}</span></span>`
-                    ).join(' ');
-                    
-                    if (item.singlePickupCount > 20) {
-                        apartmentsHtml += `<span class="apartment-item" style="background:#ddd; font-style:italic;">...and ${item.singlePickupCount - 20} more</span>`;
-                    }
-                }
+                // Single pickup apartments (1)
+                apartmentsHtml += createApartmentSection(
+                    item.apartmentsSingle, 
+                    'single', 
+                    '🏠 Single Pickup (1)', 
+                    areaId
+                );
 
                 row.innerHTML = `
                     <td class="rank-cell">${item.rank}</td>
@@ -579,7 +662,7 @@ const pickupData = [
             });
         }
 
-        // Search functionality
+        // Enhanced search functionality
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const searchTerm = e.target.value.toLowerCase();
             
@@ -598,7 +681,7 @@ const pickupData = [
             populateTable(filteredData);
         });
 
-        // Export to Excel function
+        // Export to Excel function with full data
         function exportToExcel() {
             const ws_data = [
                 ['Rank', 'Area Name', 'Total Bookings', 'Percentage', 'Total Apartments', 'All Apartment Names and Pickup Counts']
@@ -609,7 +692,7 @@ const pickupData = [
                     ...item.apartmentsHigh.map(apt => `${apt.name} (${apt.count})`),
                     ...item.apartmentsMedium.map(apt => `${apt.name} (${apt.count})`),
                     ...item.apartmentsSingle.map(apt => `${apt.name} (${apt.count})`)
-                ].join(', ');
+                ].join(' | ');
                 
                 ws_data.push([
                     item.rank,
@@ -632,15 +715,15 @@ const pickupData = [
                 { wch: 15 },  // Bookings
                 { wch: 12 },  // Percentage
                 { wch: 15 },  // Total Apartments
-                { wch: 100 }  // All Apartments
+                { wch: 150 }  // All Apartments (wider for full addresses)
             ];
 
             // Add worksheet to workbook
-            XLSX.utils.book_append_sheet(wb, ws, "All Bangalore Apartments");
+            XLSX.utils.book_append_sheet(wb, ws, "Complete Bangalore Apartments");
 
             // Generate filename with current date
             const now = new Date();
-            const filename = `All_Bangalore_Apartments_${now.getFullYear()}-${(now.getMonth()+1).toString().padStart(2,'0')}-${now.getDate().toString().padStart(2,'0')}.xlsx`;
+            const filename = `Complete_Bangalore_Apartments_${now.getFullYear()}-${(now.getMonth()+1).toString().padStart(2,'0')}-${now.getDate().toString().padStart(2,'0')}.xlsx`;
 
             // Save file
             XLSX.writeFile(wb, filename);
