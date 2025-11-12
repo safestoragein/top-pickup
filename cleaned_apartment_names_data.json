@@ -1,0 +1,4469 @@
+[
+  {
+    "rank": 1,
+    "area": "Unknown",
+    "bookings": 1672,
+    "percentage": 51.2,
+    "subAreas": [
+      "2PH4+2Q7 Battarahalli Bengaluru Karnataka 560049 India",
+      "Ahmedabad Gujarat India",
+      "ParkwayHomes Rayasandra Main Road Rayasandra Bangalore Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "B Wing",
+        "count": 11,
+        "original_address": "Ground Floor Unit 4 B wing Business at Mantri Viman Nagar Viman Nagar Pune Maharashtra 411014"
+      },
+      {
+        "name": "Nks Business Park Challaghatta",
+        "count": 10,
+        "original_address": "WeWork Cinnabar Hills Embassy Golf Links Business Park Challaghatta Bangalore Karnataka 560071 India"
+      },
+      {
+        "name": "Dlf Westend",
+        "count": 4,
+        "original_address": "DLF Westend Heights Apartments DLF Westend Avenue DLF Newtown Akshayanagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nd Phase",
+        "count": 3,
+        "original_address": "Provident Park Square Kanakapura Rd Judicial Layout 2nd Phase Vakil Garden City Bengaluru Karnataka India"
+      },
+      {
+        "name": "M Acres Outer Ring Rd Balagere",
+        "count": 3,
+        "original_address": "Sobha Dream Acres Outer Ring Rd Balagere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Mantri Tranquil Mantri",
+        "count": 3,
+        "original_address": "Mantri Tranquil Mantri Tranquil Road Gubbalala Subramanyapura Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Finsbury Park",
+        "count": 3,
+        "original_address": "Prestige Finsbury Park near Shell Technologies KIADB Gummanahalli Bagaluru Bengaluru Karnataka India"
+      },
+      {
+        "name": "Garudachar Palya Mahadevapura",
+        "count": 3,
+        "original_address": "Brigade Metropolis Garudachar Palya Mahadevapura Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sjr Blue Waters Clarence Block Sai Sree Layout",
+        "count": 3,
+        "original_address": "SJR Blue Waters Clarence Block Sai Sree Layout Parappana Agrahara Bengaluru Karnataka India"
+      },
+      {
+        "name": "Saint Johns Road Hermit Colony Sivanchetti Gardens",
+        "count": 3,
+        "original_address": "Sobha Ivory Block-2 Saint Johns Road Hermit Colony Sivanchetti Gardens Bengaluru Karnataka India"
+      },
+      {
+        "name": "Dollars Colony",
+        "count": 2,
+        "original_address": "Dollars Colony R.M.V. 2nd Stage Bengaluru Karnataka 560094 India"
+      },
+      {
+        "name": "Ra Green Acres Kalena Agrahara",
+        "count": 2,
+        "original_address": "AJMERA GREEN ACRES Kalena Agrahara Bengaluru Karnataka India"
+      },
+      {
+        "name": "Telecom Layout",
+        "count": 2,
+        "original_address": "Telecom Layout Jakkuru Bengaluru Karnataka India"
+      },
+      {
+        "name": "Shriram Greenfield Hobli",
+        "count": 2,
+        "original_address": "Shriram Greenfield HOBLI Bengaluru Karnataka India"
+      },
+      {
+        "name": "Vinayaka Nagar Nanjundeswara Layout",
+        "count": 2,
+        "original_address": "Vinayaka Nagar Nanjundeswara Layout J P Nagar Phase 5 J. P. Nagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Dream Gardens",
+        "count": 2,
+        "original_address": "SOBHA Dream Gardens (Residential Apartments in Thanisandra) Kannuru Road Mitganahalli Bellahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Pride Pegasus Visthar",
+        "count": 2,
+        "original_address": "Pride Pegasus Visthar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Purva Westend",
+        "count": 2,
+        "original_address": "Purva Westend Service Road Kudlu Gate Garebhavipalya Garvebhavi Palya Bengaluru Karnataka India"
+      },
+      {
+        "name": "Thimappa Reddy Layout Syndicate Bank Colony",
+        "count": 2,
+        "original_address": "Thimappa Reddy Layout Syndicate Bank Colony Omkar Nagar Arekere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Layout Hennur Bande Hbr Layout",
+        "count": 2,
+        "original_address": "KOTS Jour Byreshwara Layout Hennur Bande HBR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "House Of Hiranandani Villas",
+        "count": 2,
+        "original_address": "House Of Hiranandani Villas Devanahalli North Bengaluru Devanahalli Southegowdanahalli Karnataka India"
+      },
+      {
+        "name": "Bda Layout",
+        "count": 2,
+        "original_address": "BDA Layout BTM 4th Stage Bengaluru Karnataka India"
+      },
+      {
+        "name": "Th Block",
+        "count": 2,
+        "original_address": "4th Block Kormangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Pbr Residency Munireddy Layout Munnireddy Layout",
+        "count": 2,
+        "original_address": "PBR Residency Munireddy Layout Munnireddy Layout Panathur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Second Floor Ashok Avenue",
+        "count": 2,
+        "original_address": "No.88 Flat No. 201 Second Floor Ashok Avenue m K.R.Garden Murugeshpalya Bangalore - 560017"
+      },
+      {
+        "name": "Brigade Cornerstone",
+        "count": 2,
+        "original_address": "Serene Brigade Cornerstone Utopia Road Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ncr Heights",
+        "count": 1,
+        "original_address": "NCR Heights Doddanekundi Doddanekkundi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Gurugram Haryana",
+        "count": 1,
+        "original_address": "Sector 92 Gurugram Haryana India"
+      },
+      {
+        "name": "Loria Carmelaram Doddakannelli",
+        "count": 1,
+        "original_address": "Block-2 Suncity Gloria Carmelaram Doddakannelli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Dlf Woodland",
+        "count": 1,
+        "original_address": "DLF Woodland Heights Bangalore Karnataka 560105 India"
+      },
+      {
+        "name": "Abbaiah Reddy Layout",
+        "count": 1,
+        "original_address": "Abbaiah Reddy Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Dream Acres Wing 29",
+        "count": 1,
+        "original_address": "Sobha Dream Acres Wing 29 Balagere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nd Block Bda Layout",
+        "count": 1,
+        "original_address": "Sapthagiri Splendor BTM 4th Stage 2nd Block BDA Layout BTM 4th Stage Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nwood Prestige Glenwood Mandur",
+        "count": 1,
+        "original_address": "Prestige Glenwood Prestige Glenwood Mandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sneha Grandeur Subbanna Layout",
+        "count": 1,
+        "original_address": "Sneha Grandeur Subbanna Layout Hoodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Knss Colony",
+        "count": 1,
+        "original_address": "KNSS colony Horamavu Bengaluru Karnataka India"
+      },
+      {
+        "name": "Srinivasam Apartment Muniswamy Layout",
+        "count": 1,
+        "original_address": "Srinivasam Apartment Muniswamy Layout Rayasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ha Coral Behind Jakkur Jakkuru",
+        "count": 1,
+        "original_address": "Sobha Coral behind Jakkur Jakkuru Bengaluru Karnataka India"
+      },
+      {
+        "name": "Diya Apartment Reliable Residency Layout",
+        "count": 1,
+        "original_address": "Diya Apartment Reliable Residency Layout Phase 3 Reliable Tranquil Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Godrej United",
+        "count": 1,
+        "original_address": "GODREJ UNITED Bengaluru Karnataka 560048 India"
+      },
+      {
+        "name": "Th Block Phase 3",
+        "count": 1,
+        "original_address": "5th Block Phase 3 BSK Bengaluru Karnataka India"
+      },
+      {
+        "name": "Arkavathy Layout",
+        "count": 1,
+        "original_address": "Arkavathy Layout Thanisandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Reliable Lake Dew Residency",
+        "count": 1,
+        "original_address": "55/9 Reliable Lake Dew Residency Phase 2 Lakedew Residency Haralur Karnataka India"
+      },
+      {
+        "name": "Prestige Lake Ridge",
+        "count": 1,
+        "original_address": "Prestige Lake Ridge Thurahalli Road Subramanyapura Bengaluru Karnataka India"
+      },
+      {
+        "name": "Chourasia Manor",
+        "count": 1,
+        "original_address": "G3 310 chourasia manor phase 2 kaverappa layout kadubeeshnahalli bangalore 560103"
+      },
+      {
+        "name": "Sannidhi Homes",
+        "count": 1,
+        "original_address": "Sannidhi homes Jigani Bande Nalla Sandra Bangalore Division Karnataka India"
+      },
+      {
+        "name": "Sobha Dream Acres Wing 12",
+        "count": 1,
+        "original_address": "Sobha Dream Acres Wing 12 Sobha Dream Acres Balagere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Vijaya Bank Colony Gokula Layout",
+        "count": 1,
+        "original_address": "Vijaya Bank Colony Gokula Layout K R Puram Bengaluru Karnataka 560036 India"
+      },
+      {
+        "name": "Aecs Layout",
+        "count": 1,
+        "original_address": "AECS Layout Singasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hs Towers Owners Court Layout",
+        "count": 1,
+        "original_address": "Flat No 203 HS Towers Owners Court Layout West Road Kasavanahalli Bangalore - 560035"
+      },
+      {
+        "name": "Naveen Apartment Classic Colony",
+        "count": 1,
+        "original_address": "Naveen apartment Classic Colony Kasavanahalli Bengaluru Karnataka 560035"
+      },
+      {
+        "name": "Bangalore Anekal Rd Anekal",
+        "count": 1,
+        "original_address": "Godrej 24 Bangalore Anekal Rd Anekal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Karpagam Garden Layout",
+        "count": 1,
+        "original_address": "Karpagam Garden layout Hosur Tamil Nadu India"
+      },
+      {
+        "name": "Sneha Grandeur Hoodi",
+        "count": 1,
+        "original_address": "Sneha Grandeur Hoodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ut Manayata Tech Park Nagavara",
+        "count": 1,
+        "original_address": "ZENITH RESIDENCES DadaMastan Layout Manayata Tech Park Nagavara Bengaluru Karnataka"
+      },
+      {
+        "name": "Sobha City Sobha",
+        "count": 1,
+        "original_address": "Sobha City Sobha City Road Devin Paradise Enclave Thanisandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Skyline Apartment",
+        "count": 1,
+        "original_address": "Skyline Apartment Papreddy Palya 2nd Stage Chandra Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ters Township Pune Maharashtra",
+        "count": 1,
+        "original_address": "VTP BelAir Bluewaters Township Pune Maharashtra India"
+      },
+      {
+        "name": "Lakshmi Layout",
+        "count": 1,
+        "original_address": "Lakshmi Layout Arekere Bengaluru Karnataka 560076 India"
+      },
+      {
+        "name": "St Floor Sumahesh Mansion",
+        "count": 1,
+        "original_address": "101 1st floor SuMahesh Mansion Site #5 SurveyNo:224/4 Papayya Reddy Layout Sri LekshmiNarayana tmpl road Munnekollal BENGALURU KARNATAKA 560037"
+      },
+      {
+        "name": "Vijaya Springwoods Manipal County Rd Aecs C Block",
+        "count": 1,
+        "original_address": "Vijaya Springwoods Manipal County Rd AECS C Block Begur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Gokul Residency Ymr Colony",
+        "count": 1,
+        "original_address": "501 Gokul Residency YMR Colony Proddutur Kadapa (district Andrapradesh -516360"
+      },
+      {
+        "name": "Green Garden Layout Silver Springs Layout",
+        "count": 1,
+        "original_address": "Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka 560066 India"
+      },
+      {
+        "name": "Sushila Heights Kaverappa Layout",
+        "count": 1,
+        "original_address": "Flat 1 Sushila Heights Kaverappa Layout Kadubessnahalli Bengaluru - 560103"
+      },
+      {
+        "name": "Tiniketan Thigalarapalya Hoodi",
+        "count": 1,
+        "original_address": "Tower 12 Prestige Shantiniketan Thigalarapalya Hoodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Silver Springs Layout",
+        "count": 1,
+        "original_address": "VBN Classic #72 Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Fifth Element Gunjur Villa",
+        "count": 1,
+        "original_address": "Fifth Element Gunjur Village Bengaluru Karnataka India"
+      },
+      {
+        "name": "Adithya Palatial Apartment Dynasty Layout",
+        "count": 1,
+        "original_address": "Adithya Palatial Apartment Dynasty layout Thanisandra Bengaluru Karnataka 560024 India"
+      },
+      {
+        "name": "Kothanur Rammana Layout",
+        "count": 1,
+        "original_address": "kothanur Rammana Layout Byrathi Karnataka India"
+      },
+      {
+        "name": "Avalappa Layout Ammanamma Layout",
+        "count": 1,
+        "original_address": "Avalappa Layout Ammanamma Layout Murgesh Pallya Bengaluru Karnataka India"
+      },
+      {
+        "name": "Fifth Element Apartment Gunjur Villa",
+        "count": 1,
+        "original_address": "Fifth Element Apartment Gunjur village Bangalore"
+      },
+      {
+        "name": "Vishnu Enclave Silver Springs Layout",
+        "count": 1,
+        "original_address": "Vishnu Enclave Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nri Layout",
+        "count": 1,
+        "original_address": "NRI Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Purva Promenade",
+        "count": 1,
+        "original_address": "Purva Promenade Hennur Road Essel gardens Bengaluru Karnataka 560077 India"
+      },
+      {
+        "name": "Alsa Terraces Langford Gardens",
+        "count": 1,
+        "original_address": "Alsa Terraces Langford Gardens Bengaluru Karnataka India"
+      },
+      {
+        "name": "Mico Layout",
+        "count": 1,
+        "original_address": "Mico Layout Hongasandra Bengaluru Karnataka 560068 India"
+      },
+      {
+        "name": "Gardens Bharath Housing Society Layout",
+        "count": 1,
+        "original_address": "Brigade 7 Gardens Bharath Housing Society Layout Uttarahalli Hobli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Ruby Platinum",
+        "count": 1,
+        "original_address": "Sobha Ruby Platinum Tumkur Road Block-2 Havanur Layout Nagasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Th Block",
+        "count": 1,
+        "original_address": "FIRST 102 SAI SUMA HBR 4TH BLOCK HENNUR 1ST STAGE Bengaluru Urban Karnataka 560043"
+      },
+      {
+        "name": "Mahaveer Ranches Sai Sree Layout",
+        "count": 1,
+        "original_address": "Mahaveer Ranches Sai Sree Layout Parappana Agrahara Bengaluru Karnataka"
+      },
+      {
+        "name": "Sobha Apartments",
+        "count": 1,
+        "original_address": "Sobha Apartments Nagasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "S Home Isro Layout Rajeshwari Layout",
+        "count": 1,
+        "original_address": "Friend's Home ISRO Layout Rajeshwari Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Lh Lanco Hills Lanco Hills Residential Towers",
+        "count": 1,
+        "original_address": "407 11LH Lanco Hills Lanco Hills Residential Towers Rd Gachibowli Manikonda Telangana 500089"
+      },
+      {
+        "name": "Royal Slv Homes",
+        "count": 1,
+        "original_address": "Royal SLV Homes Ward Number 85 Dodda Nekkundi Extension Doddanekkundi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Amr Oaks Apartment Iggaluru Villa",
+        "count": 1,
+        "original_address": "AMR OAKS APARTMENT Iggaluru Village Bommasandra Karnataka India"
+      },
+      {
+        "name": "United Green City Apartment",
+        "count": 1,
+        "original_address": "United Green City Apartment hobli BETQ East Bidarahalli Bengaluru Bangalore Division Karnataka India"
+      },
+      {
+        "name": "Shriram Sameeksha Shriniketh Layout",
+        "count": 1,
+        "original_address": "Shriram Sameeksha Shriniketh Layout Singapura Bengaluru Karnataka India"
+      },
+      {
+        "name": "De Vishwanathapura Rajanukunte",
+        "count": 1,
+        "original_address": "PRESTIGE OASIS Adde Vishwanathapura Rajanukunte Karnataka India"
+      },
+      {
+        "name": "Prestige Finsbury Park",
+        "count": 1,
+        "original_address": "Prestige Finsbury Park Regent taluk jala hobli Gummanahalli Bagaluru Bengaluru Karnataka India"
+      },
+      {
+        "name": "Kudlu Main Rd Kudlu Aecs Layout",
+        "count": 1,
+        "original_address": "VMQ2+PJJ AMARACHANDRA ROYAL [ACR LIFESTYLE] SITE NO.36/2 AND 36/3 Kudlu Main Rd Kudlu AECS Layout - A Block VGP Layout Singasandra Bengaluru Karnataka 560068"
+      },
+      {
+        "name": "Sobha City",
+        "count": 1,
+        "original_address": "Casa Paradiso 2 Block 3 - Sobha City Thanisandra Main Rd Devin Paradise Enclave RK Hegde Nagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Th Avenue",
+        "count": 1,
+        "original_address": "Kumari Brundavan 18th Avenue Junnasandra Karnataka India"
+      },
+      {
+        "name": "Hillcrest House Of Hiranandani Akshaya Gardens",
+        "count": 1,
+        "original_address": "Hillcrest House of Hiranandani Akshaya Gardens Akshayanagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Lakeside Habitat Gunjur Villa",
+        "count": 1,
+        "original_address": "TOWER-2 Prestige Lakeside Habitat Gunjur Village Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hilal Nagar Hbr Layout",
+        "count": 1,
+        "original_address": "1st stage 3rd block Al- Hilal nagar HBR layout. Bangalore 560043"
+      },
+      {
+        "name": "Royal Nest Vijaya Bank Layout",
+        "count": 1,
+        "original_address": "Royal Nest Vijaya Bank Layout Bilekahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Yout Gundappa Layout Gottigere",
+        "count": 1,
+        "original_address": "Vaattika Doctors Layout Shivanna Layout Gundappa Layout Gottigere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Song Of The South",
+        "count": 1,
+        "original_address": "Prestige Song Of The South Tower-15 Begur - Koppa Road Nobanagar Akshaya Vana Akshayanagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Purva Skywood Silver",
+        "count": 1,
+        "original_address": "BLOCK-G Purva Skywood Silver County Road off Kudlu Haralur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Clayton St Devasthanagalu Gunjur Villa",
+        "count": 1,
+        "original_address": "TOWER-15 Clayton St Devasthanagalu Gunjur Village Bengaluru Karnataka 560087"
+      },
+      {
+        "name": "Mahalakshmi Layout",
+        "count": 1,
+        "original_address": "Mahalakshmi Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Dlf Maiden",
+        "count": 1,
+        "original_address": "DLF Maiden Heights rajapura Jigani Karnataka 560105 India"
+      },
+      {
+        "name": "Brew Drop Cafe Dlf City",
+        "count": 1,
+        "original_address": "Brew drop cafe DLF city road Akshayanagar"
+      },
+      {
+        "name": "C Wing Vani Apartment Wadiwali Villa",
+        "count": 1,
+        "original_address": "Flat no 504 C wing Vani Apartment Wadiwali Village Dr. C. G. Road Chembur East Mumbai Maharashtra 400074"
+      },
+      {
+        "name": "S Home Pragathi Layout",
+        "count": 1,
+        "original_address": "Dishwet\u201a\u00c4\u00f4s home Pragathi Layout Doddanekundi Doddanekkundi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Garrison",
+        "count": 1,
+        "original_address": "Sobha Garrison Tumkur Road Nagasandra Bengaluru Karnataka 560073 India"
+      },
+      {
+        "name": "Brigade Meadows",
+        "count": 1,
+        "original_address": "Brigade meadows Kanakapura Road Bengaluru Karnataka India"
+      },
+      {
+        "name": "Dlf Woodland",
+        "count": 1,
+        "original_address": "DLF Woodland Heights Bangalore Karnataka India"
+      },
+      {
+        "name": "S R Pride Apartment",
+        "count": 1,
+        "original_address": "S R PRIDE Apartment 60 Feet Road Thimappa Reddy Layout Doddanekundi Doddanekkundi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ganesha Block Nandini Layout",
+        "count": 1,
+        "original_address": "Ganesha Block Nandini Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Mithila Enclave",
+        "count": 1,
+        "original_address": "Mithila enclave State Highway 35 Dommasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Den Triangle Sannatammanahalli",
+        "count": 1,
+        "original_address": "Brigade Golden Triangle Sannatammanahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Avani Oakridge Sai Baba Temple",
+        "count": 1,
+        "original_address": "Pavani Oakridge Sai Baba Temple Road Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Eur Apartment Gulmohar Enclave",
+        "count": 1,
+        "original_address": "Nizantha Grandeur Apartment Gulmohar Enclave Road Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "S Road Hanumanthappa Layout",
+        "count": 1,
+        "original_address": "Purva Palm Beach Elu's Road Hanumanthappa Layout Kyalasanahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Eternia",
+        "count": 1,
+        "original_address": "SOBHA ETERNIA Haralur Road Eastwood Township Bengaluru Haralur Karnataka India"
+      },
+      {
+        "name": "Layout Rd Carmelaram Janatha Colony",
+        "count": 1,
+        "original_address": "2153 Layout Rd Carmelaram Janatha Colony Doddakannelli Bengaluru Karnataka 560035 India"
+      },
+      {
+        "name": "Naidu Layout",
+        "count": 1,
+        "original_address": "Naidu Layout Chikkalasandra Bengaluru Karnataka IN"
+      },
+      {
+        "name": "Arekere Mico Layout Lakshmi Layout",
+        "count": 1,
+        "original_address": "Arekere MICO Layout Lakshmi Layout Arekere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Lakshmi Layout",
+        "count": 1,
+        "original_address": "Lakshmi Layout Arekere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Bharathy Oakridge Reddy Avenue Ngr Layout",
+        "count": 1,
+        "original_address": "BHARATHY OAKRIDGE Reddy Avenue NGR Layout P.Krishnappa Layout Doddakannelli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Banquets Sector 63",
+        "count": 1,
+        "original_address": "Marks Hotel & Banquets Sector 63 A Noida Uttar Pradesh India"
+      },
+      {
+        "name": "Block",
+        "count": 1,
+        "original_address": "1004 Block-3 SJR Bluewaters Haralur Bangalore 560100"
+      },
+      {
+        "name": "Sobha Dream Acres Wing 10",
+        "count": 1,
+        "original_address": "Sobha Dream Acres Wing 10 Balagere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Apartments",
+        "count": 1,
+        "original_address": "Cloud 9 Apartments Vaishali Sector 3F Block C Sector-1 Vaishali Ghaziabad Uttar Pradesh India"
+      },
+      {
+        "name": "Ruby Homes Isro Layout Rajeshwari Layout",
+        "count": 1,
+        "original_address": "Ruby Homes ISRO Layout Rajeshwari Layout Munnekollal East Taluk Karnataka India"
+      },
+      {
+        "name": "Asr Homes Silver Springs Layout",
+        "count": 1,
+        "original_address": "#97 ASR Homes Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Isro Layout Rajeshwari Layout",
+        "count": 1,
+        "original_address": "ISRO Layout Rajeshwari Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Phase 2",
+        "count": 1,
+        "original_address": "Bluewaters by SJR Primecorp Silver County Road Lakedew Residency- Phase 2 Sai Meadows Parappana Agrahara Haralur Karnataka India"
+      },
+      {
+        "name": "Of Ngef Layout Bennigana Halli",
+        "count": 1,
+        "original_address": "Chervith Apartment Gurijiya Gutta East of NGEF Layout Bennigana Halli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Lake Ridge",
+        "count": 1,
+        "original_address": "Prestige Lake Ridge flat number 1091 tower 1 Uttarahalli Bangalore-560061"
+      },
+      {
+        "name": "Reddy Layout Chinnapanna Halli",
+        "count": 1,
+        "original_address": "Raghu Pride near Royal English School Chinnappanahalli Hanuma Reddy Layout Chinnapanna Halli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Purvi Khosala Silver Spring Layout",
+        "count": 1,
+        "original_address": "Purvi Khosala Silver Spring Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Habitat Eden Heights",
+        "count": 1,
+        "original_address": "Habitat Eden Heights Hoodi Hoodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Venugopal Reddy Layout Arekere",
+        "count": 1,
+        "original_address": "Spring Leaf Apartments Nanjappa Layout Venugopal Reddy Layout Arekere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Tranquility",
+        "count": 1,
+        "original_address": "Prestige Tranquility Budigere Road Bommenahalli Karnataka India"
+      },
+      {
+        "name": "Cambridge Layout",
+        "count": 1,
+        "original_address": "Cambridge Layout Jogupalya Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Royale Gardens",
+        "count": 1,
+        "original_address": "Prestige Royale Gardens Doddaballapur Road Bengaluru Karnataka 560064 India"
+      },
+      {
+        "name": "Pruthvi Layout",
+        "count": 1,
+        "original_address": "Pruthvi Layout Channasandra Koralur Karnataka India"
+      },
+      {
+        "name": "Srj Residency Pr Layout Chandra Layout",
+        "count": 1,
+        "original_address": "SRJ Residency PR Layout Chandra Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Ferns",
+        "count": 1,
+        "original_address": "Prestige Ferns Residency Haralur Road Eastwood Township Haralur Bangalore Division Karnataka India"
+      },
+      {
+        "name": "Southern Winds Layout Sai Sree Layout",
+        "count": 1,
+        "original_address": "Southern Winds Layout Sai Sree Layout Parappana Agrahara Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ourt Layout East Kasavanahalli",
+        "count": 1,
+        "original_address": "Sri Sai Enclave opposite to shell petrol bunk Owners Court Layout east Kasavanahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Home Aecs Layout",
+        "count": 1,
+        "original_address": "Home AECS Layout - A Block Yellama Layout Singasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nikoo Homes",
+        "count": 1,
+        "original_address": "Nikoo Homes Rd Thanisandra Bengaluru Karnataka 560077"
+      },
+      {
+        "name": "Sai Ganesh Apartment Sai Colony",
+        "count": 1,
+        "original_address": "Sai Ganesh apartment Sai Colony Krishnarajapuram Bengaluru Karnataka India"
+      },
+      {
+        "name": "Saroj Symphony Phase",
+        "count": 1,
+        "original_address": "Saroj Symphony Phase-2 Block-C Nagondanahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Mvs Paradise Prestige Mayberry",
+        "count": 1,
+        "original_address": "MVS Paradise Prestige Mayberry Road opposite to Green Earth Atrium behind Prestige Elms Park Channasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Pragathi Layout",
+        "count": 1,
+        "original_address": "Pragathi Layout Doddanekundi Doddanekkundi Bengaluru Karnataka 560037 India"
+      },
+      {
+        "name": "Irping Woods Eastwood Township",
+        "count": 1,
+        "original_address": "Tower-2 SHRIRAM CHIRPING WOODS Eastwood Township Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Dream Acres Wing 27",
+        "count": 1,
+        "original_address": "Sobha Dream Acres Wing 27 Balagere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Shriram Blue",
+        "count": 1,
+        "original_address": "Shriram Blue Apartment Sonnenahalli Colony Krishnarajapuram Kurudusonnenahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Bella Vista",
+        "count": 1,
+        "original_address": "Prestige Bella Vista Poonamallee Road Iyyappanthangal Chennai Tamil Nadu India"
+      },
+      {
+        "name": "Baldota Serenity Venkataswamy Layout",
+        "count": 1,
+        "original_address": "Baldota Serenity Venkataswamy Layout Rayasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Casabella",
+        "count": 1,
+        "original_address": "Prestige Casabella Neeladri Road Chikkathoguru Bengaluru Karnataka India"
+      },
+      {
+        "name": "Telecom Layout Hbr Layout",
+        "count": 1,
+        "original_address": "Telecom Layout HBR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Green Garden Layout Silver Springs Layout",
+        "count": 1,
+        "original_address": "2 Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Gvr Oak",
+        "count": 1,
+        "original_address": "GVR OAks Ardendale Kannamangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Purva Panorama Kalena Agrahara",
+        "count": 1,
+        "original_address": "Block N2 Flat no 306 Purva Panorama Kalena Agrahara Bannerghatta Road"
+      },
+      {
+        "name": "Mykonos Devin Paradise Enclave",
+        "count": 1,
+        "original_address": "Sobha City - Mykonos Devin Paradise Enclave Bengaluru Karnataka India"
+      },
+      {
+        "name": "Green House Layout",
+        "count": 1,
+        "original_address": "Green House Layout Doddathoguru Bengaluru Karnataka India"
+      },
+      {
+        "name": "Se Layout Devarachikkana Halli",
+        "count": 1,
+        "original_address": "Sona Vistaas Apartment Bannerghatta Rd near Vijaya Bank Layout Classic Paradise Layout Devarachikkana Halli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ckr Enclave Pragathi Layout",
+        "count": 1,
+        "original_address": "CKR enclave pragathi layout doddanekundi Bangalore"
+      },
+      {
+        "name": "A Block",
+        "count": 1,
+        "original_address": "A block PURVA VENEZIA Vignana Kendra Bengaluru Karnataka 560065 India"
+      },
+      {
+        "name": "Plama Heights North Punappa Layout Hennur Gardens",
+        "count": 1,
+        "original_address": "Plama Heights North Punappa Layout Hennur Gardens corrs Bengaluru Karnataka India"
+      },
+      {
+        "name": "Lave Ayyappa Society Survey Of",
+        "count": 1,
+        "original_address": "RRMR ENCLAVE Ayyappa Society Survey of India Colony Chanda Naik Nagar Madhapur Hyderabad Telangana India"
+      },
+      {
+        "name": "Dommasandra Rd Janatha Colony",
+        "count": 1,
+        "original_address": "VPMV+C94 Dommasandra Rd Janatha colony Dommasandra Bengaluru Karnataka 562125 India"
+      },
+      {
+        "name": "Provident Park Square Judicial Layout",
+        "count": 1,
+        "original_address": "Provident Park Square Judicial Layout 2nd Phase Talaghattapura Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ab Nivasa Joseph Layout Srinivasa Reddy Layout",
+        "count": 1,
+        "original_address": "AB Nivasa Joseph Layout Srinivasa Reddy Layout Begur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Brigade Buena Vista",
+        "count": 1,
+        "original_address": "Brigade Buena vista Budigere Road Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ar B Narayanapura Mahadevapura",
+        "count": 1,
+        "original_address": "Pragnya pg for ladies near brigade nalapadu near bagmane Kamadhenu layout Kamadhenu Nagar B Narayanapura Mahadevapura Bengaluru Karnataka 560016 India"
+      },
+      {
+        "name": "Btr Gardens Aecs Layout",
+        "count": 1,
+        "original_address": "BTR Gardens AECS Layout - A Block AECS Layout Singasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Assetz Marq Phase",
+        "count": 1,
+        "original_address": "Assetz Marq Phase-1 Kannamangala Karnataka 560067 India"
+      },
+      {
+        "name": "Venugopal Reddy Layout Arekere",
+        "count": 1,
+        "original_address": "Kavya Nest Livingg Space Creators near BBT factory Nanjappa Layout Venugopal Reddy Layout Arekere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hbr Layout",
+        "count": 1,
+        "original_address": "HBR Layout 3rd Block HBR Layout Bengaluru Karnataka 560043 India"
+      },
+      {
+        "name": "Casagrand Boulevard Post Sonam Layout",
+        "count": 1,
+        "original_address": "Casagrand Boulevard Post Sonam Layout Visthar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Rd Stage Puttappa Layout",
+        "count": 1,
+        "original_address": "HAL 3rd Stage Puttappa layout New Tippasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Dlf Phase 5",
+        "count": 1,
+        "original_address": "DLF Phase 5 Sector 43 Gurugram Haryana India"
+      },
+      {
+        "name": "M Acres Outer Ring Rd Balagere",
+        "count": 1,
+        "original_address": "Sobha Dream Acres Outer Ring Rd Balagere Bangalore Karnataka 560087 India"
+      },
+      {
+        "name": "Brigade Orchards Devanahalli",
+        "count": 1,
+        "original_address": "Brigade Orchards Devanahalli Bangalore Karnataka India"
+      },
+      {
+        "name": "A Block Aecs Layout",
+        "count": 1,
+        "original_address": "A block AECS Layout 1st floor - 560037"
+      },
+      {
+        "name": "Shri Kempanna Residency Aecs Layout",
+        "count": 1,
+        "original_address": "Shri Kempanna Residency AECS Layout - A Block Singasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Geethanjali Layout",
+        "count": 1,
+        "original_address": "Geethanjali Layout HAL 3rd Stage Bhoomi Reddy Colony New Tippasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sree Jd Gardens Knss Colony",
+        "count": 1,
+        "original_address": "Sree JD Gardens KNSS colony Horamavu Bengaluru Karnataka India"
+      },
+      {
+        "name": "Venkatappa Layout Postal Colony",
+        "count": 1,
+        "original_address": "Venkatappa Layout Postal Colony Sanjaynagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Brigade Eldorado Gummanahalli",
+        "count": 1,
+        "original_address": "Gallium at Brigade Eldorado Gummanahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Pooja Residency Aecs Layout",
+        "count": 1,
+        "original_address": "No 23 pooja residency AECS Layout Singasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Mvrs Residency Silver Springs Layout",
+        "count": 1,
+        "original_address": "MVRS RESIDENCY Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Swapna Residency Nri Layout",
+        "count": 1,
+        "original_address": "Swapna Residency NRI Layout Bengaluru Karnataka 560016"
+      },
+      {
+        "name": "Bidare Agrahara Colony",
+        "count": 1,
+        "original_address": "Bidare Agrahara colony Bidare Agraha Bengaluru Karnataka 560049 India"
+      },
+      {
+        "name": "Om Shakti Nilayam Carmelaram Janatha Colony",
+        "count": 1,
+        "original_address": "Om Shakti Nilayam Carmelaram Janatha Colony Doddakannelli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Rd Block Hbr Layout",
+        "count": 1,
+        "original_address": "3rd Block HBR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Aagama Residency Raju Colony",
+        "count": 1,
+        "original_address": "Aagama Residency Raju Colony Yemalur 560037 Bangalore"
+      },
+      {
+        "name": "Brigade Buena Vista",
+        "count": 1,
+        "original_address": "Brigade Buena vista Budigere Cross Bengaluru Karnataka 560049 India"
+      },
+      {
+        "name": "Ver Springs Layout Munnekollal",
+        "count": 1,
+        "original_address": "JBN Residency Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Vaishnavi Terrace Dollars Colony",
+        "count": 1,
+        "original_address": "Vaishnavi Terrace Dollars Colony Phase 4 J. P. Nagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Bda Layout",
+        "count": 1,
+        "original_address": "Ponnar Nilayam 1st Block Royal Shelters Stage 4 BDA Layout BTM 4th Stage Bengaluru Karnataka India"
+      },
+      {
+        "name": "Vgp Arjun Town Kudlu Vgp Layout",
+        "count": 1,
+        "original_address": "Tamara Site nos 25 & 26 VGP Arjun Town Kudlu VGP Layout Bengaluru Karnataka 560068"
+      },
+      {
+        "name": "Bhavisha Bentley Goldberg Phase 2",
+        "count": 1,
+        "original_address": "Bhavisha Bentley Goldberg Phase 2 Phase 2 Chikkadunnasandra Kada Agrahara Bengaluru Karnataka India"
+      },
+      {
+        "name": "Rama Villas Reliable Residency Layout",
+        "count": 1,
+        "original_address": "Rama Villas Reliable Residency Layout Phase 3 Reliable Tranquil Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Shreyas Residency Btr Gardens",
+        "count": 1,
+        "original_address": "Shreyas residency BTR gardens near kudlugate 560068"
+      },
+      {
+        "name": "Shree Gatti Residency",
+        "count": 1,
+        "original_address": "Shree Gatti residency munekollala"
+      },
+      {
+        "name": "Nbr Lallu Paradise Pragathi Layout",
+        "count": 1,
+        "original_address": "NBR Lallu Paradise Pragathi Layout Doddanekundi Doddanekkundi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ds Max Springfield Block",
+        "count": 1,
+        "original_address": "DS MAX Springfield Block-A4 Phase - 3 Anagalapura Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sri Balaji Enclave",
+        "count": 1,
+        "original_address": "Sri Balaji Enclave Junnasandra Bengaluru Karnataka 560035 India"
+      },
+      {
+        "name": "Uber Verdant Hobli Janatha Colony",
+        "count": 1,
+        "original_address": "UBER VERDANT Hobli Janatha Colony Doddakannelli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sepal Apartment",
+        "count": 1,
+        "original_address": "N.D. Sepal Apartment HSR Sector 2 Somasundarapalya Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sree Sai Residency",
+        "count": 1,
+        "original_address": "Sree sai residency Junnasandra Bangalore Karnataka India"
+      },
+      {
+        "name": "Garuda Vista Apartments Sri Venkateswara Layout",
+        "count": 1,
+        "original_address": "Garuda Vista Apartments Sri Venkateswara Layout Mahadevapura Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ut White Rose Layout Extension",
+        "count": 1,
+        "original_address": "Colive 1167 Manchester Anthem Prasanth Layout White Rose Layout extension Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sector 75 Noida Uttar",
+        "count": 1,
+        "original_address": "Sector 75 Noida Uttar Pradesh 201301\u00ac\u221154"
+      },
+      {
+        "name": "Purva Skywood Silver",
+        "count": 1,
+        "original_address": "Purva Skywood Silver County Road Lakedew Residency- Phase 2 Haralur Karnataka India"
+      },
+      {
+        "name": "Odrej Royale Woods Devanahalli",
+        "count": 1,
+        "original_address": "Godrej Royale Woods Devanahalli Bangalore Bengaluru Karnataka India"
+      },
+      {
+        "name": "Tarun Nilayam Munnekolal Near Ishan Homes",
+        "count": 1,
+        "original_address": "#37 Tarun nilayam Munnekolal near Ishan homes. Banglore 560037"
+      },
+      {
+        "name": "Vybhav Apartments Cambridge",
+        "count": 1,
+        "original_address": "Vybhav Apartments Cambridge Road Halasuru Udani Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Gopalan Sanskriti Apartment",
+        "count": 1,
+        "original_address": "Gopalan Sanskriti Apartment Mailasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nnekolala Silver Spring Layout",
+        "count": 1,
+        "original_address": "#11 SLV Luxury PG for Ladies Victorian Meadows Silver Spring Layout Munnekolala Silver Spring Layout Bangalore Karnataka 560037"
+      },
+      {
+        "name": "Salarpuria Sattva Greenage",
+        "count": 1,
+        "original_address": "Ebony Block Salarpuria Sattva Greenage Begur Road Hongasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Bren Edgewaters Owners Court Layout",
+        "count": 1,
+        "original_address": "Bren EdgeWaters Owners Court Layout Eastwood Township Kasavanahalli Bengaluru Bangalore Division Karnataka India"
+      },
+      {
+        "name": "Kumaraswamy Layout",
+        "count": 1,
+        "original_address": "Kumaraswamy Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Silver Springs Layout",
+        "count": 1,
+        "original_address": "Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Mantri Lithos Thanisandra",
+        "count": 1,
+        "original_address": "MANTRI LITHOS Thanisandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Se Layout Devarachikkana Halli",
+        "count": 1,
+        "original_address": "Classic Emerald Apartment Begur Rd Classic Paradise Layout Devarachikkana Halli Bengaluru Karnataka 560114 India"
+      },
+      {
+        "name": "Royal Manor",
+        "count": 1,
+        "original_address": "Royal Manor Sahakar Nagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ias Layout",
+        "count": 1,
+        "original_address": "IAS Layout Eastwood Township Bengaluru Karnataka India"
+      },
+      {
+        "name": "Apartment Complex Ranka Colony",
+        "count": 1,
+        "original_address": "Aahika Apartment Complex Ranka Colony Road Munivenkatppa Layout Bilekahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Kapishhouse Jcr Layout",
+        "count": 1,
+        "original_address": "KapishHouse JCR Layout Panathur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Anugraha Layout Ramanashree Enclave",
+        "count": 1,
+        "original_address": "Anugraha Layout Ramanashree Enclave Bilekahalli Bengaluru Karnataka 560076 India"
+      },
+      {
+        "name": "Lendee Sentosa Adarsh Palm Retreat",
+        "count": 1,
+        "original_address": "LENDEE SENTOSA Adarsh Palm Retreat Doddakannelli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Royal Fountain Square",
+        "count": 1,
+        "original_address": "Royal Fountain Square DRDO Phase 2 Township apartment Kaggadasapura Bengaluru Karnataka India"
+      },
+      {
+        "name": "Salarpuria Cadenza",
+        "count": 1,
+        "original_address": "Salarpuria Cadenza Apartments Kudlu Gate Krishna Reddy Industrial Area Hosapalaya Muneshwara Nagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Lake Point Tower Lake Point Tower Avenue",
+        "count": 1,
+        "original_address": "LAKE POINT TOWER Lake Point Tower Avenue AECS C Block Begur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ganga Chelston Silver Springs Layout",
+        "count": 1,
+        "original_address": "Ganga Chelston Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Koppa Road Chandrashekarapura Villa",
+        "count": 1,
+        "original_address": "Prestige Song of the South Begur - Koppa Road Chandrashekarapura Village Yelenahalli Akshayanagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Slv Residency Silver Springs Layout",
+        "count": 1,
+        "original_address": "SLV Residency Silver Springs Layout Munnekollal Bengaluru Karnataka India"
+      },
+      {
+        "name": "Panathur Dinne Dinne Lords Steps Layout",
+        "count": 1,
+        "original_address": "Panathur Dinne Dinne Lords Steps layout Panathur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Res Shoba Dream Acres Balagere",
+        "count": 1,
+        "original_address": "Sobha Dream Acres Shoba Dream Acres Balagere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ksm Enclave Dodda Kempaiah Layout",
+        "count": 1,
+        "original_address": "KSM Enclave Dodda Kempaiah Layout Kalkere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Tranquility",
+        "count": 1,
+        "original_address": "Prestige Tranquility Budigere Road Budigere Cross Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Finsbury Park",
+        "count": 1,
+        "original_address": "Prestige Finsbury Park Hyde - Tower 10 Gummanahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sarojini Residency Back Gate Aecs Layout",
+        "count": 1,
+        "original_address": "Sarojini Residency Back gate AECS Layout - A Block AECS Layout Singasandra Bengaluru Karnataka India"
+      },
+      {
+        "name": "Phase",
+        "count": 1,
+        "original_address": "KOMMAGHATTA BDA FLATS. PHASE-2 PHASE-2 Kommaghatta Karnataka India"
+      },
+      {
+        "name": "Sobha Arena",
+        "count": 1,
+        "original_address": "SOBHA Arena Kanakapura Road Judicial Layout Talaghattapura Bengaluru Karnataka India"
+      },
+      {
+        "name": "T South City Apartments Arekere Mico Layout",
+        "count": 1,
+        "original_address": "L&T South City Apartments Arekere MICO Layout 2nd stage South City Phase 7 Arekere Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ah Residency Thomas Layout",
+        "count": 1,
+        "original_address": "AH Residency Thomas Layout Hado Siddapura Carmelaram Doddakannelli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Finsbury Park",
+        "count": 1,
+        "original_address": "prestige Finsbury park hyde gummanahalli bagalur Bengaluru 562149"
+      },
+      {
+        "name": "Strial Layout Garvebhavi Palya",
+        "count": 1,
+        "original_address": "TOWER-B Purva Westend Kudlu Gate Munireddy layout Industrial Layout Garvebhavi Palya Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Finsbury Park",
+        "count": 1,
+        "original_address": "Prestige Finsbury Park Hyde - Tower 9 Gummanahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Princeville Tower",
+        "count": 1,
+        "original_address": "Princeville Tower-C Vijayashree Layout RV Vidyaniketan Mailasandra Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "NCR Heights Doddanekundi Doddanekkundi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sector 92 Gurugram Haryana India",
+        "count": 1
+      },
+      {
+        "name": "Block-2 Suncity Gloria Carmelaram Doddakannelli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "DLF Woodland Heights Bangalore Karnataka 560105 India",
+        "count": 1
+      },
+      {
+        "name": "Abbaiah Reddy Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Dream Acres Wing 29 Balagere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sapthagiri Splendor BTM 4th Stage 2nd Block BDA Layout BTM 4th Stage Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Glenwood Prestige Glenwood Mandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sneha Grandeur Subbanna Layout Hoodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "KNSS colony Horamavu Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Srinivasam Apartment Muniswamy Layout Rayasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Coral behind Jakkur Jakkuru Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Diya Apartment Reliable Residency Layout Phase 3 Reliable Tranquil Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "GODREJ UNITED Bengaluru Karnataka 560048 India",
+        "count": 1
+      },
+      {
+        "name": "5th Block Phase 3 BSK Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Arkavathy Layout Thanisandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "55/9 Reliable Lake Dew Residency Phase 2 Lakedew Residency Haralur Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Lake Ridge Thurahalli Road Subramanyapura Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "G3 310 chourasia manor phase 2 kaverappa layout kadubeeshnahalli bangalore 560103",
+        "count": 1
+      },
+      {
+        "name": "Sannidhi homes Jigani Bande Nalla Sandra Bangalore Division Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Dream Acres Wing 12 Sobha Dream Acres Balagere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Vijaya Bank Colony Gokula Layout K R Puram Bengaluru Karnataka 560036 India",
+        "count": 1
+      },
+      {
+        "name": "AECS Layout Singasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Flat No 203 HS Towers Owners Court Layout West Road Kasavanahalli Bangalore - 560035",
+        "count": 1
+      },
+      {
+        "name": "Naveen apartment Classic Colony Kasavanahalli Bengaluru Karnataka 560035",
+        "count": 1
+      },
+      {
+        "name": "Godrej 24 Bangalore Anekal Rd Anekal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Karpagam Garden layout Hosur Tamil Nadu India",
+        "count": 1
+      },
+      {
+        "name": "Sneha Grandeur Hoodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "ZENITH RESIDENCES DadaMastan Layout Manayata Tech Park Nagavara Bengaluru Karnataka",
+        "count": 1
+      },
+      {
+        "name": "Sobha City Sobha City Road Devin Paradise Enclave Thanisandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Skyline Apartment Papreddy Palya 2nd Stage Chandra Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "VTP BelAir Bluewaters Township Pune Maharashtra India",
+        "count": 1
+      },
+      {
+        "name": "Lakshmi Layout Arekere Bengaluru Karnataka 560076 India",
+        "count": 1
+      },
+      {
+        "name": "101 1st floor SuMahesh Mansion Site #5 SurveyNo:224/4 Papayya Reddy Layout Sri LekshmiNarayana tmpl road Munnekollal BENGALURU KARNATAKA 560037",
+        "count": 1
+      },
+      {
+        "name": "Vijaya Springwoods Manipal County Rd AECS C Block Begur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "501 Gokul Residency YMR Colony Proddutur Kadapa (district Andrapradesh -516360",
+        "count": 1
+      },
+      {
+        "name": "Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka 560066 India",
+        "count": 1
+      },
+      {
+        "name": "Flat 1 Sushila Heights Kaverappa Layout Kadubessnahalli Bengaluru - 560103",
+        "count": 1
+      },
+      {
+        "name": "Tower 12 Prestige Shantiniketan Thigalarapalya Hoodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "VBN Classic #72 Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Fifth Element Gunjur Village Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Adithya Palatial Apartment Dynasty layout Thanisandra Bengaluru Karnataka 560024 India",
+        "count": 1
+      },
+      {
+        "name": "kothanur Rammana Layout Byrathi Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Avalappa Layout Ammanamma Layout Murgesh Pallya Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Fifth Element Apartment Gunjur village Bangalore",
+        "count": 1
+      },
+      {
+        "name": "Vishnu Enclave Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "NRI Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Purva Promenade Hennur Road Essel gardens Bengaluru Karnataka 560077 India",
+        "count": 1
+      },
+      {
+        "name": "Alsa Terraces Langford Gardens Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Mico Layout Hongasandra Bengaluru Karnataka 560068 India",
+        "count": 1
+      },
+      {
+        "name": "Brigade 7 Gardens Bharath Housing Society Layout Uttarahalli Hobli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Ruby Platinum Tumkur Road Block-2 Havanur Layout Nagasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "FIRST 102 SAI SUMA HBR 4TH BLOCK HENNUR 1ST STAGE Bengaluru Urban Karnataka 560043",
+        "count": 1
+      },
+      {
+        "name": "Mahaveer Ranches Sai Sree Layout Parappana Agrahara Bengaluru Karnataka",
+        "count": 1
+      },
+      {
+        "name": "Sobha Apartments Nagasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Friend's Home ISRO Layout Rajeshwari Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "407 11LH Lanco Hills Lanco Hills Residential Towers Rd Gachibowli Manikonda Telangana 500089",
+        "count": 1
+      },
+      {
+        "name": "Royal SLV Homes Ward Number 85 Dodda Nekkundi Extension Doddanekkundi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "AMR OAKS APARTMENT Iggaluru Village Bommasandra Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "United Green City Apartment hobli BETQ East Bidarahalli Bengaluru Bangalore Division Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Shriram Sameeksha Shriniketh Layout Singapura Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "PRESTIGE OASIS Adde Vishwanathapura Rajanukunte Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Finsbury Park Regent taluk jala hobli Gummanahalli Bagaluru Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "VMQ2+PJJ AMARACHANDRA ROYAL [ACR LIFESTYLE] SITE NO.36/2 AND 36/3 Kudlu Main Rd Kudlu AECS Layout - A Block VGP Layout Singasandra Bengaluru Karnataka 560068",
+        "count": 1
+      },
+      {
+        "name": "Casa Paradiso 2 Block 3 - Sobha City Thanisandra Main Rd Devin Paradise Enclave RK Hegde Nagar Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Kumari Brundavan 18th Avenue Junnasandra Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Hillcrest House of Hiranandani Akshaya Gardens Akshayanagar Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "TOWER-2 Prestige Lakeside Habitat Gunjur Village Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "1st stage 3rd block Al- Hilal nagar HBR layout. Bangalore 560043",
+        "count": 1
+      },
+      {
+        "name": "Royal Nest Vijaya Bank Layout Bilekahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Vaattika Doctors Layout Shivanna Layout Gundappa Layout Gottigere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Song Of The South Tower-15 Begur - Koppa Road Nobanagar Akshaya Vana Akshayanagar Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "BLOCK-G Purva Skywood Silver County Road off Kudlu Haralur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "TOWER-15 Clayton St Devasthanagalu Gunjur Village Bengaluru Karnataka 560087",
+        "count": 1
+      },
+      {
+        "name": "Mahalakshmi Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "DLF Maiden Heights rajapura Jigani Karnataka 560105 India",
+        "count": 1
+      },
+      {
+        "name": "Brew drop cafe DLF city road Akshayanagar",
+        "count": 1
+      },
+      {
+        "name": "Flat no 504 C wing Vani Apartment Wadiwali Village Dr. C. G. Road Chembur East Mumbai Maharashtra 400074",
+        "count": 1
+      },
+      {
+        "name": "Dishwet\u201a\u00c4\u00f4s home Pragathi Layout Doddanekundi Doddanekkundi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Garrison Tumkur Road Nagasandra Bengaluru Karnataka 560073 India",
+        "count": 1
+      },
+      {
+        "name": "Brigade meadows Kanakapura Road Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "DLF Woodland Heights Bangalore Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "S R PRIDE Apartment 60 Feet Road Thimappa Reddy Layout Doddanekundi Doddanekkundi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Ganesha Block Nandini Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Mithila enclave State Highway 35 Dommasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Brigade Golden Triangle Sannatammanahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Pavani Oakridge Sai Baba Temple Road Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Nizantha Grandeur Apartment Gulmohar Enclave Road Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Purva Palm Beach Elu's Road Hanumanthappa Layout Kyalasanahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "SOBHA ETERNIA Haralur Road Eastwood Township Bengaluru Haralur Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "2153 Layout Rd Carmelaram Janatha Colony Doddakannelli Bengaluru Karnataka 560035 India",
+        "count": 1
+      },
+      {
+        "name": "Naidu Layout Chikkalasandra Bengaluru Karnataka IN",
+        "count": 1
+      },
+      {
+        "name": "Arekere MICO Layout Lakshmi Layout Arekere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Lakshmi Layout Arekere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "BHARATHY OAKRIDGE Reddy Avenue NGR Layout P.Krishnappa Layout Doddakannelli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Marks Hotel & Banquets Sector 63 A Noida Uttar Pradesh India",
+        "count": 1
+      },
+      {
+        "name": "1004 Block-3 SJR Bluewaters Haralur Bangalore 560100",
+        "count": 1
+      },
+      {
+        "name": "Sobha Dream Acres Wing 10 Balagere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Cloud 9 Apartments Vaishali Sector 3F Block C Sector-1 Vaishali Ghaziabad Uttar Pradesh India",
+        "count": 1
+      },
+      {
+        "name": "Ruby Homes ISRO Layout Rajeshwari Layout Munnekollal East Taluk Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "#97 ASR Homes Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "ISRO Layout Rajeshwari Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Bluewaters by SJR Primecorp Silver County Road Lakedew Residency- Phase 2 Sai Meadows Parappana Agrahara Haralur Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Chervith Apartment Gurijiya Gutta East of NGEF Layout Bennigana Halli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Lake Ridge flat number 1091 tower 1 Uttarahalli Bangalore-560061",
+        "count": 1
+      },
+      {
+        "name": "Raghu Pride near Royal English School Chinnappanahalli Hanuma Reddy Layout Chinnapanna Halli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Purvi Khosala Silver Spring Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Habitat Eden Heights Hoodi Hoodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Spring Leaf Apartments Nanjappa Layout Venugopal Reddy Layout Arekere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Tranquility Budigere Road Bommenahalli Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Cambridge Layout Jogupalya Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Royale Gardens Doddaballapur Road Bengaluru Karnataka 560064 India",
+        "count": 1
+      },
+      {
+        "name": "Pruthvi Layout Channasandra Koralur Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "SRJ Residency PR Layout Chandra Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Ferns Residency Haralur Road Eastwood Township Haralur Bangalore Division Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Southern Winds Layout Sai Sree Layout Parappana Agrahara Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sri Sai Enclave opposite to shell petrol bunk Owners Court Layout east Kasavanahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Home AECS Layout - A Block Yellama Layout Singasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Nikoo Homes Rd Thanisandra Bengaluru Karnataka 560077",
+        "count": 1
+      },
+      {
+        "name": "Sai Ganesh apartment Sai Colony Krishnarajapuram Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Saroj Symphony Phase-2 Block-C Nagondanahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "MVS Paradise Prestige Mayberry Road opposite to Green Earth Atrium behind Prestige Elms Park Channasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Pragathi Layout Doddanekundi Doddanekkundi Bengaluru Karnataka 560037 India",
+        "count": 1
+      },
+      {
+        "name": "Tower-2 SHRIRAM CHIRPING WOODS Eastwood Township Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Dream Acres Wing 27 Balagere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Shriram Blue Apartment Sonnenahalli Colony Krishnarajapuram Kurudusonnenahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Bella Vista Poonamallee Road Iyyappanthangal Chennai Tamil Nadu India",
+        "count": 1
+      },
+      {
+        "name": "Baldota Serenity Venkataswamy Layout Rayasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Casabella Neeladri Road Chikkathoguru Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Telecom Layout HBR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "2 Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "GVR OAks Ardendale Kannamangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Block N2 Flat no 306 Purva Panorama Kalena Agrahara Bannerghatta Road",
+        "count": 1
+      },
+      {
+        "name": "Sobha City - Mykonos Devin Paradise Enclave Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Green House Layout Doddathoguru Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sona Vistaas Apartment Bannerghatta Rd near Vijaya Bank Layout Classic Paradise Layout Devarachikkana Halli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "CKR enclave pragathi layout doddanekundi Bangalore",
+        "count": 1
+      },
+      {
+        "name": "A block PURVA VENEZIA Vignana Kendra Bengaluru Karnataka 560065 India",
+        "count": 1
+      },
+      {
+        "name": "Plama Heights North Punappa Layout Hennur Gardens corrs Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "RRMR ENCLAVE Ayyappa Society Survey of India Colony Chanda Naik Nagar Madhapur Hyderabad Telangana India",
+        "count": 1
+      },
+      {
+        "name": "VPMV+C94 Dommasandra Rd Janatha colony Dommasandra Bengaluru Karnataka 562125 India",
+        "count": 1
+      },
+      {
+        "name": "Provident Park Square Judicial Layout 2nd Phase Talaghattapura Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "AB Nivasa Joseph Layout Srinivasa Reddy Layout Begur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Brigade Buena vista Budigere Road Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Pragnya pg for ladies near brigade nalapadu near bagmane Kamadhenu layout Kamadhenu Nagar B Narayanapura Mahadevapura Bengaluru Karnataka 560016 India",
+        "count": 1
+      },
+      {
+        "name": "BTR Gardens AECS Layout - A Block AECS Layout Singasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Assetz Marq Phase-1 Kannamangala Karnataka 560067 India",
+        "count": 1
+      },
+      {
+        "name": "Kavya Nest Livingg Space Creators near BBT factory Nanjappa Layout Venugopal Reddy Layout Arekere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "HBR Layout 3rd Block HBR Layout Bengaluru Karnataka 560043 India",
+        "count": 1
+      },
+      {
+        "name": "Casagrand Boulevard Post Sonam Layout Visthar Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "HAL 3rd Stage Puttappa layout New Tippasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "DLF Phase 5 Sector 43 Gurugram Haryana India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Dream Acres Outer Ring Rd Balagere Bangalore Karnataka 560087 India",
+        "count": 1
+      },
+      {
+        "name": "Brigade Orchards Devanahalli Bangalore Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "A block AECS Layout 1st floor - 560037",
+        "count": 1
+      },
+      {
+        "name": "Shri Kempanna Residency AECS Layout - A Block Singasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Geethanjali Layout HAL 3rd Stage Bhoomi Reddy Colony New Tippasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sree JD Gardens KNSS colony Horamavu Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Venkatappa Layout Postal Colony Sanjaynagar Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Gallium at Brigade Eldorado Gummanahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "No 23 pooja residency AECS Layout Singasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "MVRS RESIDENCY Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Swapna Residency NRI Layout Bengaluru Karnataka 560016",
+        "count": 1
+      },
+      {
+        "name": "Bidare Agrahara colony Bidare Agraha Bengaluru Karnataka 560049 India",
+        "count": 1
+      },
+      {
+        "name": "Om Shakti Nilayam Carmelaram Janatha Colony Doddakannelli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "3rd Block HBR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Aagama Residency Raju Colony Yemalur 560037 Bangalore",
+        "count": 1
+      },
+      {
+        "name": "Brigade Buena vista Budigere Cross Bengaluru Karnataka 560049 India",
+        "count": 1
+      },
+      {
+        "name": "JBN Residency Green Garden Layout Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Vaishnavi Terrace Dollars Colony Phase 4 J. P. Nagar Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Ponnar Nilayam 1st Block Royal Shelters Stage 4 BDA Layout BTM 4th Stage Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Tamara Site nos 25 & 26 VGP Arjun Town Kudlu VGP Layout Bengaluru Karnataka 560068",
+        "count": 1
+      },
+      {
+        "name": "Bhavisha Bentley Goldberg Phase 2 Phase 2 Chikkadunnasandra Kada Agrahara Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Rama Villas Reliable Residency Layout Phase 3 Reliable Tranquil Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Shreyas residency BTR gardens near kudlugate 560068",
+        "count": 1
+      },
+      {
+        "name": "Shree Gatti residency munekollala",
+        "count": 1
+      },
+      {
+        "name": "NBR Lallu Paradise Pragathi Layout Doddanekundi Doddanekkundi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "DS MAX Springfield Block-A4 Phase - 3 Anagalapura Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sri Balaji Enclave Junnasandra Bengaluru Karnataka 560035 India",
+        "count": 1
+      },
+      {
+        "name": "UBER VERDANT Hobli Janatha Colony Doddakannelli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "N.D. Sepal Apartment HSR Sector 2 Somasundarapalya Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sree sai residency Junnasandra Bangalore Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Garuda Vista Apartments Sri Venkateswara Layout Mahadevapura Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Colive 1167 Manchester Anthem Prasanth Layout White Rose Layout extension Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sector 75 Noida Uttar Pradesh 201301\u00ac\u221154",
+        "count": 1
+      },
+      {
+        "name": "Purva Skywood Silver County Road Lakedew Residency- Phase 2 Haralur Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Godrej Royale Woods Devanahalli Bangalore Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "#37 Tarun nilayam Munnekolal near Ishan homes. Banglore 560037",
+        "count": 1
+      },
+      {
+        "name": "Vybhav Apartments Cambridge Road Halasuru Udani Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Gopalan Sanskriti Apartment Mailasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "#11 SLV Luxury PG for Ladies Victorian Meadows Silver Spring Layout Munnekolala Silver Spring Layout Bangalore Karnataka 560037",
+        "count": 1
+      },
+      {
+        "name": "Ebony Block Salarpuria Sattva Greenage Begur Road Hongasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Bren EdgeWaters Owners Court Layout Eastwood Township Kasavanahalli Bengaluru Bangalore Division Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Kumaraswamy Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "MANTRI LITHOS Thanisandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Classic Emerald Apartment Begur Rd Classic Paradise Layout Devarachikkana Halli Bengaluru Karnataka 560114 India",
+        "count": 1
+      },
+      {
+        "name": "Royal Manor Sahakar Nagar Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "IAS Layout Eastwood Township Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Aahika Apartment Complex Ranka Colony Road Munivenkatppa Layout Bilekahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "KapishHouse JCR Layout Panathur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Anugraha Layout Ramanashree Enclave Bilekahalli Bengaluru Karnataka 560076 India",
+        "count": 1
+      },
+      {
+        "name": "LENDEE SENTOSA Adarsh Palm Retreat Doddakannelli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Royal Fountain Square DRDO Phase 2 Township apartment Kaggadasapura Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Salarpuria Cadenza Apartments Kudlu Gate Krishna Reddy Industrial Area Hosapalaya Muneshwara Nagar Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "LAKE POINT TOWER Lake Point Tower Avenue AECS C Block Begur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Ganga Chelston Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Song of the South Begur - Koppa Road Chandrashekarapura Village Yelenahalli Akshayanagar Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "SLV Residency Silver Springs Layout Munnekollal Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Panathur Dinne Dinne Lords Steps layout Panathur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Dream Acres Shoba Dream Acres Balagere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "KSM Enclave Dodda Kempaiah Layout Kalkere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Tranquility Budigere Road Budigere Cross Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Finsbury Park Hyde - Tower 10 Gummanahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sarojini Residency Back gate AECS Layout - A Block AECS Layout Singasandra Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "KOMMAGHATTA BDA FLATS. PHASE-2 PHASE-2 Kommaghatta Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "SOBHA Arena Kanakapura Road Judicial Layout Talaghattapura Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "L&T South City Apartments Arekere MICO Layout 2nd stage South City Phase 7 Arekere Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "AH Residency Thomas Layout Hado Siddapura Carmelaram Doddakannelli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "prestige Finsbury park hyde gummanahalli bagalur Bengaluru 562149",
+        "count": 1
+      },
+      {
+        "name": "TOWER-B Purva Westend Kudlu Gate Munireddy layout Industrial Layout Garvebhavi Palya Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Finsbury Park Hyde - Tower 9 Gummanahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Princeville Tower-C Vijayashree Layout RV Vidyaniketan Mailasandra Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 249,
+    "single_pickup_count": 223,
+    "area_details": {
+      "sub_areas": [],
+      "roads": [],
+      "landmarks": []
+    }
+  },
+  {
+    "rank": 2,
+    "area": "Whitefield",
+    "bookings": 259,
+    "percentage": 7.9,
+    "subAreas": [
+      "Ravoos Rainbow Apartment Hagadur Main Road Hagadur Narayanappa Garden Whitefield Bengaluru Karnataka India",
+      "Hagadur Immadihalli Whitefield Bengaluru Karnataka India",
+      "Graphite India Limited Whitefield Main Rd Doddanakundi Industrial Area 2 Industrial Area Vishueswaraya Bengaluru Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Whitefield Varthur Kodi Palm Meadows",
+        "count": 4,
+        "original_address": "Whitefield Varthur Kodi Palm Meadows Whitefield Bengaluru Karnataka 560066 India"
+      },
+      {
+        "name": "Prestige Lakeside Habitat",
+        "count": 3,
+        "original_address": "Prestige Lakeside Habitat Marathahalli - Sarjapur Rd Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Waterford",
+        "count": 2,
+        "original_address": "Prestige Waterford ECC Road Pattandur Agrahara Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Silver Oak",
+        "count": 1,
+        "original_address": "Prestige Silver Oak ECC Road Pattandur Agrahara Whitefield Bangalore Karnataka 560066 India"
+      },
+      {
+        "name": "White Rose Layout Prithvi Layout",
+        "count": 1,
+        "original_address": "White Rose Layout Prithvi Layout Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sri Balaji Sunflower Apartment Siddappa Layout",
+        "count": 1,
+        "original_address": "Sri Balaji Sunflower Apartment Siddappa Layout Immadihalli Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Apartment Summer Paradise",
+        "count": 1,
+        "original_address": "Apartment Summer Paradise Lane Nallurhalli Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Reddy Mansion Palm Meadows",
+        "count": 1,
+        "original_address": "Reddy Mansion Palm Meadows Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prasanth Layout",
+        "count": 1,
+        "original_address": "Prasanth Layout Prasanth Extension Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Incor Carmel Heights",
+        "count": 1,
+        "original_address": "Incor Carmel Heights Taluk Prestige Ozone Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Wild Jasmine Layout",
+        "count": 1,
+        "original_address": "Wild Jasmine Layout Phase 1 Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Vinayaka Layout",
+        "count": 1,
+        "original_address": "Vinayaka Layout Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Etharama Palya Epip Whitefield",
+        "count": 1,
+        "original_address": "D615 Brigade Lakefront Seetharama Palya epip Whitefield Bangalore 560048"
+      },
+      {
+        "name": "Asn Srikaram Nallurahalli Palm Meadows Villa",
+        "count": 1,
+        "original_address": "ASN Srikaram Nallurahalli Palm Meadows Village Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prithvi Layout",
+        "count": 1,
+        "original_address": "Prithvi Layout Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "102 First Floor Sri",
+        "count": 1,
+        "original_address": "102 first floor Sri Mahalasa Residency AECS Layout Sri Nivasa reddy layout Whitefield"
+      },
+      {
+        "name": "Brigade Woods",
+        "count": 1,
+        "original_address": "Brigade woods ECC Road Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Th Floor Neil Tower Of Neil Rao Towers",
+        "count": 1,
+        "original_address": "Suite #6SE 6th floor Neil Tower of Neil Rao Towers Plot no 117 Road No 3 EPIP Phase 1 Whitefield Road Bangalore 560066."
+      },
+      {
+        "name": "Dwarakamai Nilayam Palm Meadows",
+        "count": 1,
+        "original_address": "Dwarakamai Nilayam Palm Meadows Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hoodi",
+        "count": 1,
+        "original_address": "Brigade Lakefront Seetharampalya - Hoodi Road Near SAP Labs Seetharampalya Whitefield Bangalore Karnataka India"
+      },
+      {
+        "name": "Sobha Habitech",
+        "count": 1,
+        "original_address": "3023 Sobha Habitech Road Pattandur Agrahara Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Rr Residency",
+        "count": 1,
+        "original_address": "RR Residency #6/A Dodsworth Layout Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ittina Anu Apartment Maithri Layout",
+        "count": 1,
+        "original_address": "Ittina Anu Apartment Maithri Layout Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Dodsworth Layout",
+        "count": 1,
+        "original_address": "Dodsworth Layout Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Palm Meadows",
+        "count": 1,
+        "original_address": "XP7M+RP6 Palm Meadows Whitefield Bengaluru Karnataka 560066 India"
+      },
+      {
+        "name": "Sap Labs Epip Zone Whitefield",
+        "count": 1,
+        "original_address": "Q668 brigade Lakefront Seetharampalya - Hoodi Rd Near SAP Labs EPIP Zone Whitefield Bengaluru Karnataka 560048"
+      },
+      {
+        "name": "White Rose Layout",
+        "count": 1,
+        "original_address": "White Rose Layout Pattandur Agrahara Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Dsr Green Vista Apartments Ecc Road Upkar Layout",
+        "count": 1,
+        "original_address": "DSR Green Vista Apartments ECC Road Upkar Layout Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Upkar Layout",
+        "count": 1,
+        "original_address": "Upkar Layout Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Dna Apartment Palm Meadows",
+        "count": 1,
+        "original_address": "DNA APARTMENT Palm Meadows Whitefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Vrushabadri Towers",
+        "count": 1,
+        "original_address": "Vrushabadri Towers Whitefield Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "Prestige Silver Oak ECC Road Pattandur Agrahara Whitefield Bangalore Karnataka 560066 India",
+        "count": 1
+      },
+      {
+        "name": "White Rose Layout Prithvi Layout Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sri Balaji Sunflower Apartment Siddappa Layout Immadihalli Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Apartment Summer Paradise Lane Nallurhalli Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Reddy Mansion Palm Meadows Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prasanth Layout Prasanth Extension Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Incor Carmel Heights Taluk Prestige Ozone Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Wild Jasmine Layout Phase 1 Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Vinayaka Layout Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "D615 Brigade Lakefront Seetharama Palya epip Whitefield Bangalore 560048",
+        "count": 1
+      },
+      {
+        "name": "ASN Srikaram Nallurahalli Palm Meadows Village Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prithvi Layout Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "102 first floor Sri Mahalasa Residency AECS Layout Sri Nivasa reddy layout Whitefield",
+        "count": 1
+      },
+      {
+        "name": "Brigade woods ECC Road Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Suite #6SE 6th floor Neil Tower of Neil Rao Towers Plot no 117 Road No 3 EPIP Phase 1 Whitefield Road Bangalore 560066.",
+        "count": 1
+      },
+      {
+        "name": "Dwarakamai Nilayam Palm Meadows Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Brigade Lakefront Seetharampalya - Hoodi Road Near SAP Labs Seetharampalya Whitefield Bangalore Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "3023 Sobha Habitech Road Pattandur Agrahara Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "RR Residency #6/A Dodsworth Layout Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Ittina Anu Apartment Maithri Layout Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Dodsworth Layout Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "XP7M+RP6 Palm Meadows Whitefield Bengaluru Karnataka 560066 India",
+        "count": 1
+      },
+      {
+        "name": "Q668 brigade Lakefront Seetharampalya - Hoodi Rd Near SAP Labs EPIP Zone Whitefield Bengaluru Karnataka 560048",
+        "count": 1
+      },
+      {
+        "name": "White Rose Layout Pattandur Agrahara Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "DSR Green Vista Apartments ECC Road Upkar Layout Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Upkar Layout Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "DNA APARTMENT Palm Meadows Whitefield Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Vrushabadri Towers Whitefield Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 31,
+    "single_pickup_count": 28,
+    "area_details": {
+      "sub_areas": [
+        "Ambedkar Nagar",
+        "Byrappa Layout",
+        "Prasanth Extension",
+        "Road Phase 2",
+        "Prestige Park",
+        "Springdale Layout",
+        "Narayanswamy Layout",
+        "Gopalan Colony"
+      ],
+      "roads": [
+        "Whitefield Main Road",
+        "2Nd Main",
+        "2Nd Cross Road",
+        "1St Cross",
+        "Belathur Main Road",
+        "Nallurahalli Main Road"
+      ],
+      "landmarks": [
+        "Near Nurture International School",
+        "Garudacharapalya Metro Station",
+        "Near Holy Cross School",
+        "Outer Circle"
+      ]
+    }
+  },
+  {
+    "rank": 3,
+    "area": "HSR Layout",
+    "bookings": 147,
+    "percentage": 4.5,
+    "subAreas": [
+      "DoubleTree Suites by Hilton Bengaluru Outer Ring Road Sarjapur Main Road Amblipura PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India",
+      "31A Main Road PWD Quarters Sector 2 HSR Layout Bengaluru Karnataka India",
+      "HSR layout 14th A Cross Road Sector 6 HSR Layout Bangalore Karnataka 560102 India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Hsr Layout",
+        "count": 10,
+        "original_address": "HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hsr Layout",
+        "count": 8,
+        "original_address": "Sector 1 HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hsr Layout",
+        "count": 6,
+        "original_address": "Sector 2 HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hsr Layout",
+        "count": 4,
+        "original_address": "Sector 3 HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "St Block Hsr Layout",
+        "count": 3,
+        "original_address": "Koramangala 1st Block HSR Layout 5th Sector Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hsr Layout",
+        "count": 3,
+        "original_address": "Sector 7 HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nd Sector Hsr Layout",
+        "count": 2,
+        "original_address": "2nd Sector HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Iti Layout",
+        "count": 2,
+        "original_address": "ITI Layout 7th Sector HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "St Block Koramangala Hsr Layout",
+        "count": 1,
+        "original_address": "1st Block Koramangala HSR Layout 5th Sector Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hsr Layout",
+        "count": 1,
+        "original_address": "HSR Layout Bangalore Karnataka India"
+      },
+      {
+        "name": "Poorvika Beauty Salon Garden Layout",
+        "count": 1,
+        "original_address": "Poorvika Beauty Salon Garden Layout Sector 2 HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "St Sector Hsr Layout",
+        "count": 1,
+        "original_address": "Block-17 PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Agara Villa",
+        "count": 1,
+        "original_address": "Agara Village 1st Sector HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "St Block Koramangala Hsr Layout",
+        "count": 1,
+        "original_address": "Jakkasandra 1st Block Koramangala HSR Layout 5th Sector Bengaluru Karnataka India"
+      },
+      {
+        "name": "St Sector Hsr Layout",
+        "count": 1,
+        "original_address": "Sobha Daffodil Club House 1 PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sunchees Oak",
+        "count": 1,
+        "original_address": "Sunchees Oak 1st Sector HSR Layout Bengaluru Karnataka 560102 India"
+      },
+      {
+        "name": "Hsr Layout",
+        "count": 1,
+        "original_address": "Berry Nest Parangi Palaya Sector 2 HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hsr Layout Madiwala New Extension Hsr Layout",
+        "count": 1,
+        "original_address": "Hsr layout Madiwala New Extension HSR layout Sector 2 1st Stage BTM Layout Bengaluru Karnataka 560068 India"
+      },
+      {
+        "name": "Nd Sector Hsr Layout",
+        "count": 1,
+        "original_address": "2nd Sector HSR Layout Bangalore Karnataka 560102 India"
+      },
+      {
+        "name": "Manar Elegance Somasundarapalya Hsr Layout",
+        "count": 1,
+        "original_address": "B 605 Manar Elegance Somasundarapalya HSR layout sector 2 Bengaluru 560102"
+      },
+      {
+        "name": "Purva Fairmont",
+        "count": 1,
+        "original_address": "PURVA FAIRMONT APARTMENT Garden Layout Sector 2 HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Th Sector Hsr Layout",
+        "count": 1,
+        "original_address": "7th Sector HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Agara Bus Stop Agara Villa",
+        "count": 1,
+        "original_address": "Agara Bus stop Agara Village 1st Sector HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nd Avenue",
+        "count": 1,
+        "original_address": "109 2nd Avenue Teacher's Colony Santhosapuram 1st Block Koramangala HSR Layout 5th Sector Bengaluru Karnataka India"
+      },
+      {
+        "name": "Iti Layout",
+        "count": 1,
+        "original_address": "ITI Layout Sector 7 HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Agara Lake Agara Villa",
+        "count": 1,
+        "original_address": "Agara Lake Agara Village 1st Sector HSR Layout Bengaluru Karnataka"
+      },
+      {
+        "name": "Hsr Layout",
+        "count": 1,
+        "original_address": "Rajiv Gandhi Nagar Rajiv Gandhi Nagar Muneswara Nagar Sector 6 HSR Layout Bangalore Karnataka 560068 India"
+      },
+      {
+        "name": "St Sector Hsr Layout",
+        "count": 1,
+        "original_address": "Agara 1st Sector HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hsr Layout",
+        "count": 1,
+        "original_address": "Sector 6 HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Iti Layout Main Iti Layout",
+        "count": 1,
+        "original_address": "201 building 243 ITI Layout Main ITI Layout Sector 7 HSR Layout Bengaluru Karnataka 560068 India"
+      },
+      {
+        "name": "Garden Layout Rd Garden Layout",
+        "count": 1,
+        "original_address": "Garden Layout Rd Garden Layout Sector 2 HSR Layout Bengaluru Karnataka 560102 India"
+      },
+      {
+        "name": "Bsr Mantralaya Iti Layout",
+        "count": 1,
+        "original_address": "BSR Mantralaya ITI Layout Sector 2 HSR Layout Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "1st Block Koramangala HSR Layout 5th Sector Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "HSR Layout Bangalore Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Poorvika Beauty Salon Garden Layout Sector 2 HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Block-17 PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Agara Village 1st Sector HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Jakkasandra 1st Block Koramangala HSR Layout 5th Sector Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Daffodil Club House 1 PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sunchees Oak 1st Sector HSR Layout Bengaluru Karnataka 560102 India",
+        "count": 1
+      },
+      {
+        "name": "Berry Nest Parangi Palaya Sector 2 HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Hsr layout Madiwala New Extension HSR layout Sector 2 1st Stage BTM Layout Bengaluru Karnataka 560068 India",
+        "count": 1
+      },
+      {
+        "name": "2nd Sector HSR Layout Bangalore Karnataka 560102 India",
+        "count": 1
+      },
+      {
+        "name": "B 605 Manar Elegance Somasundarapalya HSR layout sector 2 Bengaluru 560102",
+        "count": 1
+      },
+      {
+        "name": "PURVA FAIRMONT APARTMENT Garden Layout Sector 2 HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "7th Sector HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Agara Bus stop Agara Village 1st Sector HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "109 2nd Avenue Teacher's Colony Santhosapuram 1st Block Koramangala HSR Layout 5th Sector Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "ITI Layout Sector 7 HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Agara Lake Agara Village 1st Sector HSR Layout Bengaluru Karnataka",
+        "count": 1
+      },
+      {
+        "name": "Rajiv Gandhi Nagar Rajiv Gandhi Nagar Muneswara Nagar Sector 6 HSR Layout Bangalore Karnataka 560068 India",
+        "count": 1
+      },
+      {
+        "name": "Agara 1st Sector HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sector 6 HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "201 building 243 ITI Layout Main ITI Layout Sector 7 HSR Layout Bengaluru Karnataka 560068 India",
+        "count": 1
+      },
+      {
+        "name": "Garden Layout Rd Garden Layout Sector 2 HSR Layout Bengaluru Karnataka 560102 India",
+        "count": 1
+      },
+      {
+        "name": "BSR Mantralaya ITI Layout Sector 2 HSR Layout Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 32,
+    "single_pickup_count": 24,
+    "area_details": {
+      "sub_areas": [
+        "S Colony",
+        "Sector 3",
+        "Muneswara Nagar",
+        "New Extension",
+        "Sector 6",
+        "Sjr Park",
+        "Peekayam Layout",
+        "Eastwood Town"
+      ],
+      "roads": [
+        "C Cross Road",
+        "Ring Road",
+        "A Main Road",
+        "Somasundarapalya Main Road",
+        "6Th Main",
+        "5Th Cross Road"
+      ],
+      "landmarks": [
+        "Agara Bus Stop"
+      ]
+    }
+  },
+  {
+    "rank": 4,
+    "area": "Marathahalli",
+    "bookings": 142,
+    "percentage": 4.3,
+    "subAreas": [
+      "CKB Layout Marathahalli Bengaluru Karnataka India",
+      "SGR Dental College SGR Dental College Road Kasavanahalli Village Marathahalli Bengaluru Karnataka India",
+      "AECS Layout Marathahalli Bengaluru Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "St Sector Hsr Layout",
+        "count": 2,
+        "original_address": "Mantri Flora Sarjapur - Marathahalli Road Amblipura PWD Quarters 1st Sector HSR Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Marathahalli",
+        "count": 1,
+        "original_address": "Salarpuria Sanctity Sarjapur - Marathahalli Road Kaikondrahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Suvarnaraju Homes Vinayaka Layout",
+        "count": 1,
+        "original_address": "suvarnaraju homes Vinayaka Layout Dodda Nekkundi Extension Marathahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Kaveri Layout Marathahalli Villa",
+        "count": 1,
+        "original_address": "Kaveri Layout Marathahalli Village Marathahalli Bengaluru Karnataka 560037 India"
+      },
+      {
+        "name": "Purva Riviera Lakshminarayana Pura Aecs Layout",
+        "count": 1,
+        "original_address": "RFB-007 (BLOCK 5) Purva Riviera Lakshminarayana Pura AECS Layout Marathahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Manjunatha Layout Marathahalli Villa",
+        "count": 1,
+        "original_address": "Manjunatha Layout Marathahalli Village Marathahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sattva Senorita Salarpuria Tower",
+        "count": 1,
+        "original_address": "Sattva Senorita Salarpuria Tower C Flat 1601 Sarjapur Marathahalli Road Bangalore 560035"
+      },
+      {
+        "name": "Ajr Plaza Rainbow Layout Kasavanahalli Villa",
+        "count": 1,
+        "original_address": "AJR plaza Rainbow Layout Kasavanahalli Village Marathahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Purva Fountain Square Hal Old",
+        "count": 1,
+        "original_address": "Purva Fountain Square HAL Old Airport Road Near Railway Over Bridge Lakshminarayana Pura Marathahalli Bengaluru Karnataka 560037 India"
+      },
+      {
+        "name": "Rajatha Enclave Kaveri Layout Marathahalli Villa",
+        "count": 1,
+        "original_address": "Rajatha Enclave Kaveri Layout Marathahalli Village Marathahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Marathahalli",
+        "count": 1,
+        "original_address": "Salarpuria Sanctity Sarjapur - Marathahalli Road Halanayakanahalli Karnataka India"
+      },
+      {
+        "name": "Koushika Enclave Felice Enclave Rainbow Layout",
+        "count": 1,
+        "original_address": "Koushika Enclave Felice Enclave Rainbow Layout Marathahalli Bengaluru Karnataka 560037 India"
+      },
+      {
+        "name": "S V Pride B Block Aecs Layout",
+        "count": 1,
+        "original_address": "S V Pride B Block AECS Layout Marathahalli Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "Salarpuria Sanctity Sarjapur - Marathahalli Road Kaikondrahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "suvarnaraju homes Vinayaka Layout Dodda Nekkundi Extension Marathahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Kaveri Layout Marathahalli Village Marathahalli Bengaluru Karnataka 560037 India",
+        "count": 1
+      },
+      {
+        "name": "RFB-007 (BLOCK 5) Purva Riviera Lakshminarayana Pura AECS Layout Marathahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Manjunatha Layout Marathahalli Village Marathahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sattva Senorita Salarpuria Tower C Flat 1601 Sarjapur Marathahalli Road Bangalore 560035",
+        "count": 1
+      },
+      {
+        "name": "AJR plaza Rainbow Layout Kasavanahalli Village Marathahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Purva Fountain Square HAL Old Airport Road Near Railway Over Bridge Lakshminarayana Pura Marathahalli Bengaluru Karnataka 560037 India",
+        "count": 1
+      },
+      {
+        "name": "Rajatha Enclave Kaveri Layout Marathahalli Village Marathahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Salarpuria Sanctity Sarjapur - Marathahalli Road Halanayakanahalli Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Koushika Enclave Felice Enclave Rainbow Layout Marathahalli Bengaluru Karnataka 560037 India",
+        "count": 1
+      },
+      {
+        "name": "S V Pride B Block AECS Layout Marathahalli Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 13,
+    "single_pickup_count": 12,
+    "area_details": {
+      "sub_areas": [
+        "Ambedkar Nagar",
+        "Manjunatha Layout",
+        "Rajasree Layout",
+        "Pr Layout",
+        "Ashwath Nagar",
+        "Aswath Nagar",
+        "Pragathi Layout",
+        "Jawahar Nagar"
+      ],
+      "roads": [
+        "2Nd Main",
+        "9Th Main",
+        "2Nd Cross Road",
+        "1St Cross",
+        "Ring Road",
+        "Marathahalli Main Road"
+      ],
+      "landmarks": [
+        "Kaikondrahalli Bus Stop",
+        "Near Kauvery Hospital",
+        "Near Motherhood Hospital"
+      ]
+    }
+  },
+  {
+    "rank": 5,
+    "area": "Electronic City",
+    "bookings": 111,
+    "percentage": 3.4,
+    "subAreas": [
+      "Gopalan Lakefront Veerasandra Main Road Veer Sandra Electronic City Bengaluru Karnataka India",
+      "Electronic City Bengaluru Karnataka India",
+      "Hosa Road Chennakeshava Nagar Lavakusha Nagar Pragathi Nagar Electronic City Bengaluru Karnataka 560100 India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Electronic City",
+        "count": 9,
+        "original_address": "Phase 1 Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Electronics City Phase 1",
+        "count": 3,
+        "original_address": "Electronics City Phase 1 Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Electronic City",
+        "count": 3,
+        "original_address": "Phase 1 Electronic City Bengaluru Karnataka 560100 India"
+      },
+      {
+        "name": "S A Residency",
+        "count": 2,
+        "original_address": "S A Residency Kammasandra Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Electronic City Phase",
+        "count": 2,
+        "original_address": "Electronic City Phase II Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nisarga Residency Sai Sarana Layout",
+        "count": 1,
+        "original_address": "Nisarga Residency Sai Sarana Layout Phase 1 Kammasandra Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Neeladri Investment Layout",
+        "count": 1,
+        "original_address": "Neeladri Investment Layout Doddathoguru Electronics City Phase 1 Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Fortune Munireddy Layout",
+        "count": 1,
+        "original_address": "Site number 14 Fortune Munireddy Layout Doddanagamangala Electronic City Phase -2 Bangalore. Silicon Town Electronic City Bengaluru Karnataka 560100."
+      },
+      {
+        "name": "Shriram Signiaa Electronics City Phase 1",
+        "count": 1,
+        "original_address": "SHRIRAM SIGNIAA Electronics City Phase 1 Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Electronic City",
+        "count": 1,
+        "original_address": "Shri Lakshminarasimha Swamy Temple Green House Layout Doddathoguru Electronics City Phase 1 Electronic City Bengaluru Karnataka 560100 India"
+      },
+      {
+        "name": "Prestige Sunrise Park Birchwood",
+        "count": 1,
+        "original_address": "Prestige Sunrise Park Birchwood Neotown Road Phase 1 Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Celebrity Paradise Layout",
+        "count": 1,
+        "original_address": "Celebrity Paradise Layout Doddathoguru Electronics City Phase 1 Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Sunrise Park",
+        "count": 1,
+        "original_address": "Prestige Sunrise Park - Birchwood Tower 4 Electronics City Phase 1 Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Celebrity Paradise Layout",
+        "count": 1,
+        "original_address": "Celebrity Paradise Layout Doddathoguru Phase 1 Electronic City Bengaluru Karnataka 560100 India"
+      },
+      {
+        "name": "Bimadhar Building 69",
+        "count": 1,
+        "original_address": "Bimadhar Building 69 Chikkathoguru Konappana Agrahara Electronic City Bengaluru Karnataka 560100 India"
+      },
+      {
+        "name": "Factory Layout Electronic City",
+        "count": 1,
+        "original_address": "Harshu lake view apartment near NBR lake view apartment inside Vasundhara Layout Vasundhara Layout Glass Factory Layout Electronic City Bengaluru Karnataka 560100 India"
+      },
+      {
+        "name": "Electronic City Btm Phase 1",
+        "count": 1,
+        "original_address": "Electronic city BTM Phase 1 Phase 2 Electronic City Bengaluru Karnataka 560100 India"
+      },
+      {
+        "name": "Tech City Layout Celebrity Paradise Layout",
+        "count": 1,
+        "original_address": "Tech City Layout Celebrity Paradise Layout Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Pavani Chandana Phase 2",
+        "count": 1,
+        "original_address": "Pavani Chandana Phase 2 Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Silicon Oasis",
+        "count": 1,
+        "original_address": "Sobha Silicon Oasis Hosa Road Doddanagamangala Village Pragathi Nagar Electronic City Bengaluru Karnataka 560100 India"
+      },
+      {
+        "name": "Ii Doddathoguru Electronic City Phase",
+        "count": 1,
+        "original_address": "Pragathi Royale- II Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Hriram Summitt Electronic City",
+        "count": 1,
+        "original_address": "Shriram Summitt Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Electronic City",
+        "count": 1,
+        "original_address": "Phase 2 Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Silicon Oasis",
+        "count": 1,
+        "original_address": "Sobha Silicon Oasis Hosa Road Doddanagamangala Village Pragathi Nagar Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Shriram Summit Wing 3",
+        "count": 1,
+        "original_address": "Shriram Summit Wing 3 Electronic City Phase I Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "C City Phase I Electronic City",
+        "count": 1,
+        "original_address": "Vaibhav Reddy Building Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Kammasandra Electronic City",
+        "count": 1,
+        "original_address": "Phase 1 Kammasandra Electronic City Bengaluru Karnataka 560100 India"
+      },
+      {
+        "name": "Celebrity Paradise Layout",
+        "count": 1,
+        "original_address": "Celebrity Paradise Layout Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India"
+      },
+      {
+        "name": "Shriram Liberty Square Glass Factory Layout",
+        "count": 1,
+        "original_address": "Shriram Liberty Square Glass Factory Layout Electronic City Andapura Karnataka India"
+      },
+      {
+        "name": "Concorde Silicon Valley Electronic City Phase",
+        "count": 1,
+        "original_address": "Concorde Silicon Valley Electronic City Phase I Electronic City Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "Nisarga Residency Sai Sarana Layout Phase 1 Kammasandra Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Neeladri Investment Layout Doddathoguru Electronics City Phase 1 Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Site number 14 Fortune Munireddy Layout Doddanagamangala Electronic City Phase -2 Bangalore. Silicon Town Electronic City Bengaluru Karnataka 560100.",
+        "count": 1
+      },
+      {
+        "name": "SHRIRAM SIGNIAA Electronics City Phase 1 Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Shri Lakshminarasimha Swamy Temple Green House Layout Doddathoguru Electronics City Phase 1 Electronic City Bengaluru Karnataka 560100 India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Sunrise Park Birchwood Neotown Road Phase 1 Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Celebrity Paradise Layout Doddathoguru Electronics City Phase 1 Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Sunrise Park - Birchwood Tower 4 Electronics City Phase 1 Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Celebrity Paradise Layout Doddathoguru Phase 1 Electronic City Bengaluru Karnataka 560100 India",
+        "count": 1
+      },
+      {
+        "name": "Bimadhar Building 69 Chikkathoguru Konappana Agrahara Electronic City Bengaluru Karnataka 560100 India",
+        "count": 1
+      },
+      {
+        "name": "Harshu lake view apartment near NBR lake view apartment inside Vasundhara Layout Vasundhara Layout Glass Factory Layout Electronic City Bengaluru Karnataka 560100 India",
+        "count": 1
+      },
+      {
+        "name": "Electronic city BTM Phase 1 Phase 2 Electronic City Bengaluru Karnataka 560100 India",
+        "count": 1
+      },
+      {
+        "name": "Tech City Layout Celebrity Paradise Layout Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Pavani Chandana Phase 2 Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Silicon Oasis Hosa Road Doddanagamangala Village Pragathi Nagar Electronic City Bengaluru Karnataka 560100 India",
+        "count": 1
+      },
+      {
+        "name": "Pragathi Royale- II Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Shriram Summitt Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Phase 2 Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Silicon Oasis Hosa Road Doddanagamangala Village Pragathi Nagar Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Shriram Summit Wing 3 Electronic City Phase I Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Vaibhav Reddy Building Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Phase 1 Kammasandra Electronic City Bengaluru Karnataka 560100 India",
+        "count": 1
+      },
+      {
+        "name": "Celebrity Paradise Layout Doddathoguru Electronic City Phase I Electronic City Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Shriram Liberty Square Glass Factory Layout Electronic City Andapura Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Concorde Silicon Valley Electronic City Phase I Electronic City Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 30,
+    "single_pickup_count": 25,
+    "area_details": {
+      "sub_areas": [
+        "Muniswamy Layout",
+        "City Phase 2",
+        "Lavakusha Nagar",
+        "Chennakeshava Nagar",
+        "Nelladri Nagar",
+        "Btm Phase 1",
+        "Road Phase 2",
+        "Sunrise Park"
+      ],
+      "roads": [
+        "Cross Street",
+        "Shantipura Road",
+        "2Nd Cross Road",
+        "Village Road",
+        "City Road",
+        "Service Road"
+      ],
+      "landmarks": []
+    }
+  },
+  {
+    "rank": 6,
+    "area": "Bellandur",
+    "bookings": 94,
+    "percentage": 2.9,
+    "subAreas": [
+      "Devarabeesana Halli Bellandur Bengaluru Karnataka India",
+      "RMV Arcades Kariyammana Agrahara Bellandur Bengaluru Karnataka India",
+      "RMZ Ecoworld Road Adarsh Palm Retreat Bellandur Bengaluru Karnataka 560103 India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Adarsh Palm Retreat",
+        "count": 4,
+        "original_address": "Adarsh Palm Retreat Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Adarsh Palm Retreat Bellandur",
+        "count": 2,
+        "original_address": "Meda Heights near AET circle behind Adarsh Palm Retreat Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Green Glen Layout",
+        "count": 2,
+        "original_address": "Green Glen Layout Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Carnation Margosa Avenue Green Glen Layout",
+        "count": 2,
+        "original_address": "Sobha Carnation Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Muni Reddy Garden Adarsh Palm Retreat",
+        "count": 1,
+        "original_address": "Muni Reddy Garden Adarsh Palm Retreat Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Near Embassy Tech Villa",
+        "count": 1,
+        "original_address": "Venkata krishna Ladies Pg| Near Embassy Tech Village | Flipkart Chawdeshri Layouts Road devarabeeshanahalli Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Margosa Avenue Green Glen Layout",
+        "count": 1,
+        "original_address": "Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Raju Colony",
+        "count": 1,
+        "original_address": "Raju Colony Yemalur Bellandur Bangalore Karnataka 560037 India"
+      },
+      {
+        "name": "Adarsh Palm Retreat",
+        "count": 1,
+        "original_address": "Tower 2 Adarsh Palm Retreat Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Aquamarine Green Glen Layout",
+        "count": 1,
+        "original_address": "SOBHA AQUAMARINE Green Glen Layout Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Lakshmi Residency Shan Boga Colony",
+        "count": 1,
+        "original_address": "Lakshmi Residency Shan Boga Colony Yemalur Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prabha Residency Green Glen Layout",
+        "count": 1,
+        "original_address": "Prabha Residency Green Glen Layout Bellandur"
+      },
+      {
+        "name": "Oxygen Pg For Ladies Joy Avenue Green Glen Layout",
+        "count": 1,
+        "original_address": "Oxygen PG For Ladies Joy Avenue Green Glen Layout Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Embassy Pristine Suncity",
+        "count": 1,
+        "original_address": "EMBASSY PRISTINE Suncity Apartments Lane Ibbaluru Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Carmelaram Janatha Colony",
+        "count": 1,
+        "original_address": "Uber Verdant Phase 2 Carmelaram Janatha Colony Chikkabellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Dnr Reflection Green Glen Layout",
+        "count": 1,
+        "original_address": "DNR REFLECTION Green Glen Layout Bellandur Bengaluru Karnataka 560103 India"
+      },
+      {
+        "name": "Prestige Kew Gardens Kariyammana",
+        "count": 1,
+        "original_address": "Prestige Kew Gardens Kariyammana Agrahara Road Shan Boga Colony Kempapura Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Vars Parkwood Adarsh Palm Retreat",
+        "count": 1,
+        "original_address": "VARS Parkwood Adarsh Palm Retreat Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Hibiscus Green Glen Layout",
+        "count": 1,
+        "original_address": "Sobha Hibiscus Green Glen Layout Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ue Green Glen Layout Bellandur",
+        "count": 1,
+        "original_address": "Ushodaya Eleganza Happiness Avenue Green Glen Layout Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Aquamarine Palm Avenue Green Glen Layout",
+        "count": 1,
+        "original_address": "Sobha Aquamarine Palm Avenue Green Glen Layout Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Rohan Jharoka Phase",
+        "count": 1,
+        "original_address": "Rohan Jharoka phase II Yamalur Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Oceanus Freesia Enclave",
+        "count": 1,
+        "original_address": "Oceanus Freesia Enclave Block-E Oceanus Freesia Enclave Bellandur Bengaluru Karnataka 560103 India"
+      },
+      {
+        "name": "Abhiram Enclave Lake View Residency",
+        "count": 1,
+        "original_address": "Abhiram Enclave Lake View Residency Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Malibu Bonita Margosa Avenue Green Glen Layout",
+        "count": 1,
+        "original_address": "Malibu Bonita Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Adarsh Palm Retreat Adarsh Palm Retreat",
+        "count": 1,
+        "original_address": "ADARSH PALM RETREAT Adarsh Palm Retreat Bellandur Bengaluru Karnataka 560103 India"
+      },
+      {
+        "name": "Raju Colony",
+        "count": 1,
+        "original_address": "Raju Colony Yamalur Bellandur Bengaluru KA 560037 India"
+      },
+      {
+        "name": "Sobha Primrose Margosa Avenue Green Glen Layout",
+        "count": 1,
+        "original_address": "Sobha Primrose Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Rd Devarabisanahalli Bellandur",
+        "count": 1,
+        "original_address": "SOBHA Insignia Outer Ring Rd Devarabisanahalli Bellandur Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "Muni Reddy Garden Adarsh Palm Retreat Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Venkata krishna Ladies Pg| Near Embassy Tech Village | Flipkart Chawdeshri Layouts Road devarabeeshanahalli Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Raju Colony Yemalur Bellandur Bangalore Karnataka 560037 India",
+        "count": 1
+      },
+      {
+        "name": "Tower 2 Adarsh Palm Retreat Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "SOBHA AQUAMARINE Green Glen Layout Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Lakshmi Residency Shan Boga Colony Yemalur Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prabha Residency Green Glen Layout Bellandur",
+        "count": 1
+      },
+      {
+        "name": "Oxygen PG For Ladies Joy Avenue Green Glen Layout Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "EMBASSY PRISTINE Suncity Apartments Lane Ibbaluru Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Uber Verdant Phase 2 Carmelaram Janatha Colony Chikkabellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "DNR REFLECTION Green Glen Layout Bellandur Bengaluru Karnataka 560103 India",
+        "count": 1
+      },
+      {
+        "name": "Prestige Kew Gardens Kariyammana Agrahara Road Shan Boga Colony Kempapura Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "VARS Parkwood Adarsh Palm Retreat Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Hibiscus Green Glen Layout Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Ushodaya Eleganza Happiness Avenue Green Glen Layout Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Aquamarine Palm Avenue Green Glen Layout Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Rohan Jharoka phase II Yamalur Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Oceanus Freesia Enclave Block-E Oceanus Freesia Enclave Bellandur Bengaluru Karnataka 560103 India",
+        "count": 1
+      },
+      {
+        "name": "Abhiram Enclave Lake View Residency Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Malibu Bonita Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "ADARSH PALM RETREAT Adarsh Palm Retreat Bellandur Bengaluru Karnataka 560103 India",
+        "count": 1
+      },
+      {
+        "name": "Raju Colony Yamalur Bellandur Bengaluru KA 560037 India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Primrose Margosa Avenue Green Glen Layout Bellandur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "SOBHA Insignia Outer Ring Rd Devarabisanahalli Bellandur Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 29,
+    "single_pickup_count": 25,
+    "area_details": {
+      "sub_areas": [
+        "Verdant Phase 2",
+        "Ambedkar Nagar",
+        "Raju Colony",
+        "Abhiram Enclave",
+        "Freesia Enclave",
+        "Chawdeshri Layout",
+        "Boga Colony",
+        "Vars Park"
+      ],
+      "roads": [
+        "Bellandur Main Road",
+        "2Nd Cross Road",
+        "Layouts Road",
+        "Ring Road",
+        "Devarabisanahalli Road",
+        "6Th Main"
+      ],
+      "landmarks": [
+        "Aet Junction",
+        "Aet Circle",
+        "Near Ranganatha Swamy Temple",
+        "Near Motherhood Hospital"
+      ]
+    }
+  },
+  {
+    "rank": 7,
+    "area": "Varthur",
+    "bookings": 71,
+    "percentage": 2.2,
+    "subAreas": [
+      "ATZ Estrella Halasahalli Road Near Varthur Police Station Varthur Karnataka India",
+      "SANKALP CHERRY BLOSSOM Eidgah Road Devasthanagalu Varthur Karnataka 560087 India",
+      "DS max Sterling Rajbhavi Road Varthur Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Sobha Dream Acres",
+        "count": 8,
+        "original_address": "Sobha Dream Acres Balagere Road Devasthanagalu Varthur Karnataka India"
+      },
+      {
+        "name": "Cornerstone Utopia Varthur Rd",
+        "count": 2,
+        "original_address": "Brigade Cornerstone Utopia Varthur Rd Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Lakeside Habitat Cinderella Avenue",
+        "count": 2,
+        "original_address": "Prestige Lakeside Habitat Cinderella Avenue Devasthanagalu Varthur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Brigade Cornerstone Utopia",
+        "count": 2,
+        "original_address": "Brigade Cornerstone Utopia Varthur Road Varthur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Brigade Cornerstone Utopia",
+        "count": 2,
+        "original_address": "Brigade Cornerstone Utopia Varthur Road Bengaluru Karnataka India"
+      },
+      {
+        "name": "Anagalu Gunjur Village Varthur",
+        "count": 1,
+        "original_address": "TOWER-12 Prestige Lakeside Habitat Devasthanagalu Gunjur Village Varthur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Sobha Dream Acres",
+        "count": 1,
+        "original_address": "Sobha Dream Acres Balagere Road Devasthanagalu Varthur Karnataka 560087 India"
+      },
+      {
+        "name": "Krishnasiri Residency",
+        "count": 1,
+        "original_address": "A 303 Krishnasiri Residency Subbaiah Garden Devasthanagalu Varthur Karnataka India"
+      },
+      {
+        "name": "Sankalpa Layout",
+        "count": 1,
+        "original_address": "Sankalpa layout varthur Varthur Karnataka India"
+      },
+      {
+        "name": "Sobha Dream Acres Wing 5",
+        "count": 1,
+        "original_address": "Sobha Dream Acres Wing 5 Balagere Road Balagere Varthur Karnataka India"
+      },
+      {
+        "name": "Tone Utopia Varthur Rd Varthur",
+        "count": 1,
+        "original_address": "Brigade Cornerstone Utopia Varthur Rd Varthur Bengaluru Bangalore Division Karnataka India"
+      },
+      {
+        "name": "Prakash Layout",
+        "count": 1,
+        "original_address": "Prakash Layout Varthur Karnataka India"
+      },
+      {
+        "name": "Brigade Cornerstone Utopia Varthur",
+        "count": 1,
+        "original_address": "Brigade Cornerstone utopia Varthur"
+      },
+      {
+        "name": "Cornerstone Utopia Varthur Rd",
+        "count": 1,
+        "original_address": "Eden - Brigade Cornerstone Utopia Varthur Rd Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "TOWER-12 Prestige Lakeside Habitat Devasthanagalu Gunjur Village Varthur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Dream Acres Balagere Road Devasthanagalu Varthur Karnataka 560087 India",
+        "count": 1
+      },
+      {
+        "name": "A 303 Krishnasiri Residency Subbaiah Garden Devasthanagalu Varthur Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sankalpa layout varthur Varthur Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sobha Dream Acres Wing 5 Balagere Road Balagere Varthur Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Brigade Cornerstone Utopia Varthur Rd Varthur Bengaluru Bangalore Division Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prakash Layout Varthur Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Brigade Cornerstone utopia Varthur",
+        "count": 1
+      },
+      {
+        "name": "Eden - Brigade Cornerstone Utopia Varthur Rd Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 14,
+    "single_pickup_count": 9,
+    "area_details": {
+      "sub_areas": [
+        "Patel Layout",
+        "Garden Layout",
+        "Sankalpa Layout",
+        "Chinnappa Layout",
+        "Prakash Layout",
+        "Woodside Park",
+        "Paradise Layout",
+        "Aecs Layout"
+      ],
+      "roads": [
+        "Whitefield Main Road",
+        "Opulent Road",
+        "1St Cross",
+        "Panathur Main Road",
+        "Signature Road",
+        "Varthur Road"
+      ],
+      "landmarks": [
+        "Near Varthur Police Station",
+        "Opposite To Sahasra Hospital 560087"
+      ]
+    }
+  },
+  {
+    "rank": 8,
+    "area": "BTM Layout",
+    "bookings": 68,
+    "percentage": 2.1,
+    "subAreas": [
+      "AB Residency 13th Main Road Sunshine Colony Stage 2 BTM Layout Bengaluru Karnataka India",
+      "905 16th Main Road BTM 2nd Stage Kuvempu Nagar Stage 2 BTM Layout Bengaluru Karnataka India",
+      "N R NILAYA RESIDENCY 5th Cross Road Tavarekere Maruti Nagar 1st Stage BTM Layout Bengaluru Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Nd Stage Btm Layout",
+        "count": 13,
+        "original_address": "BTM 2nd Stage BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "St Stage Btm Layout",
+        "count": 3,
+        "original_address": "Madiwala 1st Stage BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Btm Layout",
+        "count": 2,
+        "original_address": "BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Galaxy Homes Vp",
+        "count": 2,
+        "original_address": "Galaxy Homes VP Road Old Madiwala Dollar Scheme Colony 1st Stage BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Btm Layout",
+        "count": 2,
+        "original_address": "BTM Layout 2nd Stage BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Brighton Dollar Layout",
+        "count": 2,
+        "original_address": "Colive 1155 Brighton Dollar Layout BTM 2nd Stage BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Abbaappa Layout",
+        "count": 1,
+        "original_address": "68 Abbaappa Layout Stage 2 BTM Layout Bengaluru Karnataka 560076 India"
+      },
+      {
+        "name": "Confident Pride Kas Officers Colony",
+        "count": 1,
+        "original_address": "Confident Pride KAS Officers Colony Stage 2 BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Aradhana Residency",
+        "count": 1,
+        "original_address": "Aradhana Residency NS Palya BTM 2nd Stage BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Mchs Colony",
+        "count": 1,
+        "original_address": "MCHS Colony BTM 2nd Stage BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Tavarekere Ramappa Layout",
+        "count": 1,
+        "original_address": "Tavarekere Ramappa layout 1st Stage BTM Layout Bengaluru Karnataka 560029 India"
+      },
+      {
+        "name": "St Stage Btm Layout",
+        "count": 1,
+        "original_address": "BTM 1st Stage BTM Layout 1 Bengaluru Karnataka India"
+      },
+      {
+        "name": "Laa Emerald Kas Officers Colony",
+        "count": 1,
+        "original_address": "Laa Emerald KAS Officers Colony Stage 2 BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Aryan Residency",
+        "count": 1,
+        "original_address": "Aryan Residency BTM 2nd Stage Kuvempu Nagar Stage 2 BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nd Btm Layout Btm Layout",
+        "count": 1,
+        "original_address": "Stage 2nd BTM Layout BTM Layout Bengaluru Karnataka India"
+      },
+      {
+        "name": "Ews Colony",
+        "count": 1,
+        "original_address": "EWS Colony BTM 2nd Stage BTM Layout Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "68 Abbaappa Layout Stage 2 BTM Layout Bengaluru Karnataka 560076 India",
+        "count": 1
+      },
+      {
+        "name": "Confident Pride KAS Officers Colony Stage 2 BTM Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Aradhana Residency NS Palya BTM 2nd Stage BTM Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "MCHS Colony BTM 2nd Stage BTM Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Tavarekere Ramappa layout 1st Stage BTM Layout Bengaluru Karnataka 560029 India",
+        "count": 1
+      },
+      {
+        "name": "BTM 1st Stage BTM Layout 1 Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Laa Emerald KAS Officers Colony Stage 2 BTM Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Aryan Residency BTM 2nd Stage Kuvempu Nagar Stage 2 BTM Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Stage 2nd BTM Layout BTM Layout Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "EWS Colony BTM 2nd Stage BTM Layout Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 16,
+    "single_pickup_count": 10,
+    "area_details": {
+      "sub_areas": [
+        "In Town",
+        "Btm Phase 1",
+        "Sunshine Colony",
+        "New Extension",
+        "Heights Layout",
+        "Aicobo Nagar",
+        "Scheme Colony",
+        "Officers Colony"
+      ],
+      "roads": [
+        "7Th Main",
+        "1St Cross",
+        "A Main Road",
+        "28Th Main",
+        "18Th Main Road",
+        "14Th Main"
+      ],
+      "landmarks": [
+        "Behind Orchid International School Gate",
+        "Opposite Apollo Pharmacy Bilekahalli Btm 560076"
+      ]
+    }
+  },
+  {
+    "rank": 9,
+    "area": "Koramangala",
+    "bookings": 59,
+    "percentage": 1.8,
+    "subAreas": [
+      "Nextdoor Bumble Co-Living PG 100 Feet Road 4th Block Koramangala Bengaluru Karnataka India",
+      "Dreamhigh Communication Austin Town Koramangala Bengaluru Karnataka India",
+      "Koramangala Bengaluru Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Th Block",
+        "count": 2,
+        "original_address": "4th Block Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nd Block",
+        "count": 1,
+        "original_address": "2nd Block Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Bed Cauvery Colony",
+        "count": 1,
+        "original_address": "S.T. Bed Cauvery Colony Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Bed Cauvery Colony",
+        "count": 1,
+        "original_address": "ESTEEM ROYALE S.T. Bed Cauvery Colony Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Srija Pg For Ladies National Games Village Complex",
+        "count": 1,
+        "original_address": "SRIJA PG FOR LADIES National Games Village Complex 6th Block Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Rd Block",
+        "count": 1,
+        "original_address": "3rd Block Koramangala 1A Block Koramangala 3 Block Koramangala Bengaluru Karnataka 560034 India"
+      },
+      {
+        "name": "Th Block",
+        "count": 1,
+        "original_address": "6th Block Koramangala Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Gem Regency Nirguna Mandir Layout",
+        "count": 1,
+        "original_address": "Gem Regency Nirguna Mandir Layout Koramangala"
+      },
+      {
+        "name": "S Colony",
+        "count": 1,
+        "original_address": "Venkatapura Teacher's Colony Jakkasandra 1st Block Koramangala Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Jyoti Vilas Pawar Khb Colony",
+        "count": 1,
+        "original_address": "Jyoti Vilas Pawar KHB Colony 5th Block Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Khb Games Village Koramangala",
+        "count": 1,
+        "original_address": "NATIONAL GAMES VILLAGE National Games Village Complex KHB Games Village Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Khb Mig Colony",
+        "count": 1,
+        "original_address": "No.15 KHB MIG Colony 5th Block Koramangala Bengaluru Karnataka 560030"
+      },
+      {
+        "name": "Khb Games Villa",
+        "count": 1,
+        "original_address": "KHB Games Village Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Out S T Bed Layout Koramangala",
+        "count": 1,
+        "original_address": "Sahana nilaya apartment Chandra Reddy Layout S T Bed Layout Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nd Block",
+        "count": 1,
+        "original_address": "Sri Ranga Luxury Ladies PG opposite to krishna sagar hotel near Madiwala Underpass Sidharata Colony Santhosapuram Koramangala 2nd Block Koramangala Bengaluru Karnataka India"
+      },
+      {
+        "name": "St Block",
+        "count": 1,
+        "original_address": "ANAA Infra's Signature Nirguna Mandir Extn 1st Block Koramangala Koramangala Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "2nd Block Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "S.T. Bed Cauvery Colony Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "ESTEEM ROYALE S.T. Bed Cauvery Colony Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "SRIJA PG FOR LADIES National Games Village Complex 6th Block Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "3rd Block Koramangala 1A Block Koramangala 3 Block Koramangala Bengaluru Karnataka 560034 India",
+        "count": 1
+      },
+      {
+        "name": "6th Block Koramangala Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Gem Regency Nirguna Mandir Layout Koramangala",
+        "count": 1
+      },
+      {
+        "name": "Venkatapura Teacher's Colony Jakkasandra 1st Block Koramangala Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Jyoti Vilas Pawar KHB Colony 5th Block Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "NATIONAL GAMES VILLAGE National Games Village Complex KHB Games Village Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "No.15 KHB MIG Colony 5th Block Koramangala Bengaluru Karnataka 560030",
+        "count": 1
+      },
+      {
+        "name": "KHB Games Village Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sahana nilaya apartment Chandra Reddy Layout S T Bed Layout Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Sri Ranga Luxury Ladies PG opposite to krishna sagar hotel near Madiwala Underpass Sidharata Colony Santhosapuram Koramangala 2nd Block Koramangala Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "ANAA Infra's Signature Nirguna Mandir Extn 1st Block Koramangala Koramangala Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 16,
+    "single_pickup_count": 15,
+    "area_details": {
+      "sub_areas": [
+        "S Colony",
+        "Bed Layout",
+        "Sbi Colony",
+        "Swamy Enclave",
+        "Mig Colony",
+        "Sidharata Colony",
+        "Reddy Layout",
+        "Austin Town"
+      ],
+      "roads": [
+        "9Th Cross Road",
+        "C Cross Road",
+        "1St Cross",
+        "Ring Road",
+        "A Main Road",
+        "6Th Main"
+      ],
+      "landmarks": []
+    }
+  },
+  {
+    "rank": 10,
+    "area": "Indiranagar",
+    "bookings": 50,
+    "percentage": 1.5,
+    "subAreas": [
+      "19 NGEF Lane Stage 1 Indiranagar Bengaluru Karnataka India",
+      "430 11th Main HAL 2nd Stage Indiranagar Bengaluru Karnataka India",
+      "4053 19th Main Road HAL 2nd Stage Indiranagar Bengaluru Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Indus Signature Apartment Eshwara Layout",
+        "count": 1,
+        "original_address": "INDUS SIGNATURE APARTMENT Eshwara Layout Indiranagar Bengaluru Karnataka India"
+      },
+      {
+        "name": "Nd Stage Indiranagar Bda Colony Domlur Villa",
+        "count": 1,
+        "original_address": "2nd stage Indiranagar BDA Colony Domlur Village Domlur Bengaluru Karnataka 560071 India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "INDUS SIGNATURE APARTMENT Eshwara Layout Indiranagar Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "2nd stage Indiranagar BDA Colony Domlur Village Domlur Bengaluru Karnataka 560071 India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 2,
+    "single_pickup_count": 2,
+    "area_details": {
+      "sub_areas": [
+        "Indira Nagar",
+        "Vignan Nagar",
+        "Kondappa Layout",
+        "Channakesahava Nagar",
+        "Hoysala Nagar",
+        "Super Town",
+        "Bda Colony",
+        "Defence Colony"
+      ],
+      "roads": [
+        "1St Cross",
+        "A Main Road",
+        "6Th Cross",
+        "3Rd Cross Road",
+        "19Th Main",
+        "15Th Cross Road"
+      ],
+      "landmarks": []
+    }
+  },
+  {
+    "rank": 11,
+    "area": "Brookefield",
+    "bookings": 50,
+    "percentage": 1.5,
+    "subAreas": [
+      "Sterling Shalom EPIP Zone Brookefield Chinnapanahalli Karnataka India",
+      "MILLENNIUM HABITAT ITPL Main Road Kundalahalli Brookefield Bengaluru Karnataka 560037 India",
+      "Brookefield Bengaluru Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Beml Layout",
+        "count": 6,
+        "original_address": "BEML Layout Brookefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Brookefield",
+        "count": 2,
+        "original_address": "Phase 2 Brookefield Bengaluru Karnataka India"
+      },
+      {
+        "name": "Layout Aecs Layout Brookefield",
+        "count": 1,
+        "original_address": "Sreenivas Reddy Layout Rd Sri Nivasa Reddy Layout AECS Layout Brookefield Bengaluru Karnataka 560037 India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "Sreenivas Reddy Layout Rd Sri Nivasa Reddy Layout AECS Layout Brookefield Bengaluru Karnataka 560037 India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 3,
+    "single_pickup_count": 1,
+    "area_details": {
+      "sub_areas": [
+        "Garden Layout",
+        "Kundalahalli Colony",
+        "Domain Layout",
+        "Krest Phase 3",
+        "Udupi Park",
+        "Layout Phase 2",
+        "Dikshith Enclave",
+        "Reddy Layout"
+      ],
+      "roads": [
+        "9Th Cross Road",
+        "3Rd Main Road",
+        "Layout Main Road",
+        "Marathahalli Main Road",
+        "6Th Main",
+        "3Rd Cross Road"
+      ],
+      "landmarks": []
+    }
+  },
+  {
+    "rank": 12,
+    "area": "Kadugodi",
+    "bookings": 48,
+    "percentage": 1.5,
+    "subAreas": [
+      "73 2nd Main Rd Maithri Layout Kadugodi Bengaluru Karnataka 560067 India",
+      "Channasandra Main Road 3G Homes Crimson Layout Kadugodi Bengaluru Karnataka India",
+      "Kadugodi Bengaluru Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Siddhartha Layout",
+        "count": 1,
+        "original_address": "Siddhartha Layout Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "G Homes Crimson Layout",
+        "count": 1,
+        "original_address": "ARK SERENE COUNTY 3G Homes Crimson Layout Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "V S Reddy Colony",
+        "count": 1,
+        "original_address": "V S Reddy Colony Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Vsr Layout Maithri Layout",
+        "count": 1,
+        "original_address": "VSR layout Maithri Layout Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Pavani Maithri Apartment Maithri Layout",
+        "count": 1,
+        "original_address": "Pavani Maithri Apartment Maithri Layout Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Maithri Layout",
+        "count": 1,
+        "original_address": "Maithri Layout Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Patalamma Layout V S Reddy Colony",
+        "count": 1,
+        "original_address": "Patalamma Layout V S Reddy Colony Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "S Green Valley Kadugodi",
+        "count": 1,
+        "original_address": "Patel's Green Valley Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prabhavathi Elegant Apartment Apartment",
+        "count": 1,
+        "original_address": "Prabhavathi Elegant Apartment Apartment Kumbena Agrahara Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Elatur Colony Brindavan Layout",
+        "count": 1,
+        "original_address": "Kadugodi Kadugodi Flyover Belatur Colony Brindavan Layout Bangalore Karnataka India"
+      },
+      {
+        "name": "Maithri Layout",
+        "count": 1,
+        "original_address": "XQP4+WF9 Maithri Layout Kadugodi Bengaluru Karnataka 560066 India"
+      },
+      {
+        "name": "Belathur Colony Kadugodi Colony",
+        "count": 1,
+        "original_address": "Belathur colony Kadugodi Colony Kumbena Agrahara Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Residency Patalamma Layout V S Reddy Colony",
+        "count": 1,
+        "original_address": "N.V. Residency Patalamma Layout V S Reddy Colony Kadugodi Bengaluru Karnataka India"
+      },
+      {
+        "name": "Prestige Park View Internal Rd Kadugodi Colony",
+        "count": 1,
+        "original_address": "4144 Prestige Park View Internal Rd Kadugodi Colony Kadugodi Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "Siddhartha Layout Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "ARK SERENE COUNTY 3G Homes Crimson Layout Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "V S Reddy Colony Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "VSR layout Maithri Layout Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Pavani Maithri Apartment Maithri Layout Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Maithri Layout Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Patalamma Layout V S Reddy Colony Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Patel's Green Valley Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Prabhavathi Elegant Apartment Apartment Kumbena Agrahara Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Kadugodi Kadugodi Flyover Belatur Colony Brindavan Layout Bangalore Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "XQP4+WF9 Maithri Layout Kadugodi Bengaluru Karnataka 560066 India",
+        "count": 1
+      },
+      {
+        "name": "Belathur colony Kadugodi Colony Kumbena Agrahara Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "N.V. Residency Patalamma Layout V S Reddy Colony Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "4144 Prestige Park View Internal Rd Kadugodi Colony Kadugodi Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 14,
+    "single_pickup_count": 14,
+    "area_details": {
+      "sub_areas": [
+        "Prasanth Extension",
+        "Prestige Park",
+        "New Extension",
+        "Crimson Layout",
+        "Belatur Colony",
+        "Hamlet Layout",
+        "Maithri Layout",
+        "Gopalkrishna Nagar"
+      ],
+      "roads": [
+        "7Th Main Road",
+        "Channasandra Main Road",
+        "Whitefield Main Road",
+        "7Th Main",
+        "2Nd Main Road",
+        "Kodigehalli Main Road"
+      ],
+      "landmarks": [
+        "Farm Circle",
+        "Near By Sai Baba Temple"
+      ]
+    }
+  },
+  {
+    "rank": 13,
+    "area": "Sarjapur",
+    "bookings": 47,
+    "percentage": 1.4,
+    "subAreas": [
+      "Ambalipura - Sarjapur Road Kaikondrahalli Bengaluru Karnataka India",
+      "Prestige Silver Dale Sarjapur Main Road Rainbow Drive Halanayakanahalli Bengaluru Karnataka India",
+      "DSR PARKWAY Sarjapur Main Road Carmelaram P.O Bhoganhalli Bengaluru Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Alhaar Sarjapur Hobli Ittangur",
+        "count": 1,
+        "original_address": "Shriram Malhaar Sarjapur Hobli Ittangur Bengaluru Karnataka India"
+      },
+      {
+        "name": "Peninsula Solitaire Villas",
+        "count": 1,
+        "original_address": "Peninsula Solitaire villas Thindlu Sarjapur 562125"
+      },
+      {
+        "name": "In Sarjapur Kanare Dew Marythi Garden Layout",
+        "count": 1,
+        "original_address": "Lio Naga Chaitanya Stay Inn - Ladies PG Gents PG Accommodation (Hostel) in Sarjapur Kanare Dew Marythi Garden Layout Rainbow Drive Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "Shriram Malhaar Sarjapur Hobli Ittangur Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Peninsula Solitaire villas Thindlu Sarjapur 562125",
+        "count": 1
+      },
+      {
+        "name": "Lio Naga Chaitanya Stay Inn - Ladies PG Gents PG Accommodation (Hostel) in Sarjapur Kanare Dew Marythi Garden Layout Rainbow Drive Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 3,
+    "single_pickup_count": 3,
+    "area_details": {
+      "sub_areas": [
+        "Ambedkar Nagar",
+        "Garden Layout",
+        "Valliyamma Layout",
+        "Bird Layout",
+        "Hsr Layout",
+        "Amrita Nagar",
+        "Serenity Layout",
+        "Narayana Nagar"
+      ],
+      "roads": [
+        "Sarjapura Main Road",
+        "Attibele Road",
+        "Hosa Road",
+        "Outer Ring Road",
+        "Ring Road",
+        "Marathahalli Road"
+      ],
+      "landmarks": [
+        "Near Anjaneya Temple",
+        "Kaikondrahalli Bus Stop",
+        "Opposite Mcdonalds Bengaluru Karnataka India",
+        "Near Motherhood Hospital"
+      ]
+    }
+  },
+  {
+    "rank": 14,
+    "area": "Kadubeesanahalli",
+    "bookings": 36,
+    "percentage": 1.1,
+    "subAreas": [
+      "Kadubeesanahalli Bengaluru Karnataka India",
+      "Kadubeesanahalli Bengaluru Karnataka India",
+      "Kadubeesanahalli Bengaluru Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Ge Tech Vista Kadubeesanahalli",
+        "count": 1,
+        "original_address": "VILLA-15 PRESTIGE TECH VISTA Kadubeesanahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Kaverappa Layout",
+        "count": 1,
+        "original_address": "BLOCK-2 Kaverappa Layout Kadubeesanahalli Bengaluru Karnataka India"
+      },
+      {
+        "name": "Krishna Residency",
+        "count": 1,
+        "original_address": "Krishna Residency opp. to CISCO Kaverappa Layout Kadubeesanahalli Bengaluru Karnataka 560103 India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "VILLA-15 PRESTIGE TECH VISTA Kadubeesanahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "BLOCK-2 Kaverappa Layout Kadubeesanahalli Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Krishna Residency opp. to CISCO Kaverappa Layout Kadubeesanahalli Bengaluru Karnataka 560103 India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 3,
+    "single_pickup_count": 3,
+    "area_details": {
+      "sub_areas": [
+        "Munireddy Layout",
+        "Appanreddy Layout",
+        "Mariyappa Layout",
+        "Kaverappa Layout"
+      ],
+      "roads": [
+        "Panathur Main Road",
+        "Station Road",
+        "2Nd Cross Road",
+        "Outer Ring Road",
+        "Agrahara Road",
+        "Varthur Road"
+      ],
+      "landmarks": [
+        "Near Jyothi English School"
+      ]
+    }
+  },
+  {
+    "rank": 15,
+    "area": "JP Nagar",
+    "bookings": 34,
+    "percentage": 1.0,
+    "subAreas": [
+      "JP Nagar 6th Phase Krishna Devaraya Nagar Yelachenahalli Kumaraswamy Layout Bengaluru Karnataka India",
+      "JP Nagar 7th Phase Bangalore Karnataka India",
+      "JP Nagar 8th Phase J. P. Nagar Bengaluru Karnataka India"
+    ],
+    "all_apartments": [
+      {
+        "name": "Annaiah Reddy Layout",
+        "count": 2,
+        "original_address": "Annaiah Reddy Layout JP Nagar Phase 6 J. P. Nagar Bengaluru Karnataka 560078 India"
+      },
+      {
+        "name": "Brigade Millenium Rd Lakshmi Layout",
+        "count": 1,
+        "original_address": "Brigade Millenium Rd Lakshmi Layout JP Nagar 7th Phase Arekere Bengaluru Karnataka 560076"
+      },
+      {
+        "name": "Ms Ramaiah City Layout",
+        "count": 1,
+        "original_address": "MS Ramaiah City Layout JP Nagar 7th Phase Bengaluru Karnataka India"
+      },
+      {
+        "name": "Century Pragati Apartment Lakshmi Layout",
+        "count": 1,
+        "original_address": "Century Pragati Apartment Lakshmi Layout JP Nagar 7th Phase Arekere Bengaluru Karnataka India"
+      }
+    ],
+    "apartments_with_single_pickup": [
+      {
+        "name": "Brigade Millenium Rd Lakshmi Layout JP Nagar 7th Phase Arekere Bengaluru Karnataka 560076",
+        "count": 1
+      },
+      {
+        "name": "MS Ramaiah City Layout JP Nagar 7th Phase Bengaluru Karnataka India",
+        "count": 1
+      },
+      {
+        "name": "Century Pragati Apartment Lakshmi Layout JP Nagar 7th Phase Arekere Bengaluru Karnataka India",
+        "count": 1
+      }
+    ],
+    "total_apartment_count": 4,
+    "single_pickup_count": 3,
+    "area_details": {
+      "sub_areas": [
+        "Annapoorneshwari Layout",
+        "City Layout",
+        "Residency Layout",
+        "Kr Layout",
+        "Reddy Layout",
+        "Pallavi Enclave",
+        "Royal Park",
+        "Devaraya Nagar"
+      ],
+      "roads": [
+        "2Nd Cross Road",
+        "1St Cross",
+        "Kanakapura Main Road",
+        "28Th Main",
+        "24Th Main Road",
+        "16Th Main"
+      ],
+      "landmarks": [
+        "Sarakki Signal"
+      ]
+    }
+  }
+]
